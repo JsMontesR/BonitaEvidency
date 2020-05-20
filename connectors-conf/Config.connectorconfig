@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:process="http://www.bonitasoft.org/ns/studio/process" definitionId="cmis-uploadnewdocument" version="2.0.1" name="Config" modelVersion="7.9.0-002">
+  <parameters key="username">
+    <expression xsi:type="expression:Expression" name="admin" content="admin" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="password">
+    <expression xsi:type="expression:Expression" name="admin" content="admin" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="url">
+    <expression xsi:type="expression:Expression" name="http://localhost:8080/alfresco/cmisws/cmis" content="http://localhost:8080/alfresco/cmisws/cmis" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="repository">
+    <expression xsi:type="expression:Expression" name="Main Repository" content="Main Repository" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="binding_type">
+    <expression xsi:type="expression:Expression" name="webservices" content="webservices" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="wsObjectServiceUrl">
+    <expression xsi:type="expression:Expression" name="http://localhost:8080/alfresco/cmisws/cmis/ObjectService?wsdl" content="http://localhost:8080/alfresco/cmisws/cmis/ObjectService?wsdl" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="wsObjectServiceEndpointUrl">
+    <expression xsi:type="expression:Expression" name="http://localhost:8080/alfresco/cmisws/cmis/ObjectService?wsdl" content="http://localhost:8080/alfresco/cmisws/cmis/ObjectService?wsdl" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="wsRepositoryServiceUrl">
+    <expression xsi:type="expression:Expression" name="http://localhost:8080/alfresco/cmisws/cmis/RepositoryService?wsdl" content="http://localhost:8080/alfresco/cmisws/cmis/RepositoryService?wsdl" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="wsRepositoryServiceEndpointUrl">
+    <expression xsi:type="expression:Expression" name="http://localhost:8080/alfresco/cmisws/cmis/RepositoryService" content="http://localhost:8080/alfresco/cmisws/cmis/RepositoryService" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="document">
+    <expression xsi:type="expression:Expression" name="evidencia_upload" content="evidencia_upload" interpreter="GROOVY" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+      <referencedElements xsi:type="process:Document" name="evidencia_upload"/>
+    </expression>
+  </parameters>
+  <parameters key="folder_path">
+    <expression xsi:type="expression:Expression" name="/Evidencias" content="/Evidencias" returnTypeFixed="true">
+      <referencedElements xsi:type="process:Data" name="nombreEvidencia">
+        <dataType xsi:type="process:StringType" href="platform:/resource/Mi%20Proyecto/diagrams/MiDiagrama-1.0.proc#_G3AzUY_XEeqdTOskSb27yg"/>
+      </referencedElements>
+    </expression>
+  </parameters>
+  <parameters key="destinationName">
+    <expression xsi:type="expression:Expression" name="nombreEvidencia" content="nombreEvidencia" type="TYPE_VARIABLE" returnTypeFixed="true">
+      <referencedElements xsi:type="process:Data" name="nombreEvidencia">
+        <dataType xsi:type="process:StringType" href="platform:/resource/Mi%20Proyecto/diagrams/MiDiagrama-1.0.proc#_G3AzUY_XEeqdTOskSb27yg"/>
+      </referencedElements>
+    </expression>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>

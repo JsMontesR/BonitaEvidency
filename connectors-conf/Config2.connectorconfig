@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:process="http://www.bonitasoft.org/ns/studio/process" definitionId="cmis-uploadnewdocument" version="2.0.1" name="Config2" modelVersion="7.9.0-002">
+  <parameters key="username">
+    <expression xsi:type="expression:Expression" name="admin" content="admin" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="password">
+    <expression xsi:type="expression:Expression" name="admin" content="admin" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="url">
+    <expression xsi:type="expression:Expression" name="http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/atom" content="http://localhost:8080/alfresco/api/-default-/public/cmis/versions/1.1/atom" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="repository">
+    <expression xsi:type="expression:Expression" name="RVI" content="RVI" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="binding_type">
+    <expression xsi:type="expression:Expression" name="atompub" content="atompub" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="wsObjectServiceUrl">
+    <expression xsi:type="expression:Expression" name="" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="wsObjectServiceEndpointUrl">
+    <expression xsi:type="expression:Expression" name="" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="wsRepositoryServiceUrl">
+    <expression xsi:type="expression:Expression" name="" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="wsRepositoryServiceEndpointUrl">
+    <expression xsi:type="expression:Expression" name="" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="document">
+    <expression xsi:type="expression:Expression" name="evidencia" content="evidencia" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+      <referencedElements xsi:type="process:Document" name="evidencia"/>
+    </expression>
+  </parameters>
+  <parameters key="folder_path">
+    <expression xsi:type="expression:Expression" name="/Evidencias" content="/Evidencias" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="destinationName">
+    <expression xsi:type="expression:Expression" name="nombreEvidencia" content="nombreEvidencia" type="TYPE_VARIABLE" returnTypeFixed="true">
+      <referencedElements xsi:type="process:Data" name="nombreEvidencia">
+        <dataType xsi:type="process:StringType" href="platform:/resource/Mi%20Proyecto/diagrams/Diagrama-1.0.proc#_syg8UZCqEeq-OaYYCPuOBQ"/>
+      </referencedElements>
+    </expression>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>
