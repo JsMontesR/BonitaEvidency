@@ -1,8 +1,8 @@
 {
   "designerVersion" : "1.9.53",
-  "id" : "guardarEvidencias",
-  "name" : "guardarEvidencias",
-  "lastUpdate" : 1590477433275,
+  "id" : "UbicarEvidencias",
+  "name" : "UbicarEvidencias",
+  "lastUpdate" : 1590481346039,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -216,7 +216,7 @@
             },
             "text" : {
               "type" : "interpolation",
-              "value" : "Usted esta en {{carpetasDelDirectorioActual}}"
+              "value" : "Usted esta en {{directorioActual.value}}"
             },
             "alignment" : {
               "type" : "constant",
@@ -235,6 +235,44 @@
           "hasValidationError" : false,
           "id" : "pbTitle"
         } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "value" : {
+              "type" : "constant",
+              "value" : "This is the initial value"
+            },
+            "color" : {
+              "type" : "constant",
+              "value" : "RebeccaPurple"
+            },
+            "background" : {
+              "type" : "constant",
+              "value" : "Yellow"
+            },
+            "directorioActual" : {
+              "type" : "variable",
+              "value" : "directorioActual"
+            },
+            "listaDirectorios" : {
+              "type" : "variable",
+              "value" : "carpetasDelDirectorioActual"
+            }
+          },
+          "reference" : "68fd6664-52a8-4321-9cab-6da68a3a33c1",
+          "hasValidationError" : false,
+          "id" : "customNavegador"
+        } ], [ {
           "type" : "container",
           "dimension" : {
             "xs" : 12
@@ -250,7 +288,7 @@
             },
             "hidden" : {
               "type" : "constant",
-              "value" : false
+              "value" : true
             },
             "cssClasses" : {
               "type" : "constant",
@@ -296,42 +334,13 @@
                 "type" : "constant",
                 "value" : false
               },
-              "text" : {
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
                 "type" : "interpolation",
                 "value" : "{{$item}}"
-              },
-              "type" : {
-                "type" : "constant",
-                "value" : "URL"
-              },
-              "targetUrl" : {
-                "type" : "constant",
-                "value" : "http://"
-              },
-              "pageToken" : {
-                "type" : "constant"
-              },
-              "processName" : {
-                "type" : "constant"
-              },
-              "processVersion" : {
-                "type" : "constant"
-              },
-              "taskId" : {
-                "type" : "constant"
-              },
-              "caseId" : {
-                "type" : "constant"
-              },
-              "target" : {
-                "type" : "constant",
-                "value" : "_self"
-              },
-              "appToken" : {
-                "type" : "constant"
-              },
-              "urlParams" : {
-                "type" : "constant"
               },
               "alignment" : {
                 "type" : "constant",
@@ -339,12 +348,63 @@
               },
               "buttonStyle" : {
                 "type" : "constant",
-                "value" : "link"
+                "value" : "default"
+              },
+              "action" : {
+                "type" : "constant",
+                "value" : "Submit task"
+              },
+              "assign" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "url" : {
+                "type" : "interpolation"
+              },
+              "responseStatusCode" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "dataToSend" : {
+                "type" : "expression",
+                "value" : "formOutput"
+              },
+              "dataFromSuccess" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "closeOnSuccess" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "dataFromError" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "targetUrlOnSuccess" : {
+                "type" : "interpolation"
+              },
+              "collectionToModify" : {
+                "type" : "variable"
+              },
+              "modalId" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "collectionPosition" : {
+                "type" : "constant",
+                "value" : "Last"
+              },
+              "valueToAdd" : {
+                "type" : "constant"
+              },
+              "removeItem" : {
+                "type" : "variable"
               }
             },
-            "reference" : "478c0afd-ec0a-4bcd-9dd3-cd67b6e89a80",
+            "reference" : "eebf5d43-b2d9-4448-8f11-564f5a8d1847",
             "hasValidationError" : false,
-            "id" : "pbLink"
+            "id" : "pbButton"
           } ] ]
         } ] ]
       } ], [ {
@@ -529,7 +589,7 @@
     },
     "formOutput" : {
       "type" : "expression",
-      "value" : "if( $data.context ){\n\treturn {\n\t\tdocumentsDocumentInput: $data.context.documents_ref.map( doc => ({\n\t\t\tid : doc.id ? doc.id.toString() : null,\n\t\t\tfilename : doc.newValue && doc.newValue.filename ? doc.newValue.filename : null,\n\t\t\ttempPath : doc.newValue && doc.newValue.tempPath ? doc.newValue.tempPath : null,\n\t\t\tcontentType : doc.newValue && doc.newValue.contentType ? doc.newValue.contentType : null\n\t\t}))\n\t}\n}",
+      "value" : "return {\n\tdirectorioActual_Input: $data.formInput.directorioActual_Input,\n\tguardado_Input: $data.formInput.guardado_Input\n}",
       "exposed" : false
     },
     "context" : {
