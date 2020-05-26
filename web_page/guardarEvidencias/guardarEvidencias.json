@@ -1,8 +1,8 @@
 {
   "designerVersion" : "1.9.53",
-  "id" : "newForm",
-  "name" : "newForm",
-  "lastUpdate" : 1589828085173,
+  "id" : "guardarEvidencias",
+  "name" : "guardarEvidencias",
+  "lastUpdate" : 1590477433275,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -140,7 +140,8 @@
         },
         "propertyValues" : {
           "repeatedCollection" : {
-            "type" : "variable"
+            "type" : "variable",
+            "value" : ""
           },
           "labelHidden" : {
             "type" : "constant",
@@ -215,7 +216,7 @@
             },
             "text" : {
               "type" : "interpolation",
-              "value" : "Documents"
+              "value" : "Usted esta en {{carpetasDelDirectorioActual}}"
             },
             "alignment" : {
               "type" : "constant",
@@ -241,7 +242,7 @@
           "propertyValues" : {
             "repeatedCollection" : {
               "type" : "variable",
-              "value" : "context.documents_ref"
+              "value" : "carpetasDelDirectorioActual.value"
             },
             "labelHidden" : {
               "type" : "constant",
@@ -287,287 +288,64 @@
               "xs" : 12
             },
             "propertyValues" : {
-              "showPreview" : {
+              "cssClasses" : {
                 "type" : "constant",
-                "value" : false
+                "value" : ""
               },
               "hidden" : {
                 "type" : "constant",
                 "value" : false
               },
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "widgetId" : {
-                "type" : "constant",
-                "value" : "pbFileViewer"
-              },
-              "document" : {
-                "type" : "variable",
-                "value" : "$item"
-              },
-              "readOnly" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "label" : {
-                "type" : "interpolation"
+              "text" : {
+                "type" : "interpolation",
+                "value" : "{{$item}}"
               },
               "type" : {
                 "type" : "constant",
-                "value" : "Process document"
+                "value" : "URL"
               },
-              "url" : {
+              "targetUrl" : {
+                "type" : "constant",
+                "value" : "http://"
+              },
+              "pageToken" : {
                 "type" : "constant"
               },
-              "labelHidden" : {
+              "processName" : {
+                "type" : "constant"
+              },
+              "processVersion" : {
+                "type" : "constant"
+              },
+              "taskId" : {
+                "type" : "constant"
+              },
+              "caseId" : {
+                "type" : "constant"
+              },
+              "target" : {
                 "type" : "constant",
-                "value" : false
+                "value" : "_self"
+              },
+              "appToken" : {
+                "type" : "constant"
+              },
+              "urlParams" : {
+                "type" : "constant"
               },
               "alignment" : {
                 "type" : "constant",
                 "value" : "left"
-              },
-              "class" : {
-                "type" : "constant",
-                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.FileViewerWidget"
-              },
-              "dimension" : {
-                "type" : "constant",
-                "value" : 12
-              }
-            },
-            "reference" : "58f997b7-f7af-4739-b395-05ec0cf75403",
-            "hasValidationError" : false,
-            "id" : "pbFileViewer"
-          } ], [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 11
-            },
-            "propertyValues" : {
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "widgetId" : {
-                "type" : "constant",
-                "value" : "pbUpload"
-              },
-              "labelWidth" : {
-                "type" : "constant",
-                "value" : 4
-              },
-              "readOnly" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "label" : {
-                "type" : "interpolation",
-                "value" : "Documents"
-              },
-              "required" : {
-                "type" : "constant",
-                "value" : true
-              },
-              "url" : {
-                "type" : "constant",
-                "value" : "../API/formFileUpload"
-              },
-              "labelHidden" : {
-                "type" : "constant",
-                "value" : true
-              },
-              "labelPosition" : {
-                "type" : "constant",
-                "value" : "top"
-              },
-              "placeholder" : {
-                "type" : "constant",
-                "value" : "Browse to update the file..."
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "left"
-              },
-              "class" : {
-                "type" : "constant",
-                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.FileUploadWidget"
-              },
-              "dimension" : {
-                "type" : "constant",
-                "value" : 11
-              },
-              "value" : {
-                "type" : "variable",
-                "value" : "$item.newValue"
-              }
-            },
-            "reference" : "c9cced87-d549-47b3-9259-c83ba09d79ad",
-            "hasValidationError" : false,
-            "id" : "pbUpload"
-          }, {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 1
-            },
-            "propertyValues" : {
-              "removeItem" : {
-                "type" : "variable",
-                "value" : "$item"
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "widgetId" : {
-                "type" : "constant",
-                "value" : "pbButton"
               },
               "buttonStyle" : {
                 "type" : "constant",
-                "value" : "danger"
-              },
-              "readOnly" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "label" : {
-                "type" : "interpolation",
-                "value" : "<span class=\"glyphicon glyphicon-remove\"></span>"
-              },
-              "dataToSend" : {
-                "type" : "expression"
-              },
-              "labelHidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "collectionPosition" : {
-                "type" : "constant",
-                "value" : "Item"
-              },
-              "targetUrlOnSuccess" : {
-                "type" : "interpolation"
-              },
-              "action" : {
-                "type" : "constant",
-                "value" : "Remove from collection"
-              },
-              "collectionToModify" : {
-                "type" : "variable",
-                "value" : "$collection"
-              },
-              "valueToAdd" : {
-                "type" : "expression"
-              },
-              "disabled" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "left"
-              },
-              "class" : {
-                "type" : "constant",
-                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
-              },
-              "dimension" : {
-                "type" : "constant",
-                "value" : 1
+                "value" : "link"
               }
             },
-            "reference" : "9cdfcbb2-fca8-402c-af33-ac7d1b11b92a",
+            "reference" : "478c0afd-ec0a-4bcd-9dd3-cd67b6e89a80",
             "hasValidationError" : false,
-            "id" : "pbButton"
+            "id" : "pbLink"
           } ] ]
-        } ], [ {
-          "type" : "component",
-          "dimension" : {
-            "xs" : 12
-          },
-          "propertyValues" : {
-            "removeItem" : {
-              "type" : "variable"
-            },
-            "hidden" : {
-              "type" : "constant",
-              "value" : false
-            },
-            "cssClasses" : {
-              "type" : "constant",
-              "value" : ""
-            },
-            "widgetId" : {
-              "type" : "constant",
-              "value" : "pbButton"
-            },
-            "buttonStyle" : {
-              "type" : "constant",
-              "value" : "primary"
-            },
-            "readOnly" : {
-              "type" : "constant",
-              "value" : false
-            },
-            "label" : {
-              "type" : "interpolation",
-              "value" : "<span class=\"glyphicon glyphicon-plus\"></span> Add File"
-            },
-            "dataToSend" : {
-              "type" : "expression"
-            },
-            "labelHidden" : {
-              "type" : "constant",
-              "value" : false
-            },
-            "collectionPosition" : {
-              "type" : "constant"
-            },
-            "targetUrlOnSuccess" : {
-              "type" : "interpolation"
-            },
-            "action" : {
-              "type" : "constant",
-              "value" : "Add to collection"
-            },
-            "collectionToModify" : {
-              "type" : "variable",
-              "value" : "context.documents_ref"
-            },
-            "valueToAdd" : {
-              "type" : "expression"
-            },
-            "disabled" : {
-              "type" : "constant",
-              "value" : false
-            },
-            "alignment" : {
-              "type" : "constant",
-              "value" : "left"
-            },
-            "class" : {
-              "type" : "constant",
-              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
-            },
-            "dimension" : {
-              "type" : "constant",
-              "value" : 12
-            }
-          },
-          "reference" : "e59398cc-15cb-4db7-a048-035df2d3c0b9",
-          "hasValidationError" : false,
-          "id" : "pbButton"
         } ] ]
       } ], [ {
         "type" : "component",
@@ -600,7 +378,7 @@
           },
           "label" : {
             "type" : "interpolation",
-            "value" : "Submit"
+            "value" : "Guardar"
           },
           "dataToSend" : {
             "type" : "expression",
@@ -646,6 +424,29 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "assign" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "responseStatusCode" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "closeOnSuccess" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : ""
           }
         },
         "reference" : "38e84cad-3dcb-4982-8614-8335405fecaa",
@@ -739,6 +540,16 @@
     "taskId" : {
       "type" : "urlparameter",
       "value" : "id",
+      "exposed" : false
+    },
+    "directorioActual" : {
+      "type" : "url",
+      "value" : "../API/bpm/activityVariable/{{taskId}}/directorioActual",
+      "exposed" : false
+    },
+    "carpetasDelDirectorioActual" : {
+      "type" : "url",
+      "value" : "../API/bpm/activityVariable/{{taskId}}/carpetasDelDirectorioActual",
       "exposed" : false
     }
   },
