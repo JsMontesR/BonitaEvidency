@@ -77,8 +77,10 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_OqHeoZ8jEeq0IslVhd1Y9Q" name="directorioActual" content="directorioActual" type="TYPE_VARIABLE">
               <referencedElements xmi:type="process:Data" xmi:id="_PRzJsJ8jEeq0IslVhd1Y9Q" name="directorioActual" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_OqHeop8jEeq0IslVhd1Y9Q" name="directorioActual" content="directorioActual" type="TYPE_VARIABLE">
-              <referencedElements xmi:type="process:Data" xmi:id="_PtfAIJ8jEeq0IslVhd1Y9Q" name="directorioActual" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_OqHeop8jEeq0IslVhd1Y9Q" name="directorioActual_Input" content="directorioActual_Input" type="TYPE_CONTRACT_INPUT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_HeDyUKFtEeqs26PCr8HFxA" name="directorioActual_Input">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_HeDyUaFtEeqs26PCr8HFxA"/>
+              </referencedElements>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_OqHeo58jEeq0IslVhd1Y9Q" type="ASSIGNMENT"/>
           </operations>
@@ -90,7 +92,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_sjMSyJkmEeq5hPv8qFMc8A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_sjMSx5kmEeq5hPv8qFMc8A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_t2On-ZkmEeq5hPv8qFMc8A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_CkKKYJk5Eeqe2ZT2jZ4NHg" name="UbicarEvidencias" content="9ebe447d-e1a9-426f-9f91-687e8b9c325d" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_jl0jsKFsEeqs26PCr8HFxA" name="UbicarEvidencias" content="9ebe447d-e1a9-426f-9f91-687e8b9c325d" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_t2On-JkmEeq5hPv8qFMc8A">
             <inputs xmi:type="process:ContractInput" xmi:id="_D6GRoJ8jEeq0IslVhd1Y9Q" name="directorioActual_Input">
@@ -113,7 +115,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_wWV-IZ8iEeq0IslVhd1Y9Q" name="false" content="false" returnType="java.lang.Boolean"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_3O-SVJkhEeq5hPv8qFMc8A">
-        <targetForm xmi:type="expression:Expression" xmi:id="_EPRa8J8kEeq0IslVhd1Y9Q" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="__mNsUKFsEeqs26PCr8HFxA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_3O-SVpkhEeq5hPv8qFMc8A">
         <targetForm xmi:type="expression:Expression" xmi:id="_3O-SV5khEeq5hPv8qFMc8A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

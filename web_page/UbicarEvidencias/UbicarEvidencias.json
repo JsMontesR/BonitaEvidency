@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "UbicarEvidencias",
   "name" : "UbicarEvidencias",
-  "lastUpdate" : 1590481346039,
+  "lastUpdate" : 1590730073878,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -272,140 +272,6 @@
           "reference" : "68fd6664-52a8-4321-9cab-6da68a3a33c1",
           "hasValidationError" : false,
           "id" : "customNavegador"
-        } ], [ {
-          "type" : "container",
-          "dimension" : {
-            "xs" : 12
-          },
-          "propertyValues" : {
-            "repeatedCollection" : {
-              "type" : "variable",
-              "value" : "carpetasDelDirectorioActual.value"
-            },
-            "labelHidden" : {
-              "type" : "constant",
-              "value" : false
-            },
-            "hidden" : {
-              "type" : "constant",
-              "value" : true
-            },
-            "cssClasses" : {
-              "type" : "constant",
-              "value" : ""
-            },
-            "widgetId" : {
-              "type" : "constant"
-            },
-            "readOnly" : {
-              "type" : "constant",
-              "value" : false
-            },
-            "label" : {
-              "type" : "interpolation"
-            },
-            "alignment" : {
-              "type" : "constant",
-              "value" : "left"
-            },
-            "class" : {
-              "type" : "constant",
-              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.WidgetContainer"
-            },
-            "dimension" : {
-              "type" : "constant",
-              "value" : 12
-            }
-          },
-          "reference" : "7f30983e-c5b6-436b-8c81-deef61d74dcf",
-          "hasValidationError" : false,
-          "id" : "pbContainer",
-          "rows" : [ [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "disabled" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "label" : {
-                "type" : "interpolation",
-                "value" : "{{$item}}"
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "left"
-              },
-              "buttonStyle" : {
-                "type" : "constant",
-                "value" : "default"
-              },
-              "action" : {
-                "type" : "constant",
-                "value" : "Submit task"
-              },
-              "assign" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "url" : {
-                "type" : "interpolation"
-              },
-              "responseStatusCode" : {
-                "type" : "variable",
-                "value" : ""
-              },
-              "dataToSend" : {
-                "type" : "expression",
-                "value" : "formOutput"
-              },
-              "dataFromSuccess" : {
-                "type" : "variable",
-                "value" : ""
-              },
-              "closeOnSuccess" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "dataFromError" : {
-                "type" : "variable",
-                "value" : ""
-              },
-              "targetUrlOnSuccess" : {
-                "type" : "interpolation"
-              },
-              "collectionToModify" : {
-                "type" : "variable"
-              },
-              "modalId" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "collectionPosition" : {
-                "type" : "constant",
-                "value" : "Last"
-              },
-              "valueToAdd" : {
-                "type" : "constant"
-              },
-              "removeItem" : {
-                "type" : "variable"
-              }
-            },
-            "reference" : "eebf5d43-b2d9-4448-8f11-564f5a8d1847",
-            "hasValidationError" : false,
-            "id" : "pbButton"
-          } ] ]
         } ] ]
       } ], [ {
         "type" : "component",
@@ -438,7 +304,7 @@
           },
           "label" : {
             "type" : "interpolation",
-            "value" : "Guardar"
+            "value" : "Guardar aquí"
           },
           "dataToSend" : {
             "type" : "expression",
@@ -610,6 +476,11 @@
     "carpetasDelDirectorioActual" : {
       "type" : "url",
       "value" : "../API/bpm/activityVariable/{{taskId}}/carpetasDelDirectorioActual",
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : "{\r\n  \"directorioActual_Input\" : \"\",\r\n  \"guardado_Input\" : false\r\n}",
       "exposed" : false
     }
   },
