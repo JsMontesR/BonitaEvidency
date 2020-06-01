@@ -13,10 +13,13 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_LplVQZkiEeq5hPv8qFMc8A" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_LplVQ5kiEeq5hPv8qFMc8A" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_t2OA4JkmEeq5hPv8qFMc8A" name="Ver documentos" outgoing="_O6QZ0Jk4Eeqe2ZT2jZ4NHg" incoming="_PWA6IJ8JEeqxgJ2UzkC1Ww" type="STANDARD" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_t2OA4JkmEeq5hPv8qFMc8A" name="Ver documentos" outgoing="_O6QZ0Jk4Eeqe2ZT2jZ4NHg" incoming="_PWA6IJ8JEeqxgJ2UzkC1Ww" type="STANDARD" testBefore="true" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_sjMSwpkmEeq5hPv8qFMc8A" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_sjMSwZkmEeq5hPv8qFMc8A" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_sjMSw5kmEeq5hPv8qFMc8A" name="" content="" returnTypeFixed="true"/>
+          <data xmi:type="process:Data" xmi:id="_JDYRIKNsEeq0QbgMzcPtTQ" name="dummy" dataType="_3O-SbJkhEeq5hPv8qFMc8A">
+            <defaultValue xmi:type="expression:Expression" xmi:id="_JDYRIaNsEeq0QbgMzcPtTQ" content="" returnType="java.lang.Boolean"/>
+          </data>
           <connectors xmi:type="process:Connector" xmi:id="_R0DWoJkmEeq5hPv8qFMc8A" name="listDocs" definitionId="cmis-listdocuments" event="ON_ENTER" throwErrorEvent="true" namedError="Error grave" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_R0DWoZkmEeq5hPv8qFMc8A" definitionId="cmis-listdocuments" version="1.0.0" modelVersion="7.9.0-002">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_R0DWopkmEeq5hPv8qFMc8A" key="username">
@@ -53,54 +56,57 @@
               </parameters>
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_PghZoJ8MEeqVjr8ADC156g">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_PghZoZ8MEeqVjr8ADC156g" name="carpetasDelDirectorioActual" content="carpetasDelDirectorioActual" type="TYPE_VARIABLE" returnType="java.util.List">
-                <referencedElements xmi:type="process:Data" xmi:id="_8NbdsJ8eEeqjDuZjFRODCw" name="carpetasDelDirectorioActual" multiple="true" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
+              <leftOperand xmi:type="expression:Expression" xmi:id="_PghZoZ8MEeqVjr8ADC156g" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_OwHucKRREeqOh_4tUW-xWg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
               </leftOperand>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_PghZo58MEeqVjr8ADC156g" name="folder_documents" content="import java.util.logging.Logger;&#xD;&#xA;import java.util.List;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;List&lt;String> lista = new ArrayList&lt;String>()&#xD;&#xA;String directorio;&#xD;&#xA;for (item in folder_documents) {&#xD;&#xA;&#x9;for (property in item.getProperties()) {&#xD;&#xA;&#x9;&#x9;if(property.getAt(&quot;id&quot;).equals(&quot;cmis:objectTypeId&quot;) &amp;&amp; property.getAt(&quot;value&quot;).equals(&quot;cmis:folder&quot;)){&#xD;&#xA;&#x9;&#x9;&#x9;for (property2 in item.getProperties()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if(property2.getAt(&quot;id&quot;).equals(&quot;cmis:name&quot;)){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;directorio = property2.getAt(&quot;values&quot;).toString().replace(&quot;]&quot;, &quot;&quot;).replace(&quot;[&quot;, &quot;&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;logger.info(directorio);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;lista.add(directorio);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return lista;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <rightOperand xmi:type="expression:Expression" xmi:id="_PghZo58MEeqVjr8ADC156g" name="exploradorDeRutas()" content="import java.util.logging.Logger;&#xD;&#xA;import java.util.List;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;List&lt;String> lista = new ArrayList&lt;String>()&#xD;&#xA;String directorio;&#xD;&#xA;for (item in folder_documents) {&#xD;&#xA;&#x9;for (property in item.getProperties()) {&#xD;&#xA;&#x9;&#x9;if(property.getAt(&quot;id&quot;).equals(&quot;cmis:objectTypeId&quot;) &amp;&amp; property.getAt(&quot;value&quot;).equals(&quot;cmis:folder&quot;)){&#xD;&#xA;&#x9;&#x9;&#x9;for (property2 in item.getProperties()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if(property2.getAt(&quot;id&quot;).equals(&quot;cmis:name&quot;)){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;directorio = property2.getAt(&quot;values&quot;).toString().replace(&quot;]&quot;, &quot;&quot;).replace(&quot;[&quot;, &quot;&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;logger.info(directorio);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;lista.add(directorio);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;def browsingScopeDAO = browsingScopeDAO.newInstance();&#xD;&#xA;browsingScopeDAO.setDirectorioActual(directorioActual);&#xD;&#xA;browsingScopeDAO.setDirectoriosDeLaCarpetaActual(lista);&#xD;&#xA;logger.info(browsingScopeDAO.toString());&#xD;&#xA;&#xD;&#xA;return browsingScopeDAO;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.BrowsingScope">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_OwIVgKRREeqOh_4tUW-xWg" name="browsingScopeDAO" content="browsingScopeDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.BrowsingScopeDAO" returnTypeFixed="true"/>
+                <referencedElements xmi:type="process:Data" xmi:id="_OwIVgaRREeqOh_4tUW-xWg" name="directorioActual" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
                 <referencedElements xmi:type="definition:Output" xmi:id="_8NbdsZ8eEeqjDuZjFRODCw" name="folder_documents" type="java.util.List"/>
               </rightOperand>
               <operator xmi:type="expression:Operator" xmi:id="_PghZpZ8MEeqVjr8ADC156g" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
-          <operations xmi:type="expression:Operation" xmi:id="_Ne_IQJ8jEeq0IslVhd1Y9Q">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Ne_IQZ8jEeq0IslVhd1Y9Q" name="guardado" content="guardado" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
-              <referencedElements xmi:type="process:Data" xmi:id="_R_WVEJ8jEeq0IslVhd1Y9Q" name="guardado" dataType="_3O-SbJkhEeq5hPv8qFMc8A"/>
+          <operations xmi:type="expression:Operation" xmi:id="_gSyQwqRNEeqOh_4tUW-xWg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_gSyQw6RNEeqOh_4tUW-xWg" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gSyQxKRNEeqOh_4tUW-xWg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Ne_IQp8jEeq0IslVhd1Y9Q" name="guardado_Input" content="guardado_Input" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_ObBSsJ8jEeq0IslVhd1Y9Q" name="guardado_Input" type="BOOLEAN">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_ObBSsZ8jEeq0IslVhd1Y9Q"/>
-              </referencedElements>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_gSyQxaRNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput.directorioActual" content="objetoDeNavegacionInput?.directorioActual" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_gSyQxqRNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Ne_IQ58jEeq0IslVhd1Y9Q" type="ASSIGNMENT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_gSyQx6RNEeqOh_4tUW-xWg" type="JAVA_METHOD" expression="setDirectorioActual">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_OqHeoJ8jEeq0IslVhd1Y9Q">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_OqHeoZ8jEeq0IslVhd1Y9Q" name="directorioActual" content="directorioActual" type="TYPE_VARIABLE">
-              <referencedElements xmi:type="process:Data" xmi:id="_PRzJsJ8jEeq0IslVhd1Y9Q" name="directorioActual" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
+          <operations xmi:type="expression:Operation" xmi:id="_gSyQyKRNEeqOh_4tUW-xWg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_gSyQyaRNEeqOh_4tUW-xWg" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gSyQyqRNEeqOh_4tUW-xWg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_OqHeop8jEeq0IslVhd1Y9Q" name="directorioActual_Input" content="directorioActual_Input" type="TYPE_CONTRACT_INPUT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_HeDyUKFtEeqs26PCr8HFxA" name="directorioActual_Input">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_HeDyUaFtEeqs26PCr8HFxA"/>
-              </referencedElements>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_gSyQy6RNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput.directoriosDeLaCarpetaActual" content="objetoDeNavegacionInput?.directoriosDeLaCarpetaActual" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_gSyQzKRNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_OqHeo58jEeq0IslVhd1Y9Q" type="ASSIGNMENT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_gSyQzaRNEeqOh_4tUW-xWg" type="JAVA_METHOD" expression="setDirectoriosDeLaCarpetaActual">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_sjMSxJkmEeq5hPv8qFMc8A" name="guardado" content="return !guardado;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-            <referencedElements xmi:type="process:Data" xmi:id="_1yoAoJ8iEeq0IslVhd1Y9Q" name="guardado" dataType="_3O-SbJkhEeq5hPv8qFMc8A"/>
+            <referencedElements xmi:type="process:Data" xmi:id="_PY0aEKQ5EeqOh_4tUW-xWg" name="guardado" dataType="_3O-SbJkhEeq5hPv8qFMc8A"/>
           </loopCondition>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_sjMSxZkmEeq5hPv8qFMc8A" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_sjMSxpkmEeq5hPv8qFMc8A" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_sjMSyJkmEeq5hPv8qFMc8A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_sjMSx5kmEeq5hPv8qFMc8A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_t2On-ZkmEeq5hPv8qFMc8A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_jl0jsKFsEeqs26PCr8HFxA" name="UbicarEvidencias" content="9ebe447d-e1a9-426f-9f91-687e8b9c325d" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_g7DKoKRNEeqOh_4tUW-xWg" name="SeleccionarDirectorio" content="27ec6873-48b1-4a6b-8570-b06fd689c077" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_t2On-JkmEeq5hPv8qFMc8A">
-            <inputs xmi:type="process:ContractInput" xmi:id="_D6GRoJ8jEeq0IslVhd1Y9Q" name="directorioActual_Input">
-              <mapping xmi:type="process:ContractInputMapping" xmi:id="_D6GRoZ8jEeq0IslVhd1Y9Q"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_gSxpsKRNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput" type="COMPLEX" dataReference="objetoDeNavegacion" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_gSxpsaRNEeqOh_4tUW-xWg" name="directorioActual" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_gSyQwKRNEeqOh_4tUW-xWg" name="directoriosDeLaCarpetaActual" multiple="true" createMode="false"/>
             </inputs>
-            <inputs xmi:type="process:ContractInput" xmi:id="_GCW-oJ8jEeq0IslVhd1Y9Q" name="guardado_Input" type="BOOLEAN">
-              <mapping xmi:type="process:ContractInputMapping" xmi:id="_GCW-oZ8jEeq0IslVhd1Y9Q"/>
-            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_gSyQwaRNEeqOh_4tUW-xWg" expression="objetoDeNavegacionInput?.directorioActual != null" errorMessage="directorioActual is mandatory for BrowsingScope" name="mandatory_objetoDeNavegacionInput_directorioActual">
+              <inputNames>objetoDeNavegacionInput</inputNames>
+            </constraints>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_t2On-5kmEeq5hPv8qFMc8A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
@@ -114,8 +120,11 @@
       <data xmi:type="process:Data" xmi:id="_wWV-IJ8iEeq0IslVhd1Y9Q" name="guardado" dataType="_3O-SbJkhEeq5hPv8qFMc8A">
         <defaultValue xmi:type="expression:Expression" xmi:id="_wWV-IZ8iEeq0IslVhd1Y9Q" name="false" content="false" returnType="java.lang.Boolean"/>
       </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_prACgKQ7EeqOh_4tUW-xWg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_prACgaQ7EeqOh_4tUW-xWg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_3O-SVJkhEeq5hPv8qFMc8A">
-        <targetForm xmi:type="expression:Expression" xmi:id="__mNsUKFsEeqs26PCr8HFxA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_onZvIKRJEeqOh_4tUW-xWg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_3O-SVpkhEeq5hPv8qFMc8A">
         <targetForm xmi:type="expression:Expression" xmi:id="_3O-SV5khEeq5hPv8qFMc8A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

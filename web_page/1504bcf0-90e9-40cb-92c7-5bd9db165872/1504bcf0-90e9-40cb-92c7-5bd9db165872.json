@@ -1,0 +1,226 @@
+{
+  "designerVersion" : "1.9.24",
+  "previousDesignerVersion" : "1.5.7",
+  "id" : "1504bcf0-90e9-40cb-92c7-5bd9db165872",
+  "name" : "autoRedirectNextTaskStep2",
+  "lastUpdate" : 1590954273866,
+  "rows" : [ [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "text" : {
+        "type" : "interpolation",
+        "value" : "This task includes automatic redirect to next task. As no more task are available it will redirect user to Portal home page"
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "left"
+      },
+      "allowHTML" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "label" : {
+        "type" : "interpolation",
+        "value" : ""
+      },
+      "labelPosition" : {
+        "type" : "constant",
+        "value" : "top"
+      },
+      "labelWidth" : {
+        "type" : "constant",
+        "value" : 4
+      }
+    },
+    "reference" : "fd78a146-fde4-436e-b7ec-03bda82a0283",
+    "hasValidationError" : false,
+    "id" : "pbText"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "widgetId" : {
+        "type" : "constant",
+        "value" : "pbButton"
+      },
+      "buttonStyle" : {
+        "type" : "constant",
+        "value" : "primary"
+      },
+      "isDisplayed" : {
+        "type" : "constant",
+        "value" : true
+      },
+      "label" : {
+        "type" : "constant",
+        "value" : "Submit"
+      },
+      "dataToSend" : {
+        "type" : "variable",
+        "value" : "formOutput"
+      },
+      "labelHidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "readonly" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "collectionPosition" : {
+        "type" : "constant"
+      },
+      "targetUrlOnSuccess" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "action" : {
+        "type" : "constant",
+        "value" : "Submit task"
+      },
+      "collectionToModify" : {
+        "type" : "variable"
+      },
+      "disabled" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "alignment" : {
+        "type" : "constant",
+        "value" : "center"
+      },
+      "class" : {
+        "type" : "constant",
+        "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+      },
+      "dimension" : {
+        "type" : "constant",
+        "value" : 12
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "url" : {
+        "type" : "interpolation"
+      },
+      "dataFromSuccess" : {
+        "type" : "variable",
+        "value" : "answer"
+      },
+      "dataFromError" : {
+        "type" : "variable"
+      },
+      "valueToAdd" : {
+        "type" : "constant"
+      },
+      "removeItem" : {
+        "type" : "variable"
+      }
+    },
+    "reference" : "0e208190-c253-4f94-8c0d-e29915316713",
+    "hasValidationError" : false,
+    "id" : "pbButton"
+  } ], [ {
+    "type" : "component",
+    "dimension" : {
+      "xs" : 12
+    },
+    "propertyValues" : {
+      "cssClasses" : {
+        "type" : "constant",
+        "value" : ""
+      },
+      "hidden" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "timeToWait" : {
+        "type" : "constant",
+        "value" : 500
+      },
+      "submitButtonSuccessfulResponseValue" : {
+        "type" : "expression",
+        "value" : "answer"
+      },
+      "numberOfRetries" : {
+        "type" : "constant",
+        "value" : 8
+      },
+      "bonitaWebAppName" : {
+        "type" : "constant",
+        "value" : "bonita"
+      },
+      "taskId" : {
+        "type" : "expression",
+        "value" : "taskId"
+      },
+      "messageDisplayed" : {
+        "type" : "constant",
+        "value" : "Searching for current user next task in current case"
+      }
+    },
+    "reference" : "51dce394-51bb-4924-a1ca-c064889550aa",
+    "hasValidationError" : false,
+    "id" : "customRedirectNextTask"
+  } ] ],
+  "assets" : [ {
+    "id" : "c77729fe-1b52-4ee8-adde-d47c87ef348a",
+    "name" : "style.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  } ],
+  "inactiveAssets" : [ ],
+  "data" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : "{ }",
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : "return {\n\n};",
+      "exposed" : false
+    },
+    "context" : {
+      "type" : "url",
+      "value" : "/bonita/API/bpm/userTask/{{taskId}}/context",
+      "exposed" : false
+    },
+    "taskId" : {
+      "type" : "urlparameter",
+      "value" : "id",
+      "exposed" : false
+    },
+    "answer" : {
+      "type" : "constant",
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "1504bcf0-90e9-40cb-92c7-5bd9db165872",
+  "type" : "form",
+  "description" : "Page generated with Bonita UI designer"
+}

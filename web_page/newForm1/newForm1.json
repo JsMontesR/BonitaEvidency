@@ -1,28 +1,15 @@
 {
   "designerVersion" : "1.9.53",
-  "id" : "UbicarEvidencias",
-  "name" : "UbicarEvidencias",
-  "lastUpdate" : 1591035175271,
+  "id" : "newForm1",
+  "name" : "newForm1",
+  "lastUpdate" : 1591038042203,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
       "xs" : 12
     },
-    "propertyValues" : {
-      "cssClasses" : {
-        "type" : "constant",
-        "value" : ""
-      },
-      "hidden" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "repeatedCollection" : {
-        "type" : "variable",
-        "value" : ""
-      }
-    },
-    "reference" : "6f66b6ae-0184-4239-bf1b-4bae82128a8c",
+    "propertyValues" : { },
+    "reference" : "e1be7670-9e7e-474e-809c-3339edd3f47d",
     "hasValidationError" : false,
     "id" : "pbContainer",
     "rows" : [ [ {
@@ -75,7 +62,7 @@
           "value" : 12
         }
       },
-      "reference" : "6cb4f5f3-5533-448a-b4cc-969eecf153b1",
+      "reference" : "2c6d394e-1fb0-4be1-b857-0b0c5a18395f",
       "hasValidationError" : false,
       "id" : "pbTitle"
     } ], [ {
@@ -122,21 +109,9 @@
         "dimension" : {
           "type" : "constant",
           "value" : 12
-        },
-        "labelPosition" : {
-          "type" : "constant",
-          "value" : "top"
-        },
-        "labelWidth" : {
-          "type" : "constant",
-          "value" : 4
-        },
-        "allowHTML" : {
-          "type" : "constant",
-          "value" : true
         }
       },
-      "reference" : "99bcf894-de71-4478-9a9a-d68adebbce25",
+      "reference" : "0269252a-b87c-475e-aa25-48c6ab3d1773",
       "hasValidationError" : false,
       "id" : "pbText"
     } ] ]
@@ -145,17 +120,8 @@
     "dimension" : {
       "xs" : 12
     },
-    "propertyValues" : {
-      "cssClasses" : {
-        "type" : "constant",
-        "value" : ""
-      },
-      "hidden" : {
-        "type" : "constant",
-        "value" : false
-      }
-    },
-    "reference" : "70aa5c50-42f5-45d0-bca6-8c8a553fa317",
+    "propertyValues" : { },
+    "reference" : "947910e2-d943-442c-b81b-e452fb273365",
     "hasValidationError" : false,
     "id" : "pbFormContainer",
     "container" : {
@@ -164,10 +130,79 @@
         "xs" : 12
       },
       "propertyValues" : { },
-      "reference" : "6c66b7ce-5577-44b9-855c-761a3222cf6d",
+      "reference" : "379f4757-34b1-495c-af19-fb205510cde8",
       "hasValidationError" : false,
       "id" : "pbContainer",
       "rows" : [ [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbInput"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Directorio Actual"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "placeholder" : {
+            "type" : "constant"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.InputWidget"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "formInput.directorioActual"
+          }
+        },
+        "reference" : "6585c070-87c8-41bd-bb3c-7af81c1d3f8f",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      } ], [ {
         "type" : "component",
         "dimension" : {
           "xs" : 12
@@ -181,28 +216,21 @@
             "type" : "constant",
             "value" : false
           },
-          "level" : {
-            "type" : "constant",
-            "value" : "Level 4"
-          },
           "cssClasses" : {
             "type" : "constant",
             "value" : ""
           },
           "widgetId" : {
             "type" : "constant",
-            "value" : "pbTitle"
+            "value" : "pbCheckbox"
           },
-          "readOnly" : {
+          "disabled" : {
             "type" : "constant",
             "value" : false
           },
           "label" : {
-            "type" : "interpolation"
-          },
-          "text" : {
             "type" : "interpolation",
-            "value" : "Usted esta en {{directorioActual.value}}"
+            "value" : "Is Guardado"
           },
           "alignment" : {
             "type" : "constant",
@@ -210,92 +238,20 @@
           },
           "class" : {
             "type" : "constant",
-            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TitleWidget"
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.CheckboxWidget"
           },
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "formInput.isGuardado"
           }
         },
-        "reference" : "23a3043c-4e70-4689-a25b-b671b0aaefdd",
+        "reference" : "7504d169-2ce2-4be3-8f0a-18089a7641a0",
         "hasValidationError" : false,
-        "id" : "pbTitle"
-      } ], [ {
-        "type" : "component",
-        "dimension" : {
-          "xs" : 12
-        },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "directorioActual" : {
-            "type" : "variable",
-            "value" : "directorioActual"
-          },
-          "listaDirectorios" : {
-            "type" : "variable",
-            "value" : "carpetasDelDirectorioActual"
-          }
-        },
-        "reference" : "4d4334a4-b00d-4f89-a368-1a6f285abb3f",
-        "hasValidationError" : false,
-        "id" : "customNavegador"
-      } ], [ {
-        "type" : "component",
-        "dimension" : {
-          "xs" : 12
-        },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "timeToWait" : {
-            "type" : "constant",
-            "value" : 500
-          },
-          "submitButtonSuccessfulResponseValue" : {
-            "type" : "expression",
-            "value" : "formOutput"
-          },
-          "numberOfRetries" : {
-            "type" : "constant",
-            "value" : 8
-          },
-          "bonitaWebAppName" : {
-            "type" : "constant",
-            "value" : "bonita"
-          },
-          "taskId" : {
-            "type" : "expression",
-            "value" : "taskId"
-          },
-          "messageDisplayed" : {
-            "type" : "constant",
-            "value" : "Searching for current user next task in current case"
-          },
-          "directorioActual" : {
-            "type" : "variable",
-            "value" : "directorioActual"
-          },
-          "listaDirectorios" : {
-            "type" : "variable",
-            "value" : "carpetasDelDirectorioActual"
-          }
-        },
-        "reference" : "c9744a21-e8cc-4f84-8a11-4c9372474706",
-        "hasValidationError" : false,
-        "id" : "customRedirectNextTask"
+        "id" : "pbCheckbox"
       } ], [ {
         "type" : "component",
         "dimension" : {
@@ -327,7 +283,7 @@
           },
           "label" : {
             "type" : "interpolation",
-            "value" : "Guardar aquí"
+            "value" : "Submit"
           },
           "dataToSend" : {
             "type" : "expression",
@@ -373,32 +329,9 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
-          },
-          "assign" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "url" : {
-            "type" : "interpolation"
-          },
-          "responseStatusCode" : {
-            "type" : "variable",
-            "value" : ""
-          },
-          "dataFromSuccess" : {
-            "type" : "variable",
-            "value" : ""
-          },
-          "closeOnSuccess" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "modalId" : {
-            "type" : "constant",
-            "value" : ""
           }
         },
-        "reference" : "38e84cad-3dcb-4982-8614-8335405fecaa",
+        "reference" : "44a9974a-3ce4-4a4b-b71a-75cba4f84a85",
         "hasValidationError" : false,
         "id" : "pbButton"
       } ], [ {
@@ -449,24 +382,16 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
-          },
-          "labelPosition" : {
-            "type" : "constant",
-            "value" : "top"
-          },
-          "labelWidth" : {
-            "type" : "constant",
-            "value" : 4
           }
         },
-        "reference" : "8c9405dc-ecc2-4942-bf3e-27ab9832df0c",
+        "reference" : "f8d2225d-05bd-4b60-a6f4-2d7e19d6953d",
         "hasValidationError" : false,
         "id" : "pbText"
       } ] ]
     }
   } ] ],
   "assets" : [ {
-    "id" : "ea602539-332f-469e-b98b-2b2e51aef65d",
+    "id" : "81e8496a-3a20-40ba-a2c4-4b11f202e3d8",
     "name" : "style.css",
     "type" : "css",
     "order" : 0,
@@ -479,6 +404,11 @@
       "value" : "../API/bpm/userTask/{{taskId}}",
       "exposed" : false
     },
+    "formInput" : {
+      "type" : "json",
+      "value" : "{\r\n  \"directorioActual\" : \"\",\r\n  \"isGuardado\" : false\r\n}",
+      "exposed" : false
+    },
     "submit_errors_list" : {
       "type" : "expression",
       "value" : "if($data.formOutput && $data.formOutput._submitError && $data.formOutput._submitError.explanations){\n\tconst liElements = $data.formOutput._submitError.explanations\n\t\t.filter(cause => cause !== null)\n\t\t.map(cause => \"<li>\" + cause + \"</li>\")\n\t\t.join('');\n\tif(liElements){\n\t\treturn \"<ul>\" + liElements + \"</ul>\";\n\t}\n}",
@@ -486,7 +416,7 @@
     },
     "formOutput" : {
       "type" : "expression",
-      "value" : "return {\n\tdirectorioActual: $data.directorioActual,\n\tisGuardado: $data.formInput.guardado_Input\n}",
+      "value" : "return {\n\tdirectorioActual: $data.formInput.directorioActual,\n\tisGuardado: $data.formInput.isGuardado\n}",
       "exposed" : false
     },
     "context" : {
@@ -498,25 +428,10 @@
       "type" : "urlparameter",
       "value" : "id",
       "exposed" : false
-    },
-    "directorioActual" : {
-      "type" : "url",
-      "value" : "../API/bpm/activityVariable/{{taskId}}/directorioActual",
-      "exposed" : false
-    },
-    "carpetasDelDirectorioActual" : {
-      "type" : "url",
-      "value" : "../API/bpm/activityVariable/{{taskId}}/carpetasDelDirectorioActual",
-      "exposed" : false
-    },
-    "formInput" : {
-      "type" : "json",
-      "value" : "{\r\n  \"directorioActual\" : \"\",\r\n  \"isGuardado\" : false\r\n}",
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "9ebe447d-e1a9-426f-9f91-687e8b9c325d",
+  "uuid" : "77b28db1-a96a-4148-8727-2881055a5251",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
