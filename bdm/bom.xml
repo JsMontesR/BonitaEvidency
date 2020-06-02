@@ -3,8 +3,11 @@
     <businessObjects>
         <businessObject qualifiedName="com.company.model.BrowsingScope">
             <fields>
-                <field type="STRING" length="255" name="directorioActual" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="directoriosDeLaCarpetaActual" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="directorioActual" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="carpetasDelDirectorioActual" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="directorioAnterior" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="guardar" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="carpetaSeleccionada" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

@@ -57,36 +57,80 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_PghZoJ8MEeqVjr8ADC156g">
               <leftOperand xmi:type="expression:Expression" xmi:id="_PghZoZ8MEeqVjr8ADC156g" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
-                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_OwHucKRREeqOh_4tUW-xWg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
+                <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_VoqPkKR9EeqkS7tZTdRdQg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
               </leftOperand>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_PghZo58MEeqVjr8ADC156g" name="exploradorDeRutas()" content="import java.util.logging.Logger;&#xD;&#xA;import com.company.model.BrowsingScope;&#xD;&#xA;import java.util.List;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;List&lt;String> lista = new ArrayList&lt;String>()&#xD;&#xA;String directorio;&#xD;&#xA;for (item in folder_documents) {&#xD;&#xA;&#x9;for (property in item.getProperties()) {&#xD;&#xA;&#x9;&#x9;if(property.getAt(&quot;id&quot;).equals(&quot;cmis:objectTypeId&quot;) &amp;&amp; property.getAt(&quot;value&quot;).equals(&quot;cmis:folder&quot;)){&#xD;&#xA;&#x9;&#x9;&#x9;for (property2 in item.getProperties()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if(property2.getAt(&quot;id&quot;).equals(&quot;cmis:name&quot;)){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;directorio = property2.getAt(&quot;values&quot;).toString().replace(&quot;]&quot;, &quot;&quot;).replace(&quot;[&quot;, &quot;&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;logger.info(directorio);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;lista.add(directorio);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;BrowsingScope bs = new com.company.model.BrowsingScope();&#xD;&#xA;logger.info(&quot;Zona 1&quot;);&#xD;&#xA;bs.setDirectorioActual(directorioActual);&#xD;&#xA;logger.info(&quot;Zona 2&quot;);&#xD;&#xA;bs.setDirectoriosDeLaCarpetaActual(lista);&#xD;&#xA;logger.info(&quot;Zona 4&quot;);&#xD;&#xA;logger.info(bs.toString());&#xD;&#xA;logger.info(&quot;Zona 5&quot;);&#xD;&#xA;&#xD;&#xA;return bs;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.BrowsingScope">
-                <referencedElements xmi:type="process:Data" xmi:id="_usAKUKRTEeqOh_4tUW-xWg" name="directorioActual" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
-                <referencedElements xmi:type="definition:Output" xmi:id="_ZNMU0aRSEeqOh_4tUW-xWg" name="folder_documents" type="java.util.List"/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_PghZo58MEeqVjr8ADC156g" name="exploradorDeRutas()" content="import java.util.logging.Logger;&#xD;&#xA;import com.company.model.BrowsingScope;&#xD;&#xA;import java.util.List;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;List&lt;String> lista = new ArrayList&lt;String>()&#xD;&#xA;String directorio;&#xD;&#xA;for (item in folder_documents) {&#xD;&#xA;&#x9;for (property in item.getProperties()) {&#xD;&#xA;&#x9;&#x9;if(property.getAt(&quot;id&quot;).equals(&quot;cmis:objectTypeId&quot;) &amp;&amp; property.getAt(&quot;value&quot;).equals(&quot;cmis:folder&quot;)){&#xD;&#xA;&#x9;&#x9;&#x9;for (property2 in item.getProperties()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if(property2.getAt(&quot;id&quot;).equals(&quot;cmis:name&quot;)){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;directorio = property2.getAt(&quot;values&quot;).toString().replace(&quot;]&quot;, &quot;&quot;).replace(&quot;[&quot;, &quot;&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;logger.info(directorio);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;lista.add(directorio);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;BrowsingScope bs = new BrowsingScope();&#xD;&#xA;bs.setDirectorioActual(directorioActual);&#xD;&#xA;bs.setDirectorioAnterior(directorioAnterior);&#xD;&#xA;bs.setCarpetasDelDirectorioActual(lista);&#xD;&#xA;logger.info(bs.toString());&#xD;&#xA;logger.info(&quot;Done done&quot;);&#xD;&#xA;&#xD;&#xA;return bs;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.BrowsingScope">
+                <referencedElements xmi:type="process:Data" xmi:id="_t9bv8KRaEeqOh_4tUW-xWg" name="directorioAnterior" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
+                <referencedElements xmi:type="process:Data" xmi:id="_t9bv8aRaEeqOh_4tUW-xWg" name="directorioActual" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
+                <referencedElements xmi:type="definition:Output" xmi:id="_t9bv8qRaEeqOh_4tUW-xWg" name="folder_documents" type="java.util.List"/>
               </rightOperand>
               <operator xmi:type="expression:Operator" xmi:id="_PghZpZ8MEeqVjr8ADC156g" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
-          <operations xmi:type="expression:Operation" xmi:id="_gSyQwqRNEeqOh_4tUW-xWg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_gSyQw6RNEeqOh_4tUW-xWg" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gSyQxKRNEeqOh_4tUW-xWg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
+          <operations xmi:type="expression:Operation" xmi:id="_fYczlaUKEeq4Pdu70ARKuQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_fYczlqUKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fYczl6UKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_gSyQxaRNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput.directorioActual" content="objetoDeNavegacionInput?.directorioActual" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_gSyQxqRNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_fYczmKUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput.directorioActual" content="objetoDeNavegacionInput?.directorioActual" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_fYczmaUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_gSyQx6RNEeqOh_4tUW-xWg" type="JAVA_METHOD" expression="setDirectorioActual">
+            <operator xmi:type="expression:Operator" xmi:id="_fYczmqUKEeq4Pdu70ARKuQ" type="JAVA_METHOD" expression="setDirectorioActual">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_gSyQyKRNEeqOh_4tUW-xWg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_gSyQyaRNEeqOh_4tUW-xWg" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gSyQyqRNEeqOh_4tUW-xWg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
+          <operations xmi:type="expression:Operation" xmi:id="_fYczm6UKEeq4Pdu70ARKuQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_fYcznKUKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fYcznaUKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_gSyQy6RNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput.directoriosDeLaCarpetaActual" content="objetoDeNavegacionInput?.directoriosDeLaCarpetaActual" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_gSyQzKRNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_fYcznqUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput.carpetasDelDirectorioActual" content="objetoDeNavegacionInput?.carpetasDelDirectorioActual" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_fYczn6UKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_gSyQzaRNEeqOh_4tUW-xWg" type="JAVA_METHOD" expression="setDirectoriosDeLaCarpetaActual">
+            <operator xmi:type="expression:Operator" xmi:id="_fYczoKUKEeq4Pdu70ARKuQ" type="JAVA_METHOD" expression="setCarpetasDelDirectorioActual">
               <inputTypes>java.util.List</inputTypes>
             </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_fYczoaUKEeq4Pdu70ARKuQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_fYczoqUKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fYczo6UKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_fYczpKUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput.directorioAnterior" content="objetoDeNavegacionInput?.directorioAnterior" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_fYczpaUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_fYczpqUKEeq4Pdu70ARKuQ" type="JAVA_METHOD" expression="setDirectorioAnterior">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_fYczp6UKEeq4Pdu70ARKuQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_fYczqKUKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fYczqaUKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_fYczqqUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput.guardar" content="objetoDeNavegacionInput?.guardar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_fYczq6UKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_fYczrKUKEeq4Pdu70ARKuQ" type="JAVA_METHOD" expression="setGuardar">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_fYczraUKEeq4Pdu70ARKuQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_fYczrqUKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" content="objetoDeNavegacion" type="TYPE_VARIABLE" returnType="com.company.model.BrowsingScope">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_fYczr6UKEeq4Pdu70ARKuQ" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_fYczsKUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput.carpetaSeleccionada" content="objetoDeNavegacionInput?.carpetaSeleccionada" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_fYczsaUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_fYczsqUKEeq4Pdu70ARKuQ" type="JAVA_METHOD" expression="setCarpetaSeleccionada">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_6LjpsKUKEeq4Pdu70ARKuQ">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_6LjpsaUKEeq4Pdu70ARKuQ" name="directorioActual" content="directorioActual" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_6voAEKUKEeq4Pdu70ARKuQ" name="directorioActual" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_6LjpsqUKEeq4Pdu70ARKuQ" name="newScript()" content="directorioActual + &quot;/&quot; + objetoDeNavegacionInput?.carpetaSeleccionada" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:Data" xmi:id="_I-J7UKULEeq4Pdu70ARKuQ" name="directorioActual" dataType="_3O-ScZkhEeq5hPv8qFMc8A"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="__nixQKUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_6Ljps6UKEeq4Pdu70ARKuQ" type="ASSIGNMENT"/>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_sjMSxJkmEeq5hPv8qFMc8A" name="guardado" content="return !guardado;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
             <referencedElements xmi:type="process:Data" xmi:id="_PY0aEKQ5EeqOh_4tUW-xWg" name="guardado" dataType="_3O-SbJkhEeq5hPv8qFMc8A"/>
@@ -96,16 +140,16 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_sjMSyJkmEeq5hPv8qFMc8A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_sjMSx5kmEeq5hPv8qFMc8A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_t2On-ZkmEeq5hPv8qFMc8A">
-            <targetForm xmi:type="expression:Expression" xmi:id="_g7DKoKRNEeqOh_4tUW-xWg" name="SeleccionarDirectorio" content="27ec6873-48b1-4a6b-8570-b06fd689c077" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_gip84KUKEeq4Pdu70ARKuQ" name="newForm" content="19df0962-61cd-4931-b1a6-528a9bf915a4" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_t2On-JkmEeq5hPv8qFMc8A">
-            <inputs xmi:type="process:ContractInput" xmi:id="_gSxpsKRNEeqOh_4tUW-xWg" name="objetoDeNavegacionInput" type="COMPLEX" dataReference="objetoDeNavegacion" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_gSxpsaRNEeqOh_4tUW-xWg" name="directorioActual" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_gSyQwKRNEeqOh_4tUW-xWg" name="directoriosDeLaCarpetaActual" multiple="true" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_fYcMgKUKEeq4Pdu70ARKuQ" name="objetoDeNavegacionInput" type="COMPLEX" dataReference="objetoDeNavegacion" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_fYczkKUKEeq4Pdu70ARKuQ" name="directorioActual" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_fYczkaUKEeq4Pdu70ARKuQ" name="carpetasDelDirectorioActual" multiple="true" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_fYczkqUKEeq4Pdu70ARKuQ" name="directorioAnterior" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_fYczk6UKEeq4Pdu70ARKuQ" name="guardar" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_fYczlKUKEeq4Pdu70ARKuQ" name="carpetaSeleccionada" createMode="false"/>
             </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_gSyQwaRNEeqOh_4tUW-xWg" expression="objetoDeNavegacionInput?.directorioActual != null" errorMessage="directorioActual is mandatory for BrowsingScope" name="mandatory_objetoDeNavegacionInput_directorioActual">
-              <inputNames>objetoDeNavegacionInput</inputNames>
-            </constraints>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_t2On-5kmEeq5hPv8qFMc8A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
@@ -119,11 +163,14 @@
       <data xmi:type="process:Data" xmi:id="_wWV-IJ8iEeq0IslVhd1Y9Q" name="guardado" dataType="_3O-SbJkhEeq5hPv8qFMc8A">
         <defaultValue xmi:type="expression:Expression" xmi:id="_wWV-IZ8iEeq0IslVhd1Y9Q" name="false" content="false" returnType="java.lang.Boolean"/>
       </data>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_prACgKQ7EeqOh_4tUW-xWg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_prACgaQ7EeqOh_4tUW-xWg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      <data xmi:type="process:Data" xmi:id="_CXJF8KRZEeqOh_4tUW-xWg" name="directorioAnterior" dataType="_3O-ScZkhEeq5hPv8qFMc8A">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_CXJF8aRZEeqOh_4tUW-xWg" name="setNullDir()" content="return null;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_SH0mEKR9EeqkS7tZTdRdQg" name="objetoDeNavegacion" dataType="_3O-SdJkhEeq5hPv8qFMc8A" className="com.company.model.BrowsingScope">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_SH0mEaR9EeqkS7tZTdRdQg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_3O-SVJkhEeq5hPv8qFMc8A">
-        <targetForm xmi:type="expression:Expression" xmi:id="_Z1o04KRSEeqOh_4tUW-xWg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_qvbIUKUJEeq4Pdu70ARKuQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_3O-SVpkhEeq5hPv8qFMc8A">
         <targetForm xmi:type="expression:Expression" xmi:id="_3O-SV5khEeq5hPv8qFMc8A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
