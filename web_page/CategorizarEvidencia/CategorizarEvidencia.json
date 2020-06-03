@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "CategorizarEvidencia",
   "name" : "CategorizarEvidencia",
-  "lastUpdate" : 1591129450715,
+  "lastUpdate" : 1591161468325,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -461,7 +461,7 @@
         } ], [ {
           "type" : "component",
           "dimension" : {
-            "xs" : 12
+            "xs" : 6
           },
           "propertyValues" : {
             "labelHidden" : {
@@ -512,6 +512,48 @@
           "reference" : "5ba15eae-24f1-47a8-8fe4-465745625410",
           "hasValidationError" : false,
           "id" : "pbCheckbox"
+        }, {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 6
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "timeToWait" : {
+              "type" : "constant",
+              "value" : 500
+            },
+            "submitButtonSuccessfulResponseValue" : {
+              "type" : "expression",
+              "value" : "formOutput"
+            },
+            "numberOfRetries" : {
+              "type" : "constant",
+              "value" : 8
+            },
+            "bonitaWebAppName" : {
+              "type" : "constant",
+              "value" : "bonita"
+            },
+            "taskId" : {
+              "type" : "constant",
+              "value" : "taskId"
+            },
+            "messageDisplayed" : {
+              "type" : "constant",
+              "value" : "Searching for current user next task in current case"
+            }
+          },
+          "reference" : "93ddb628-f9e4-4067-8aca-f10037143cc6",
+          "hasValidationError" : false,
+          "id" : "customRedirectNextTask"
         } ] ]
       } ], [ {
         "type" : "component",
