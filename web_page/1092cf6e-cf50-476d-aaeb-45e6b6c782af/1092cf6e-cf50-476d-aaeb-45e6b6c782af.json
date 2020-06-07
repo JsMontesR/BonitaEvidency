@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.5.7",
   "id" : "1092cf6e-cf50-476d-aaeb-45e6b6c782af",
   "name" : "autoRedirectNextTaskStep1",
-  "lastUpdate" : 1590954273806,
+  "lastUpdate" : 1591197110333,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {
@@ -77,7 +77,7 @@
         "value" : "Submit"
       },
       "dataToSend" : {
-        "type" : "variable",
+        "type" : "expression",
         "value" : "formOutput"
       },
       "labelHidden" : {
@@ -130,13 +130,30 @@
         "value" : "answer"
       },
       "dataFromError" : {
-        "type" : "variable"
+        "type" : "variable",
+        "value" : ""
       },
       "valueToAdd" : {
         "type" : "constant"
       },
       "removeItem" : {
         "type" : "variable"
+      },
+      "assign" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "responseStatusCode" : {
+        "type" : "variable",
+        "value" : ""
+      },
+      "closeOnSuccess" : {
+        "type" : "constant",
+        "value" : false
+      },
+      "modalId" : {
+        "type" : "constant",
+        "value" : ""
       }
     },
     "reference" : "9b6f4db5-fff3-4b1a-84ad-a139a63aa3bc",

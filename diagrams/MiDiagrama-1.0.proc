@@ -181,9 +181,9 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_SH0mEaR9EeqkS7tZTdRdQg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_3O-SVJkhEeq5hPv8qFMc8A">
-        <targetForm xmi:type="expression:Expression" xmi:id="_70PXwKVXEeqjwJeca_gVxg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_28VssKWvEeqK3ZeScmH_IA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
-      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_3O-SVpkhEeq5hPv8qFMc8A">
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_3O-SVpkhEeq5hPv8qFMc8A" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_3O-SV5khEeq5hPv8qFMc8A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </overviewFormMapping>
       <connections xmi:type="process:SequenceFlow" xmi:id="_O6QZ0Jk4Eeqe2ZT2jZ4NHg" target="_LplVQJkiEeq5hPv8qFMc8A" source="_t2OA4JkmEeq5hPv8qFMc8A">

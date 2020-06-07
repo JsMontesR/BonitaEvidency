@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.5.7",
   "id" : "251e200f-ff7f-4fae-bc77-3572665d88c0",
   "name" : "autoRedirectNextTaskInit",
-  "lastUpdate" : 1590954273922,
+  "lastUpdate" : 1591164437048,
   "rows" : [ [ {
     "type" : "component",
     "dimension" : {

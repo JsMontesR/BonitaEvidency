@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>obtenerArbolDirectorios-impl</implementationId>
+  <implementationVersion>1.0.0</implementationVersion>
+  <definitionId>obtenerArbolDirectorios</definitionId>
+  <definitionVersion>1.0.0</definitionVersion>
+  <implementationClassname>org.uniquindio.connector.ObtenerArbolDirectoriosImpl</implementationClassname>
+  <description></description>
+  <jarDependencies>
+    <jarDependency>bonita-connector-cmis-3.0.3.jar</jarDependency>
+    <jarDependency>chemistry-opencmis-client-api-1.1.0.jar</jarDependency>
+    <jarDependency>chemistry-opencmis-client-bindings-1.1.0.jar</jarDependency>
+    <jarDependency>chemistry-opencmis-client-impl-1.1.0.jar</jarDependency>
+    <jarDependency>chemistry-opencmis-commons-api-1.1.0.jar</jarDependency>
+    <jarDependency>chemistry-opencmis-commons-impl-1.1.0.jar</jarDependency>
+    <jarDependency>json-simple-1.1.1.jar</jarDependency>
+  </jarDependencies>
+</implementation:connectorImplementation>

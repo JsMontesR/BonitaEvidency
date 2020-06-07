@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "CategorizarEvidencia",
   "name" : "CategorizarEvidencia",
-  "lastUpdate" : 1591161468325,
+  "lastUpdate" : 1591198862810,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -512,48 +512,6 @@
           "reference" : "5ba15eae-24f1-47a8-8fe4-465745625410",
           "hasValidationError" : false,
           "id" : "pbCheckbox"
-        }, {
-          "type" : "component",
-          "dimension" : {
-            "xs" : 6
-          },
-          "propertyValues" : {
-            "cssClasses" : {
-              "type" : "constant",
-              "value" : ""
-            },
-            "hidden" : {
-              "type" : "constant",
-              "value" : false
-            },
-            "timeToWait" : {
-              "type" : "constant",
-              "value" : 500
-            },
-            "submitButtonSuccessfulResponseValue" : {
-              "type" : "expression",
-              "value" : "formOutput"
-            },
-            "numberOfRetries" : {
-              "type" : "constant",
-              "value" : 8
-            },
-            "bonitaWebAppName" : {
-              "type" : "constant",
-              "value" : "bonita"
-            },
-            "taskId" : {
-              "type" : "constant",
-              "value" : "taskId"
-            },
-            "messageDisplayed" : {
-              "type" : "constant",
-              "value" : "Searching for current user next task in current case"
-            }
-          },
-          "reference" : "93ddb628-f9e4-4067-8aca-f10037143cc6",
-          "hasValidationError" : false,
-          "id" : "customRedirectNextTask"
         } ] ]
       } ], [ {
         "type" : "component",
@@ -594,7 +552,7 @@
           },
           "dataFromError" : {
             "type" : "variable",
-            "value" : "formOutput._submitError"
+            "value" : ""
           },
           "labelHidden" : {
             "type" : "constant",
@@ -605,7 +563,7 @@
           },
           "targetUrlOnSuccess" : {
             "type" : "interpolation",
-            "value" : "/bonita"
+            "value" : ""
           },
           "action" : {
             "type" : "constant",
@@ -618,8 +576,8 @@
             "type" : "expression"
           },
           "disabled" : {
-            "type" : "expression",
-            "value" : "$form.$invalid"
+            "type" : "constant",
+            "value" : false
           },
           "alignment" : {
             "type" : "constant",
@@ -646,7 +604,7 @@
           },
           "dataFromSuccess" : {
             "type" : "variable",
-            "value" : ""
+            "value" : "redirectionFlag"
           },
           "closeOnSuccess" : {
             "type" : "constant",
@@ -660,6 +618,48 @@
         "reference" : "3713bc43-52d0-4610-aef0-fdddaecc383d",
         "hasValidationError" : false,
         "id" : "pbButton"
+      } ], [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "timeToWait" : {
+            "type" : "constant",
+            "value" : 500
+          },
+          "submitButtonSuccessfulResponseValue" : {
+            "type" : "expression",
+            "value" : "redirectionFlag"
+          },
+          "numberOfRetries" : {
+            "type" : "constant",
+            "value" : 8
+          },
+          "bonitaWebAppName" : {
+            "type" : "constant",
+            "value" : "bonita"
+          },
+          "taskId" : {
+            "type" : "expression",
+            "value" : "taskId"
+          },
+          "messageDisplayed" : {
+            "type" : "constant",
+            "value" : "Searching for current user next task in current case"
+          }
+        },
+        "reference" : "93ddb628-f9e4-4067-8aca-f10037143cc6",
+        "hasValidationError" : false,
+        "id" : "customRedirectNextTask"
       } ], [ {
         "type" : "component",
         "dimension" : {
@@ -753,6 +753,15 @@
     "taskId" : {
       "type" : "urlparameter",
       "value" : "id",
+      "exposed" : false
+    },
+    "redirectionFlag" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "flowNode" : {
+      "type" : "url",
+      "value" : "../API/bpm/flowNode/{{taskId}}",
       "exposed" : false
     }
   },

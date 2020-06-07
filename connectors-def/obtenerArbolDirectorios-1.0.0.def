@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>obtenerArbolDirectorios</id>
+  <version>1.0.0</version>
+  <category icon="cmis.png" id="cmis" parentCategoryId="cms"/>
+  <category icon="CMS.png" id="cms"/>
+  <input mandatory="true" name="folder_path" type="java.lang.String"/>
+  <input name="atompub" type="java.lang.String"/>
+  <input name="webservices" type="java.lang.String"/>
+  <input name="url" type="java.lang.String"/>
+  <input name="repository" type="java.lang.String"/>
+  <input name="binding_type" type="java.lang.String"/>
+  <input name="wsObjectServiceUrl" type="java.lang.String"/>
+  <input name="wsObjectServiceEndpointUrl" type="java.lang.String"/>
+  <input name="wsRepositoryServiceUrl" type="java.lang.String"/>
+  <input name="wsRepositoryServiceEndpointUrl" type="java.lang.String"/>
+  <input name="wsVersioningServiceUrl" type="java.lang.String"/>
+  <input name="wsVersioningServiceEndpointUrl" type="java.lang.String"/>
+  <input name="wsNavigationServiceUrl" type="java.lang.String"/>
+  <input name="wsNavigationServiceEndpointUrl" type="java.lang.String"/>
+  <input name="username" type="java.lang.String"/>
+  <input name="password" type="java.lang.String"/>
+  <output name="dir_tree" type="org.apache.chemistry.opencmis.commons.impl.json.JSONObject"/>
+  <page id="conexion">
+    <widget xsi:type="definition:Text" id="username" inputName="username"/>
+    <widget xsi:type="definition:Password" id="password" inputName="password"/>
+    <widget xsi:type="definition:Text" id="repository" inputName="repository"/>
+    <widget xsi:type="definition:Select" id="binding_type" inputName="binding_type">
+      <items>atompub</items>
+      <items>webservices</items>
+    </widget>
+    <widget xsi:type="definition:Group" id="grupoAtom">
+      <widget xsi:type="definition:Text" id="url" inputName="url"/>
+    </widget>
+    <widget xsi:type="definition:Group" id="grupo_webservices">
+      <widget xsi:type="definition:Text" id="wsRepositoryServiceUrl" inputName="wsRepositoryServiceUrl"/>
+      <widget xsi:type="definition:Text" id="wsRepositoryServiceEndpointUrl" inputName="wsRepositoryServiceEndpointUrl"/>
+      <widget xsi:type="definition:Text" id="wsObjectServiceUrl" inputName="wsObjectServiceUrl"/>
+      <widget xsi:type="definition:Text" id="wsObjectServiceEndpointUrl" inputName="wsObjectServiceEndpointUrl"/>
+    </widget>
+  </page>
+  <page id="parametros">
+    <widget xsi:type="definition:Text" id="folder_path" inputName="folder_path"/>
+  </page>
+  <jarDependency>bonita-connector-cmis-3.0.3.jar</jarDependency>
+  <jarDependency>chemistry-opencmis-client-api-1.1.0.jar</jarDependency>
+  <jarDependency>chemistry-opencmis-client-bindings-1.1.0.jar</jarDependency>
+  <jarDependency>chemistry-opencmis-client-impl-1.1.0.jar</jarDependency>
+  <jarDependency>chemistry-opencmis-commons-api-1.1.0.jar</jarDependency>
+  <jarDependency>chemistry-opencmis-commons-impl-1.1.0.jar</jarDependency>
+</definition:ConnectorDefinition>

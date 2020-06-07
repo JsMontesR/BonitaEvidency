@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="Vicerrectoria de investigaciones" description="Actores en el proceso de envío y revisión de evidencias">
+  <customUserInfoDefinitions>
+    <customUserInfoDefinition>
+      <name>email</name>
+      <description>Correo electrónico</description>
+    </customUserInfoDefinition>
+  </customUserInfoDefinitions>
+  <users>
+    <user userName="salcedo">
+      <firstName>Felipe</firstName>
+      <lastName>Salcedo</lastName>
+      <title>Revisor Felipe Salcedo</title>
+      <jobTitle>Ingeniero</jobTitle>
+      <manager></manager>
+      <personalData>
+        <email>jsalcedo@uqvirtual.edu.co</email>
+      </personalData>
+      <professionalData/>
+      <password encrypted="false">uq1</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value>jsalcedo@uqvirtual.edu.co</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+  </users>
+  <roles>
+    <role name="Revisor">
+      <displayName>Revisor</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Investigadores">
+      <displayName>Investigadores</displayName>
+    </group>
+    <group name="Revisores vicerrectoria">
+      <displayName>Revisores vicerrectoria</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>salcedo</userName>
+      <roleName>Revisor</roleName>
+      <groupName>Revisores vicerrectoria</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>
