@@ -37,6 +37,7 @@ import org.apache.chemistry.opencmis.client.api.CmisObject;
 import org.apache.chemistry.opencmis.client.api.Folder;
 import org.apache.chemistry.opencmis.client.api.ItemIterable;
 import org.apache.chemistry.opencmis.commons.enums.BaseTypeId;
+import org.apache.chemistry.opencmis.commons.impl.json.JSONArray;
 import org.apache.chemistry.opencmis.commons.impl.json.JSONObject;
 import org.bonitasoft.connectors.cmis.AbstractCMISConnector;
 import org.bonitasoft.connectors.cmis.cmisclient.AbstractCmisClient;
@@ -59,8 +60,7 @@ public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
         
         try {
             if (cmisClient != null) {
-            	JSONObject root = new JSONObject();
-            	root.put("root", construirArbol(folderPath, cmisClient, new JSONObject()));
+            	JSONObject root = construirArbol(folderPath, cmisClient, new JSONObject());
             	logger.info("SALÍ");
             	setOutputParameter(ARBOL, root);
             }else {
@@ -85,18 +85,23 @@ public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
 		ArrayList<String> directorios = obtenerDirectorios(documents);
 		
 		logger.info("Los directorios son." + directorios.toString());
-		if(directorios.isEmpty()) {
-			logger.info("Salgo ZDXASCSD");
-			return null;
-		}else {
-			
+		
+		parent.put("id",path);
+		parent.put("text", folder.getName());
+		
+		if(!directorios.isEmpty()) {
+			JSONArray children = new JSONArray();
 			for (String directorio : directorios) {
 				logger.info("Mirame:" + directorio);
-				parent.put(directorio, construirArbol(path +"/" + directorio, cmisClient, new JSONObject()));
+				children.add(construirArbol(path +"/" + directorio, cmisClient, new JSONObject()));
+				
     			logger.info("objetoJSON ->" + parent.toJSONString()); 			
 			}
-			return parent;
+			parent.put("children", children);
 		}
+		
+		
+		return parent;
 	}
     
     public ArrayList<String> obtenerDirectorios(ItemIterable<CmisObject> documents) {

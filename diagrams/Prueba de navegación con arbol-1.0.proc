@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_X_IBEKg1Eeqw05Q0JV1OQw" name="MiDiagrama1" author="SEBAS" bonitaVersion="7.9.2" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E32">
+  <process:MainProcess xmi:id="_X_IBEKg1Eeqw05Q0JV1OQw" name="Prueba de navegación con arbol" author="SEBAS" bonitaVersion="7.9.2" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E32">
     <elements xmi:type="process:Pool" xmi:id="_X_IBEag1Eeqw05Q0JV1OQw" name="Pool1">
       <elements xmi:type="process:Lane" xmi:id="_X_IBEqg1Eeqw05Q0JV1OQw" name="Revisor" actor="_PpfWYKg2Eeqw05Q0JV1OQw">
         <elements xmi:type="process:StartEvent" xmi:id="_X_IBE6g1Eeqw05Q0JV1OQw" name="Inicio1" outgoing="_X_IBKKg1Eeqw05Q0JV1OQw">
@@ -12,8 +12,8 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_X_IBGKg1Eeqw05Q0JV1OQw" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_X_IBGag1Eeqw05Q0JV1OQw" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_X_IBGqg1Eeqw05Q0JV1OQw" name="" content="" returnTypeFixed="true"/>
-          <data xmi:type="process:JavaObjectData" xmi:id="_rn2UIKg1Eeqw05Q0JV1OQw" name="arbol" dataType="_X_IBQqg1Eeqw05Q0JV1OQw" className="org.apache.chemistry.opencmis.commons.impl.json.JSONObject">
-            <defaultValue xmi:type="expression:Expression" xmi:id="_rn2UIag1Eeqw05Q0JV1OQw" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONObject"/>
+          <data xmi:type="process:JavaObjectData" xmi:id="_Bnnj8KkvEeqdrq1gK07tVg" name="arbol" dataType="_X_IBQqg1Eeqw05Q0JV1OQw" className="org.apache.chemistry.opencmis.commons.impl.json.JSONArray">
+            <defaultValue xmi:type="expression:Expression" xmi:id="_Bnnj8akvEeqdrq1gK07tVg" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONArray"/>
           </data>
           <connectors xmi:type="process:Connector" xmi:id="_su9tMKg1Eeqw05Q0JV1OQw" name="obtenerArbol" definitionId="obtenerArbolDirectorios" event="ON_ENTER" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_su9tMag1Eeqw05Q0JV1OQw" definitionId="obtenerArbolDirectorios" version="1.0.0" modelVersion="7.9.0-002">
@@ -57,24 +57,39 @@
               </parameters>
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_su9tTag1Eeqw05Q0JV1OQw">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_su9tTqg1Eeqw05Q0JV1OQw" name="arbol" content="arbol" type="TYPE_VARIABLE" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONObject">
-                <referencedElements xmi:type="process:JavaObjectData" xmi:id="_su9tT6g1Eeqw05Q0JV1OQw" name="arbol" dataType="_X_IBQqg1Eeqw05Q0JV1OQw" className="org.apache.chemistry.opencmis.commons.impl.json.JSONObject"/>
+              <leftOperand xmi:type="expression:Expression" xmi:id="_su9tTqg1Eeqw05Q0JV1OQw" name="arbol" content="arbol" type="TYPE_VARIABLE" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONArray">
+                <referencedElements xmi:type="process:JavaObjectData" xmi:id="_KxU6cKkvEeqdrq1gK07tVg" name="arbol" dataType="_X_IBQqg1Eeqw05Q0JV1OQw" className="org.apache.chemistry.opencmis.commons.impl.json.JSONArray"/>
               </leftOperand>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_su9tUKg1Eeqw05Q0JV1OQw" name="newScript()" content="return dir_tree;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONObject">
-                <referencedElements xmi:type="definition:Output" xmi:id="_zOJAAKhJEeqFs7cXZNtLHg" name="dir_tree" type="org.apache.chemistry.opencmis.commons.impl.json.JSONObject"/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_su9tUKg1Eeqw05Q0JV1OQw" name="generarModeloDeSeleccion()" content="import org.apache.chemistry.opencmis.commons.impl.json.JSONArray&#xD;&#xA;JSONArray ja = new JSONArray();&#xD;&#xA;ja.add(dir_tree);&#xD;&#xA;return ja;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONArray">
+                <referencedElements xmi:type="definition:Output" xmi:id="_kV8RQKk8Eeqdrq1gK07tVg" name="dir_tree" type="org.apache.chemistry.opencmis.commons.impl.json.JSONObject"/>
               </rightOperand>
               <operator xmi:type="expression:Operator" xmi:id="_su9tUqg1Eeqw05Q0JV1OQw" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
+          <operations xmi:type="expression:Operation" xmi:id="_zmUHMKlAEeqdrq1gK07tVg">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_zmUHMalAEeqdrq1gK07tVg" name="directorioDeGuardado" content="directorioDeGuardado" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_5wBQYKlAEeqdrq1gK07tVg" name="directorioDeGuardado" dataType="_X_IBQag1Eeqw05Q0JV1OQw"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_zmUHMqlAEeqdrq1gK07tVg" name="directorioSeleccionado" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;logger.info(&quot;Seleccionaste &quot; + directorioSeleccionado);&#xD;&#xA;return directorioSeleccionado;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_34zaoKlBEeqdrq1gK07tVg" name="directorioSeleccionado">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_34zaoalBEeqdrq1gK07tVg"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_zmUHM6lAEeqdrq1gK07tVg" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_X_IBG6g1Eeqw05Q0JV1OQw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_X_IBHKg1Eeqw05Q0JV1OQw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_X_IBHag1Eeqw05Q0JV1OQw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_X_IBHqg1Eeqw05Q0JV1OQw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_X_IBH6g1Eeqw05Q0JV1OQw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_X_IBIKg1Eeqw05Q0JV1OQw">
-            <targetForm xmi:type="expression:Expression" xmi:id="_4u4X0KhhEeqFs7cXZNtLHg" name="newForm" content="9c22f552-2be8-4308-879d-1aaf9a709abe" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_KmKjkKlAEeqdrq1gK07tVg" name="ArchivarEvidencias" content="7dba071f-ce94-4d58-856f-b4e20c25f7b0" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_X_IBIqg1Eeqw05Q0JV1OQw"/>
+          <contract xmi:type="process:Contract" xmi:id="_X_IBIqg1Eeqw05Q0JV1OQw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_MJHZgKk_Eeqdrq1gK07tVg" name="directorioSeleccionado">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_MJHZgak_Eeqdrq1gK07tVg"/>
+            </inputs>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_X_IBI6g1Eeqw05Q0JV1OQw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:EndEvent" xmi:id="_YxPagKg1Eeqw05Q0JV1OQw" name="Fin1" incoming="_Yxl_0Kg1Eeqw05Q0JV1OQw">
@@ -86,8 +101,11 @@
       <data xmi:type="process:Data" xmi:id="_RGEEQKhFEeqkZ-N-hNu_ZA" name="directorioRaizVicerrectoriaDeInvestigaciones" dataType="_X_IBQag1Eeqw05Q0JV1OQw">
         <defaultValue xmi:type="expression:Expression" xmi:id="_RGErUKhFEeqkZ-N-hNu_ZA" name="/Sitios/vicerrectoria/documentLibrary" content="/Sitios/vicerrectoria/documentLibrary"/>
       </data>
+      <data xmi:type="process:Data" xmi:id="_4vXEoKlAEeqdrq1gK07tVg" name="directorioDeGuardado" dataType="_X_IBQag1Eeqw05Q0JV1OQw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_4vXEoalAEeqdrq1gK07tVg" content=""/>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_X_IBJKg1Eeqw05Q0JV1OQw">
-        <targetForm xmi:type="expression:Expression" xmi:id="_MMgs0KhwEeqYs8SCVVjc5g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_oeAgkKlBEeqdrq1gK07tVg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_X_IBJqg1Eeqw05Q0JV1OQw">
         <targetForm xmi:type="expression:Expression" xmi:id="_X_IBJ6g1Eeqw05Q0JV1OQw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -146,7 +164,7 @@
             </children>
             <children xmi:type="notation:Shape" xmi:id="_X_IBT6g1Eeqw05Q0JV1OQw" type="3002" element="_X_IBE6g1Eeqw05Q0JV1OQw" fontName="Segoe UI">
               <children xmi:type="notation:DecorationNode" xmi:id="_X_IBUKg1Eeqw05Q0JV1OQw" type="5024">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_X_IBUag1Eeqw05Q0JV1OQw" y="5"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_X_IBUag1Eeqw05Q0JV1OQw" x="-1" y="21"/>
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_X_IBUqg1Eeqw05Q0JV1OQw" x="60" y="68"/>
             </children>

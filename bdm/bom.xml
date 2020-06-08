@@ -13,5 +13,14 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.ModeloDeSeleccion">
+            <fields>
+                <field type="TEXT" length="255" name="arbol" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="directorioSeleccionado" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
     </businessObjects>
 </businessObjectModel>

@@ -1,15 +1,15 @@
 {
   "designerVersion" : "1.9.53",
-  "id" : "newForm",
-  "name" : "newForm",
-  "lastUpdate" : 1591497921261,
+  "id" : "ArchivarEvidencias",
+  "name" : "ArchivarEvidencias",
+  "lastUpdate" : 1591590990066,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
       "xs" : 12
     },
     "propertyValues" : { },
-    "reference" : "34cbe646-557d-491e-8c64-3597e43a5695",
+    "reference" : "fe2b5a3b-f239-4404-9530-eacc9cb247e6",
     "hasValidationError" : false,
     "id" : "pbContainer",
     "rows" : [ [ {
@@ -62,7 +62,7 @@
           "value" : 12
         }
       },
-      "reference" : "538ae020-e84d-4656-9fb0-703b77c410f6",
+      "reference" : "c1f74b07-0017-46be-9704-54724f5da4be",
       "hasValidationError" : false,
       "id" : "pbTitle"
     } ], [ {
@@ -109,53 +109,11 @@
         "dimension" : {
           "type" : "constant",
           "value" : 12
-        },
-        "labelPosition" : {
-          "type" : "constant",
-          "value" : "top"
-        },
-        "labelWidth" : {
-          "type" : "constant",
-          "value" : 4
-        },
-        "allowHTML" : {
-          "type" : "constant",
-          "value" : true
         }
       },
-      "reference" : "6baa9909-9bed-48d1-a4b3-468b356dd3e9",
+      "reference" : "ed92dbe3-3d00-43e7-b31d-cab284b2c70b",
       "hasValidationError" : false,
       "id" : "pbText"
-    } ], [ {
-      "type" : "component",
-      "dimension" : {
-        "xs" : 12
-      },
-      "propertyValues" : {
-        "cssClasses" : {
-          "type" : "constant",
-          "value" : ""
-        },
-        "hidden" : {
-          "type" : "constant",
-          "value" : false
-        },
-        "text" : {
-          "type" : "interpolation",
-          "value" : "El arbol es {{arbol}}"
-        },
-        "level" : {
-          "type" : "constant",
-          "value" : "Level 2"
-        },
-        "alignment" : {
-          "type" : "constant",
-          "value" : "left"
-        }
-      },
-      "reference" : "4a74123c-d912-4aa5-833c-897f39b65655",
-      "hasValidationError" : false,
-      "id" : "pbTitle"
     } ] ]
   } ], [ {
     "type" : "formContainer",
@@ -172,7 +130,7 @@
         "value" : false
       }
     },
-    "reference" : "64b0663d-d403-4fc2-8c8f-40b8a1500657",
+    "reference" : "898a47d9-014b-40eb-8ef6-a7c307b2bda6",
     "hasValidationError" : false,
     "id" : "pbFormContainer",
     "container" : {
@@ -181,10 +139,36 @@
         "xs" : 12
       },
       "propertyValues" : { },
-      "reference" : "6597d0d7-6c41-4400-b8a9-39002f32e93b",
+      "reference" : "7b879c45-9f99-4a3a-b42e-520c7dbea512",
       "hasValidationError" : false,
       "id" : "pbContainer",
       "rows" : [ [ {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "arbolDeDirectorios" : {
+            "type" : "variable",
+            "value" : "arbolDeDirectorios"
+          },
+          "selectedData" : {
+            "type" : "variable",
+            "value" : "formOutput.directorioSeleccionado"
+          }
+        },
+        "reference" : "5eaedf1c-9345-49b4-b2b0-9f16ada79c69",
+        "hasValidationError" : false,
+        "id" : "customArbolNavegador"
+      } ], [ {
         "type" : "component",
         "dimension" : {
           "xs" : 12
@@ -215,7 +199,7 @@
           },
           "label" : {
             "type" : "interpolation",
-            "value" : "Submit"
+            "value" : "Guardar en carpeta seleccionada"
           },
           "dataToSend" : {
             "type" : "expression",
@@ -261,9 +245,32 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "assign" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "responseStatusCode" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "closeOnSuccess" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : ""
           }
         },
-        "reference" : "54f497fb-f90b-48ed-b172-925cf9c68a24",
+        "reference" : "99a99dbe-fe6e-42a9-96f9-8d60b57488f0",
         "hasValidationError" : false,
         "id" : "pbButton"
       } ], [ {
@@ -316,14 +323,14 @@
             "value" : 12
           }
         },
-        "reference" : "241f484b-1133-42f7-9826-9471f05dfc11",
+        "reference" : "c297a7ea-72f6-4185-b24d-bcd9c62a9adf",
         "hasValidationError" : false,
         "id" : "pbText"
       } ] ]
     }
   } ] ],
   "assets" : [ {
-    "id" : "38ded58f-3dad-4b29-89ee-060b4fc6269d",
+    "id" : "5e0be636-30be-4c75-b9d3-a08834a02ff4",
     "name" : "style.css",
     "type" : "css",
     "order" : 0,
@@ -336,6 +343,11 @@
       "value" : "../API/bpm/userTask/{{taskId}}",
       "exposed" : false
     },
+    "formInput" : {
+      "type" : "json",
+      "value" : "{\r\n  \"directorioSeleccionado\" : \"\"\r\n}",
+      "exposed" : false
+    },
     "submit_errors_list" : {
       "type" : "expression",
       "value" : "if($data.formOutput && $data.formOutput._submitError && $data.formOutput._submitError.explanations){\n\tconst liElements = $data.formOutput._submitError.explanations\n\t\t.filter(cause => cause !== null)\n\t\t.map(cause => \"<li>\" + cause + \"</li>\")\n\t\t.join('');\n\tif(liElements){\n\t\treturn \"<ul>\" + liElements + \"</ul>\";\n\t}\n}",
@@ -343,7 +355,7 @@
     },
     "formOutput" : {
       "type" : "expression",
-      "value" : "return {\n\n}",
+      "value" : "return {\n\tdirectorioSeleccionado: $data.formInput.directorioSeleccionado\n}",
       "exposed" : false
     },
     "context" : {
@@ -356,14 +368,14 @@
       "value" : "id",
       "exposed" : false
     },
-    "arbol" : {
+    "arbolDeDirectorios" : {
       "type" : "url",
       "value" : "../API/bpm/activityVariable/{{taskId}}/arbol",
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "9c22f552-2be8-4308-879d-1aaf9a709abe",
+  "uuid" : "7dba071f-ce94-4d58-856f-b4e20c25f7b0",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

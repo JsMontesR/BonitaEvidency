@@ -1,0 +1,42 @@
+{
+  "designerVersion" : "1.9.53",
+  "id" : "customArbolNavegador",
+  "name" : "ArbolNavegador",
+  "lastUpdate" : 1591591149286,
+  "template" : "<!-- The custom widget template is defined here\n   - You can use standard HTML tags and AngularJS built-in directives, scope and interpolation system\n   - Custom widget properties defined on the right can be used as variables in a templates with properties.newProperty\n   - Functions exposed in the controller can be used with ctrl.newFunction()\n   - You can use the 'environment' property injected in the scope when inside the Editor whiteboard. It allows to define a mockup\n     of the Custom Widget to be displayed in the whiteboard only. By default the widget is represented by an auto-generated icon\n     and its name (See the <span> below).\n-->\n \n<span ng-if=\"environment\"><identicon name=\"{{environment.component.id}}\" size=\"30\" background-color=\"[255,255,255, 0]\" foreground-color=\"[51,51,51]\"></identicon> {{environment.component.name}}</span>\n    <div>\n        <input type=\"button\" value=\"Explorar repositorio\" ng-click=\"ctrl.cambiarValor()\">\n    </div>\n    <br>\n    <div id=\"jstree\">\n        \n    </div>\n  \n    \n",
+  "controller" : "/**\n * The controller is a JavaScript function that augments the AngularJS scope and exposes functions that can be used in the custom widget template\n * \n * Custom widget properties defined on the right can be used as variables in a controller with $scope.properties\n * To use AngularJS standard services, you must declare them in the main function arguments.\n * \n * You can leave the controller empty if you do not need it.\n */\nfunction ($scope) {\n    \n    console.log($scope.properties);\n    \n      \n     this.cambiarValor = function(){\n         console.log(\"Hola\");\n         console.log($scope.properties.arbolDeDirectorios.value);\n         console.log(\"Hola2\");\n\n       $('#jstree').jstree({\n            'core': {\n                'data': $scope.properties.arbolDeDirectorios.value,\n                \"multiple\" : false\n            }\n        });\n\n        $('#jstree').on('changed.jstree', function (e, data) {\n            var h = $(\"#jstree\").jstree(\"get_selected\")[0];\n            $scope.properties.selectedData = h;\n            console.log(h);\n          })\n        };\n    \n}",
+  "custom" : true,
+  "properties" : [ {
+    "label" : "Arbol de directorios",
+    "name" : "arbolDeDirectorios",
+    "type" : "text",
+    "bond" : "variable"
+  }, {
+    "label" : "Directorio seleccionado",
+    "name" : "selectedData",
+    "type" : "text",
+    "bond" : "variable"
+  } ],
+  "assets" : [ {
+    "id" : "b79de24e-1d00-4d28-94bc-e49517702086",
+    "name" : "jstree.min.js",
+    "type" : "js",
+    "order" : 3,
+    "external" : false
+  }, {
+    "id" : "2db02771-c7dc-4a81-b27b-418c835d4f66",
+    "name" : "style.min.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  }, {
+    "id" : "0fc40788-37eb-4b29-82ec-c0415cb9b21d",
+    "name" : "jquery.min.js",
+    "type" : "js",
+    "order" : 2,
+    "external" : false
+  } ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}
