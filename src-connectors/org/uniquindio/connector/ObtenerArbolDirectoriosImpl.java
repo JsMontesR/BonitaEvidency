@@ -61,7 +61,6 @@ public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
         try {
             if (cmisClient != null) {
             	JSONObject root = construirArbol(folderPath, cmisClient, new JSONObject());
-            	logger.info("SALÍ");
             	setOutputParameter(ARBOL, root);
             }else {
             	throw new ConnectorException("Fallo de conexión al cliente CMIS");
@@ -79,9 +78,7 @@ public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
   			
 		Folder folder = cmisClient.getFolderByPath(path);
 		
-		logger.info("path: " + path);
 		ItemIterable<CmisObject> documents = folder.getChildren();
-		logger.info(documents.toString() + " - " + documents.getTotalNumItems()); 
 		ArrayList<String> directorios = obtenerDirectorios(documents);
 		
 		logger.info("Los directorios son." + directorios.toString());
@@ -92,10 +89,7 @@ public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
 		if(!directorios.isEmpty()) {
 			JSONArray children = new JSONArray();
 			for (String directorio : directorios) {
-				logger.info("Mirame:" + directorio);
-				children.add(construirArbol(path +"/" + directorio, cmisClient, new JSONObject()));
-				
-    			logger.info("objetoJSON ->" + parent.toJSONString()); 			
+				children.add(construirArbol(path +"/" + directorio, cmisClient, new JSONObject()));		
 			}
 			parent.put("children", children);
 		}
