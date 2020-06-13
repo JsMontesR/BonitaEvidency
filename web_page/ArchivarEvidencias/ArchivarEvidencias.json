@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "ArchivarEvidencias",
   "name" : "ArchivarEvidencias",
-  "lastUpdate" : 1591980711335,
+  "lastUpdate" : 1591999662929,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -64,7 +64,7 @@
         },
         "alignment" : {
           "type" : "constant",
-          "value" : "center"
+          "value" : "left"
         },
         "class" : {
           "type" : "constant",
@@ -152,7 +152,7 @@
             },
             "alignment" : {
               "type" : "constant",
-              "value" : "left"
+              "value" : "center"
             }
           },
           "reference" : "9a009ded-3e6d-4522-b399-78a912b5967f",
@@ -162,7 +162,7 @@
       } ], [ {
         "type" : "container",
         "dimension" : {
-          "xs" : 6
+          "xs" : 12
         },
         "propertyValues" : {
           "cssClasses" : {
@@ -205,17 +205,17 @@
             },
             "alignment" : {
               "type" : "constant",
-              "value" : "left"
+              "value" : "center"
             }
           },
           "reference" : "98862d1f-aaa2-4612-850e-1fb1e0217863",
           "hasValidationError" : false,
           "id" : "pbTitle"
         } ] ]
-      }, {
+      } ], [ {
         "type" : "container",
         "dimension" : {
-          "xs" : 6
+          "xs" : 12
         },
         "propertyValues" : {
           "cssClasses" : {
@@ -258,7 +258,7 @@
             },
             "alignment" : {
               "type" : "constant",
-              "value" : "left"
+              "value" : "center"
             }
           },
           "reference" : "e9f235b0-1227-4252-9d35-9220146f295b",
@@ -307,7 +307,7 @@
             },
             "level" : {
               "type" : "constant",
-              "value" : "Level 3"
+              "value" : "Level 4"
             },
             "alignment" : {
               "type" : "constant",

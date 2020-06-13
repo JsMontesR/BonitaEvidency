@@ -25,15 +25,1042 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
+    <user userName="7549257">
+      <firstName>Jorge</firstName>
+      <lastName>Marín</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="41721518">
+      <firstName>Magda</firstName>
+      <lastName>Ivonne</lastName>
+      <title></title>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="31288995">
+      <firstName>Maria De Las Mercedes</firstName>
+      <lastName>Girón</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="41902205">
+      <firstName>Alba</firstName>
+      <lastName>Duque</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7555343">
+      <firstName>Carlos</firstName>
+      <lastName>Morales</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="32629604">
+      <firstName>Neira Del Carmen</firstName>
+      <lastName>Loaiza</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7554191">
+      <firstName>Jhon</firstName>
+      <lastName>Castaño</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="25153622">
+      <firstName>María</firstName>
+      <lastName>García</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="16786435">
+      <firstName>William</firstName>
+      <lastName>Giraldo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="42086140">
+      <firstName>Eunice</firstName>
+      <lastName>Ríos</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7512686">
+      <firstName>Hugo</firstName>
+      <lastName>Monsalve</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="24587121">
+      <firstName>Andrea</firstName>
+      <lastName>García</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="9728888">
+      <firstName>Cesar</firstName>
+      <lastName>Rodriguez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="89007514">
+      <firstName>Jorge</firstName>
+      <lastName>Marín</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="4377450">
+      <firstName>Alejandro</firstName>
+      <lastName>García</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7527497">
+      <firstName>Carlos</firstName>
+      <lastName>Montes</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="89007291">
+      <firstName>Pablo</firstName>
+      <lastName>Muñoz</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7535130">
+      <firstName>Cesar</firstName>
+      <lastName>Román</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7548440">
+      <firstName>Cesar</firstName>
+      <lastName>Gómez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="75079723">
+      <firstName>José</firstName>
+      <lastName>Ayala</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="33816860">
+      <firstName>Ysis</firstName>
+      <lastName>Velez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="41494489">
+      <firstName>Zahyra Del Socorro</firstName>
+      <lastName>Camargo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="18462122">
+      <firstName>Angelmiro</firstName>
+      <lastName>Galindo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="76308181">
+      <firstName>Fernando</firstName>
+      <lastName>Cuenú</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="18497574">
+      <firstName>Jose</firstName>
+      <lastName>Padilla</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="19162785">
+      <firstName>Arturo</firstName>
+      <lastName>Celis</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="93381654">
+      <firstName>Fernando</firstName>
+      <lastName>Gordillo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="93357542">
+      <firstName>Jorge</firstName>
+      <lastName>Lozano</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="30283722">
+      <firstName>Angela</firstName>
+      <lastName>Londoño</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="19164898">
+      <firstName>Milton</firstName>
+      <lastName>Gómez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="42874352">
+      <firstName>Irene</firstName>
+      <lastName>Duarte</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="1098308059">
+      <firstName>Julián</firstName>
+      <lastName>Rincón</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7500332">
+      <firstName>Hernando</firstName>
+      <lastName>Calderón</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="31287177">
+      <firstName>Patrici</firstName>
+      <lastName>Landazuri</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="75064983">
+      <firstName>Pedro</firstName>
+      <lastName>Diaz</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="14241527">
+      <firstName>Eliecer</firstName>
+      <lastName>Aldana</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="328307">
+      <firstName>Reinaldo</firstName>
+      <lastName>Sierra</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="94286282">
+      <firstName>Christian</firstName>
+      <lastName>Candela</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="42086202">
+      <firstName>Ana</firstName>
+      <lastName>Torres</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7521214">
+      <firstName>José</firstName>
+      <lastName>Reinel</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7540504">
+      <firstName>Gonzalo</firstName>
+      <lastName>Jiménez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="98337524">
+      <firstName>Edwin</firstName>
+      <lastName>Chamorro</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7527404">
+      <firstName>Aníbal</firstName>
+      <lastName>Muñóz</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="76318502">
+      <firstName>Evelio</firstName>
+      <lastName>Astaiza</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="24571354">
+      <firstName>Adiela</firstName>
+      <lastName>Henao</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="75101892">
+      <firstName>Jhon</firstName>
+      <lastName>Isaza</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="1094890604">
+      <firstName>Cristian</firstName>
+      <lastName>Villa</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7523648">
+      <firstName>Carlos</firstName>
+      <lastName>Correa</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="41912331">
+      <firstName>Milena</firstName>
+      <lastName>Gómez</lastName>
+      <title></title>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7556508">
+      <firstName>Roberto</firstName>
+      <lastName>Villa</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7534788">
+      <firstName>Samuel</firstName>
+      <lastName>Higinio</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="41922558">
+      <firstName>Olga</firstName>
+      <lastName>Torres</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="41914131">
+      <firstName>Mildred</firstName>
+      <lastName>Gutierrez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="41942993">
+      <firstName>Alejandra</firstName>
+      <lastName>Pulgarín</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="24580571">
+      <firstName>Alba</firstName>
+      <lastName>Suarez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="52070041">
+      <firstName>Sandra</firstName>
+      <lastName>Leal</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="10122357">
+      <firstName>Oscar</firstName>
+      <lastName>Montoya</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="1094893955">
+      <firstName>Constanza</firstName>
+      <lastName>Fajardo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="Usuario1">
+      <firstName>José</firstName>
+      <lastName>Castillo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="7561086">
+      <firstName>Lina</firstName>
+      <lastName>Castro</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="16185584">
+      <firstName>Oscar</firstName>
+      <lastName>Sanchez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="38794076">
+      <firstName>Monica</firstName>
+      <lastName>Cortés</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="66736378">
+      <firstName>Nelsy</firstName>
+      <lastName>Loango</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="18497593">
+      <firstName>Jhon</firstName>
+      <lastName>Rodríguez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="24602147">
+      <firstName>Nelly</firstName>
+      <lastName>Carvajal</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="41939761">
+      <firstName>Liliana</firstName>
+      <lastName>Ospina</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="43876871">
+      <firstName>Lina</firstName>
+      <lastName>Agudelo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="94501347">
+      <firstName>Juan</firstName>
+      <lastName>Acevedo</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="9739588">
+      <firstName>César</firstName>
+      <lastName>Álvarez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="41931649">
+      <firstName>Ángela</firstName>
+      <lastName>Jimenez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="Usuario2">
+      <firstName>Luis</firstName>
+      <lastName>Castro</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="70420310">
+      <firstName>Edgar</firstName>
+      <lastName>Gómez</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="89006379">
+      <firstName>Victor</firstName>
+      <lastName>García</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
   </users>
   <roles>
     <role name="Revisor">
       <displayName>Revisor</displayName>
     </role>
+    <role name="Lider investigador">
+      <displayName>Lider investigador</displayName>
+    </role>
   </roles>
   <groups>
-    <group name="Investigadores">
-      <displayName>Investigadores</displayName>
+    <group name="Lideres investigadores">
+      <displayName>Lideres investigadores</displayName>
     </group>
     <group name="Revisores vicerrectoria">
       <displayName>Revisores vicerrectoria</displayName>
@@ -44,6 +1071,371 @@
       <userName>salcedo</userName>
       <roleName>Revisor</roleName>
       <groupName>Revisores vicerrectoria</groupName>
+    </membership>
+    <membership>
+      <userName>7549257</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>41721518</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>31288995</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>41902205</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7555343</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>32629604</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7554191</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>25153622</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>16786435</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>42086140</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7512686</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>24587121</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>9728888</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>89007514</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>4377450</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7527497</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>89007291</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7535130</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7548440</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>75079723</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>33816860</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>41494489</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>18462122</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>76308181</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>18497574</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>19162785</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>93381654</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>93357542</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>30283722</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>19164898</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>42874352</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>1098308059</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7500332</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>31287177</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>75064983</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>14241527</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>328307</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>94286282</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>42086202</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7521214</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7540504</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>98337524</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7527404</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>76318502</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>24571354</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>75101892</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>1094890604</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7523648</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>41912331</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7556508</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7534788</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>41922558</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>41914131</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>41942993</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>24580571</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>52070041</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>10122357</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>1094893955</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>Usuario1</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>7561086</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>16185584</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>38794076</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>66736378</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>18497593</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>24602147</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>41939761</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>43876871</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>94501347</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>9739588</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>41931649</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>Usuario2</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>70420310</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>89006379</userName>
+      <roleName>Lider investigador</roleName>
+      <groupName>Lideres investigadores</groupName>
     </membership>
   </memberships>
 </organization:Organization>

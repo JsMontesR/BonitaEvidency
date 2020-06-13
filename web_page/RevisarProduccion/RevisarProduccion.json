@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "RevisarProduccion",
   "name" : "RevisarProduccion",
-  "lastUpdate" : 1591953638171,
+  "lastUpdate" : 1592015988712,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -64,7 +64,7 @@
         },
         "alignment" : {
           "type" : "constant",
-          "value" : "center"
+          "value" : "left"
         },
         "class" : {
           "type" : "constant",
@@ -152,7 +152,7 @@
             },
             "alignment" : {
               "type" : "constant",
-              "value" : "left"
+              "value" : "center"
             }
           },
           "reference" : "a3bbb69e-7908-49db-bad7-fd1f0266a77f",
@@ -167,7 +167,7 @@
         "propertyValues" : {
           "cssClasses" : {
             "type" : "constant",
-            "value" : ""
+            "value" : "panel panel-default"
           },
           "hidden" : {
             "type" : "constant",
@@ -182,111 +182,88 @@
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [ [ {
-          "type" : "container",
+          "type" : "component",
           "dimension" : {
-            "xs" : 6
+            "xs" : 12
           },
           "propertyValues" : {
             "cssClasses" : {
               "type" : "constant",
-              "value" : "panel panel-default"
+              "value" : ""
             },
             "hidden" : {
               "type" : "constant",
               "value" : false
             },
-            "repeatedCollection" : {
-              "type" : "variable",
-              "value" : ""
+            "text" : {
+              "type" : "interpolation",
+              "value" : "Grupo de investigación asociado: {{nombreGrupo.value}}"
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 4"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "center"
             }
           },
-          "reference" : "1a3edfb2-9c7f-4cca-ab33-2fe001c75017",
+          "reference" : "7017029c-1825-4cdd-96cd-75b9b585e350",
           "hasValidationError" : false,
-          "id" : "pbContainer",
-          "rows" : [ [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "text" : {
-                "type" : "interpolation",
-                "value" : "Grupo de investigación asociado: {{nombreGrupo.value}}"
-              },
-              "level" : {
-                "type" : "constant",
-                "value" : "Level 4"
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "left"
-              }
-            },
-            "reference" : "7017029c-1825-4cdd-96cd-75b9b585e350",
-            "hasValidationError" : false,
-            "id" : "pbTitle"
-          } ] ]
-        }, {
-          "type" : "container",
+          "id" : "pbTitle"
+        } ] ]
+      } ], [ {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "panel panel-default"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "c66283d1-e31a-4cf5-b5f5-79f9d4eff5e4",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
           "dimension" : {
-            "xs" : 6
+            "xs" : 12
           },
           "propertyValues" : {
             "cssClasses" : {
               "type" : "constant",
-              "value" : "panel panel-default"
+              "value" : ""
             },
             "hidden" : {
               "type" : "constant",
               "value" : false
             },
-            "repeatedCollection" : {
-              "type" : "variable",
-              "value" : ""
+            "text" : {
+              "type" : "interpolation",
+              "value" : "Lider del grupo: {{nombreDeLiderDeGrupo.value}}"
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 4"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "center"
             }
           },
-          "reference" : "c66283d1-e31a-4cf5-b5f5-79f9d4eff5e4",
+          "reference" : "c7ba02f1-4125-496d-acd4-9df6305acf82",
           "hasValidationError" : false,
-          "id" : "pbContainer",
-          "rows" : [ [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "text" : {
-                "type" : "interpolation",
-                "value" : "Lider del grupo: {{nombreDeLiderDeGrupo.value}}"
-              },
-              "level" : {
-                "type" : "constant",
-                "value" : "Level 4"
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "left"
-              }
-            },
-            "reference" : "c7ba02f1-4125-496d-acd4-9df6305acf82",
-            "hasValidationError" : false,
-            "id" : "pbTitle"
-          } ] ]
+          "id" : "pbTitle"
         } ] ]
       } ], [ {
         "type" : "container",
@@ -497,6 +474,92 @@
             "reference" : "921412fb-f23a-4cbb-96b7-8289a083b336",
             "hasValidationError" : false,
             "id" : "pbFileViewer"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Eliminar"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "right"
+              },
+              "buttonStyle" : {
+                "type" : "constant",
+                "value" : "danger"
+              },
+              "action" : {
+                "type" : "constant",
+                "value" : "Remove from collection"
+              },
+              "assign" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "url" : {
+                "type" : "interpolation"
+              },
+              "responseStatusCode" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "dataToSend" : {
+                "type" : "constant"
+              },
+              "dataFromSuccess" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "closeOnSuccess" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "dataFromError" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "targetUrlOnSuccess" : {
+                "type" : "interpolation"
+              },
+              "collectionToModify" : {
+                "type" : "variable",
+                "value" : "context.evidencias_ref"
+              },
+              "modalId" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "collectionPosition" : {
+                "type" : "constant",
+                "value" : "Item"
+              },
+              "valueToAdd" : {
+                "type" : "constant"
+              },
+              "removeItem" : {
+                "type" : "variable",
+                "value" : "$item"
+              }
+            },
+            "reference" : "1c92084f-f6e0-4315-b6ba-b06634c011b6",
+            "hasValidationError" : false,
+            "id" : "pbButton"
           } ] ]
         } ] ]
       } ], [ {
@@ -586,16 +649,16 @@
               "value" : ""
             },
             "hidden" : {
-              "type" : "constant",
-              "value" : false
+              "type" : "expression",
+              "value" : "comprobacionDeCriterioDeEvaluacion"
             },
             "readOnly" : {
               "type" : "constant",
               "value" : false
             },
             "required" : {
-              "type" : "expression",
-              "value" : "comprobacionDeCriterioDeEvaluacion"
+              "type" : "constant",
+              "value" : true
             },
             "minLength" : {
               "type" : "constant",
@@ -692,8 +755,8 @@
               "type" : "expression"
             },
             "disabled" : {
-              "type" : "constant",
-              "value" : false
+              "type" : "expression",
+              "value" : "$form.$invalid"
             },
             "alignment" : {
               "type" : "constant",
@@ -832,7 +895,7 @@
     },
     "comprobacionDeCriterioDeEvaluacion" : {
       "type" : "expression",
-      "value" : "return !$data.formInput.criterioDeEvaluacion;",
+      "value" : "return $data.formInput.criterioDeEvaluacion;",
       "exposed" : false
     },
     "nombreDeLiderDeGrupo" : {
