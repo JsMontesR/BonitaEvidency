@@ -49,7 +49,18 @@
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lrkZMa2qEeqAHbQ9cgyVpQ" key="body">
-                <expression xmi:type="expression:Expression" xmi:id="_lrkZMq2qEeqAHbQ9cgyVpQ" name="&lt;pattern-expression>" content="username=viceinvestigaciones&amp;password=9738437" type="TYPE_PATTERN" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lrkZMq2qEeqAHbQ9cgyVpQ" name="&lt;pattern-expression>" content="username=${usuarioGRI}&amp;password=${passwordGRI}" type="TYPE_PATTERN" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_zbI5sK5pEeqDUNF84RLjFg" name="usuarioGRI" content="usuarioGRI" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_zbI5sa5pEeqDUNF84RLjFg" name="usuarioGRI" content="usuarioGRI" type="TYPE_PARAMETER">
+                      <referencedElements xmi:type="parameter:Parameter" xmi:id="_zbI5sq5pEeqDUNF84RLjFg" name="usuarioGRI" typeClassname="java.lang.String"/>
+                    </referencedElements>
+                  </referencedElements>
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_zbI5s65pEeqDUNF84RLjFg" name="passwordGRI" content="passwordGRI" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_zbI5tK5pEeqDUNF84RLjFg" name="passwordGRI" content="passwordGRI" type="TYPE_PARAMETER">
+                      <referencedElements xmi:type="parameter:Parameter" xmi:id="_zbI5ta5pEeqDUNF84RLjFg" name="passwordGRI" typeClassname="java.lang.String"/>
+                    </referencedElements>
+                  </referencedElements>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lrkZNa2qEeqAHbQ9cgyVpQ" key="do_not_follow_redirect">
                 <expression xmi:type="expression:Expression" xmi:id="_lrkZNq2qEeqAHbQ9cgyVpQ" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -134,10 +145,10 @@
           <connectors xmi:type="process:Connector" xmi:id="_GcNnQK4EEeq6lfxmyd58ug" name="Actualizar estado de la produccion" definitionId="rest-put" event="ON_ENTER" definitionVersion="1.1.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_GcNnQa4EEeq6lfxmyd58ug" definitionId="rest-put" version="1.1.0" modelVersion="7.9.0-002">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_GcNnQq4EEeq6lfxmyd58ug" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="_GcNnQ64EEeq6lfxmyd58ug" name="construirURLDeActualizacion()" content="return urlActualizarEstadoDeProduccionAPI+&quot;/&quot;+idDeProduccion+&quot;?estado=2&amp;tipo=&quot;+tipoDeProduccion;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_smGvcK4EEeq6lfxmyd58ug" name="tipoDeProduccion" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ"/>
-                  <referencedElements xmi:type="process:Data" xmi:id="_GcNnRK4EEeq6lfxmyd58ug" name="idDeProduccion" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ"/>
-                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_GcNnRa4EEeq6lfxmyd58ug" name="urlActualizarEstadoDeProduccionAPI" typeClassname="java.lang.String"/>
+                <expression xmi:type="expression:Expression" xmi:id="_GcNnQ64EEeq6lfxmyd58ug" name="construirURLDeActualizacion()" content="return urlActualizarEstadoDeProduccionAPI+&quot;/&quot;+idDeProduccion + &quot;?estado=2&amp;tipo=&quot;+tipoDeProduccion;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_LjuDQK5qEeqDUNF84RLjFg" name="idDeProduccion" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ"/>
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_LjuDQa5qEeqDUNF84RLjFg" name="urlActualizarEstadoDeProduccionAPI" typeClassname="java.lang.String"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_LjuDQq5qEeqDUNF84RLjFg" name="tipoDeProduccion" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_GcNnR64EEeq6lfxmyd58ug" key="contentType">
@@ -160,7 +171,7 @@
                 <expression xmi:type="expression:TableExpression" xmi:id="_GcNnUq4EEeq6lfxmyd58ug"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_GcNnU64EEeq6lfxmyd58ug" key="body">
-                <expression xmi:type="expression:Expression" xmi:id="_GcNnVK4EEeq6lfxmyd58ug" name="&lt;pattern-expression>" type="TYPE_PATTERN" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_GcNnVK4EEeq6lfxmyd58ug" name="&lt;pattern-expression>" content="" type="TYPE_PATTERN" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_GcNnVa4EEeq6lfxmyd58ug" key="do_not_follow_redirect">
                 <expression xmi:type="expression:Expression" xmi:id="_GcNnVq4EEeq6lfxmyd58ug" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -234,10 +245,10 @@
             </configuration>
             <outputs xmi:type="expression:Operation" xmi:id="_GcOOY64EEeq6lfxmyd58ug">
               <leftOperand xmi:type="expression:Expression" xmi:id="_GcOOZK4EEeq6lfxmyd58ug" name="dummy" content="dummy" type="TYPE_VARIABLE">
-                <referencedElements xmi:type="process:Data" xmi:id="_ShiS8K4HEeq5DP7hz6BfBg" name="dummy" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ"/>
+                <referencedElements xmi:type="process:Data" xmi:id="_vNRdAK5nEeqDUNF84RLjFg" name="dummy" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ"/>
               </leftOperand>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_GcOOZa4EEeq6lfxmyd58ug" name="bodyAsString" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;logger.info(&quot;Flujo terminado, enviando actualización de estado al GRI, status: &quot; + status_code);&#xD;&#xA;&#xD;&#xA;return null;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                <referencedElements xmi:type="definition:Output" xmi:id="_Mk6uEK4IEeq5DP7hz6BfBg" name="status_code" type="java.lang.Integer"/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_GcOOZa4EEeq6lfxmyd58ug" name="bodyAsString" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;String estadoDeLaTransaccion = &quot;fallida&quot;;&#xD;&#xA;if(bodyAsString.equals(&quot;true&quot;)){&#xD;&#xA;&#x9;estadoDeLaTransaccion = &quot;exitosa&quot;;&#xD;&#xA;}&#xD;&#xA;logger.info(&quot;Flujo terminado, enviando actualización de estado al GRI, respuesta: &quot; + estadoDeLaTransaccion);&#xD;&#xA;&#xD;&#xA;return null;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                <referencedElements xmi:type="definition:Output" xmi:id="_ZDwWQK5pEeqDUNF84RLjFg" name="bodyAsString" type="java.lang.String"/>
               </rightOperand>
               <operator xmi:type="expression:Operator" xmi:id="_GcOOZ64EEeq6lfxmyd58ug" type="ASSIGNMENT"/>
             </outputs>
@@ -255,7 +266,7 @@
         </elements>
       </elements>
       <formMapping xmi:type="process:FormMapping" xmi:id="_lbmDhK2qEeqAHbQ9cgyVpQ">
-        <targetForm xmi:type="expression:Expression" xmi:id="_97x6cK4HEeq5DP7hz6BfBg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_BDUmoK5qEeqDUNF84RLjFg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_lbmDhq2qEeqAHbQ9cgyVpQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_lbmDh62qEeqAHbQ9cgyVpQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

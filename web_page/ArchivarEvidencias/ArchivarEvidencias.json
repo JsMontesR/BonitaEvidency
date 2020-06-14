@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "ArchivarEvidencias",
   "name" : "ArchivarEvidencias",
-  "lastUpdate" : 1591999662929,
+  "lastUpdate" : 1592164855738,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -64,7 +64,7 @@
         },
         "alignment" : {
           "type" : "constant",
-          "value" : "left"
+          "value" : "center"
         },
         "class" : {
           "type" : "constant",
