@@ -266,7 +266,7 @@
         </elements>
       </elements>
       <formMapping xmi:type="process:FormMapping" xmi:id="_lbmDhK2qEeqAHbQ9cgyVpQ">
-        <targetForm xmi:type="expression:Expression" xmi:id="_BDUmoK5qEeqDUNF84RLjFg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_lqHyUK6UEeqHzozNyeX62A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_lbmDhq2qEeqAHbQ9cgyVpQ">
         <targetForm xmi:type="expression:Expression" xmi:id="_lbmDh62qEeqAHbQ9cgyVpQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -304,6 +304,202 @@
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_lbmDma2qEeqAHbQ9cgyVpQ">
         <name xmi:type="expression:Expression" xmi:id="_lbmDmq2qEeqAHbQ9cgyVpQ" content="" returnTypeFixed="true"/>
         <value xmi:type="expression:Expression" xmi:id="_lbmDm62qEeqAHbQ9cgyVpQ" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <elements xmi:type="process:Pool" xmi:id="_FlxsEK6UEeqHzozNyeX62A" name="Pool1">
+      <elements xmi:type="process:Task" xmi:id="_Fyui8K6UEeqHzozNyeX62A" documentation="Un revisor de la Vicerrectoría de investigaciones de la Universidad del Quindío define donde guardar la documentación previamente aprobada." name="Poner produccion en custodia" outgoing="_IA640K6UEeqHzozNyeX62A" incoming="_G_t6gK6UEeqHzozNyeX62A" actor="_Fyt74K6UEeqHzozNyeX62A">
+        <dynamicLabel xmi:type="expression:Expression" xmi:id="_Fyui8a6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+        <dynamicDescription xmi:type="expression:Expression" xmi:id="_Fyui8q6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+        <stepSummary xmi:type="expression:Expression" xmi:id="_Fyui866UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+        <data xmi:type="process:JavaObjectData" xmi:id="_Fyui9K6UEeqHzozNyeX62A" name="arbol" dataType="_lbmDoq2qEeqAHbQ9cgyVpQ" className="org.apache.chemistry.opencmis.commons.impl.json.JSONArray">
+          <defaultValue xmi:type="expression:Expression" xmi:id="_Fyui9a6UEeqHzozNyeX62A" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONArray"/>
+        </data>
+        <data xmi:type="process:Data" xmi:id="_Fyui9q6UEeqHzozNyeX62A" name="directorioRaizVicerrectoriaDeInvestigaciones" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ">
+          <defaultValue xmi:type="expression:Expression" xmi:id="_Fyui966UEeqHzozNyeX62A" name="/Sitios/vicerrectoria/documentLibrary" content="/Sitios/vicerrectoria/documentLibrary"/>
+        </data>
+        <connectors xmi:type="process:Connector" xmi:id="_Fyui-K6UEeqHzozNyeX62A" name="obtenerArbol" definitionId="obtenerArbolDirectorios" event="ON_ENTER" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Fyui-a6UEeqHzozNyeX62A" definitionId="obtenerArbolDirectorios" version="1.0.0" modelVersion="7.9.0-002">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Fyui-q6UEeqHzozNyeX62A" key="folder_path">
+              <expression xmi:type="expression:Expression" xmi:id="_Fyui-66UEeqHzozNyeX62A" name="directorioRaizVicerrectoriaDeInvestigaciones" content="directorioRaizVicerrectoriaDeInvestigaciones" type="TYPE_VARIABLE" returnTypeFixed="true">
+                <referencedElements xmi:type="process:Data" xmi:id="_Fyui_K6UEeqHzozNyeX62A" name="directorioRaizVicerrectoriaDeInvestigaciones" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Fyui_a6UEeqHzozNyeX62A" key="atompub"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Fyui_q6UEeqHzozNyeX62A" key="webservices"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Fyui_66UEeqHzozNyeX62A" key="url">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujAK6UEeqHzozNyeX62A" name="direccionAlfrescoATOMPUB" content="direccionAlfrescoATOMPUB" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_FyujAa6UEeqHzozNyeX62A" name="direccionAlfrescoATOMPUB" typeClassname="java.lang.String"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujAq6UEeqHzozNyeX62A" key="repository">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujA66UEeqHzozNyeX62A" name="nombreDeRepositorioAlfresco" content="nombreDeRepositorioAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_FyujBK6UEeqHzozNyeX62A" name="nombreDeRepositorioAlfresco" typeClassname="java.lang.String"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujBa6UEeqHzozNyeX62A" key="binding_type">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujBq6UEeqHzozNyeX62A" name="atompub" content="atompub" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujB66UEeqHzozNyeX62A" key="wsObjectServiceUrl">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujCK6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujCa6UEeqHzozNyeX62A" key="wsObjectServiceEndpointUrl">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujCq6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujC66UEeqHzozNyeX62A" key="wsRepositoryServiceUrl">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujDK6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujDa6UEeqHzozNyeX62A" key="wsRepositoryServiceEndpointUrl">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujDq6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujD66UEeqHzozNyeX62A" key="wsVersioningServiceUrl"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujEK6UEeqHzozNyeX62A" key="wsVersioningServiceEndpointUrl"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujEa6UEeqHzozNyeX62A" key="wsNavigationServiceUrl"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujEq6UEeqHzozNyeX62A" key="wsNavigationServiceEndpointUrl"/>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujE66UEeqHzozNyeX62A" key="username">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujFK6UEeqHzozNyeX62A" name="usuarioAlfresco" content="usuarioAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_FyujFa6UEeqHzozNyeX62A" name="usuarioAlfresco" typeClassname="java.lang.String"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujFq6UEeqHzozNyeX62A" key="password">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujF66UEeqHzozNyeX62A" name="passwordAlfresco" content="passwordAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_FyujGK6UEeqHzozNyeX62A" name="passwordAlfresco" typeClassname="java.lang.String"/>
+              </expression>
+            </parameters>
+          </configuration>
+          <outputs xmi:type="expression:Operation" xmi:id="_FyujGa6UEeqHzozNyeX62A">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_FyujGq6UEeqHzozNyeX62A" name="arbol" content="arbol" type="TYPE_VARIABLE" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONArray">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_FyujG66UEeqHzozNyeX62A" name="arbol" dataType="_lbmDoq2qEeqAHbQ9cgyVpQ" className="org.apache.chemistry.opencmis.commons.impl.json.JSONArray"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_FyujHK6UEeqHzozNyeX62A" name="generarModeloDeSeleccion()" content="import org.apache.chemistry.opencmis.commons.impl.json.JSONArray&#xD;&#xA;JSONArray ja = new JSONArray();&#xD;&#xA;ja.add(dir_tree);&#xD;&#xA;return ja;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONArray">
+              <referencedElements xmi:type="definition:Output" xmi:id="_FyujHa6UEeqHzozNyeX62A" name="dir_tree" type="org.apache.chemistry.opencmis.commons.impl.json.JSONObject"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_FyujHq6UEeqHzozNyeX62A" type="ASSIGNMENT"/>
+          </outputs>
+        </connectors>
+        <connectors xmi:type="process:Connector" xmi:id="_FyujH66UEeqHzozNyeX62A" name="Subir documentos a Alfresco" definitionId="cmis-uploadnewdocuments" event="ON_FINISH" throwErrorEvent="true" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_FyujIK6UEeqHzozNyeX62A" definitionId="cmis-uploadnewdocuments" version="1.0.0" modelVersion="7.9.0-002">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujIa6UEeqHzozNyeX62A" key="username">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujIq6UEeqHzozNyeX62A" name="usuarioAlfresco" content="usuarioAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_FyujI66UEeqHzozNyeX62A" name="usuarioAlfresco" typeClassname="java.lang.String"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujJK6UEeqHzozNyeX62A" key="password">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujJa6UEeqHzozNyeX62A" name="passwordAlfresco" content="passwordAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_FyujJq6UEeqHzozNyeX62A" name="passwordAlfresco" typeClassname="java.lang.String"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujJ66UEeqHzozNyeX62A" key="url">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujKK6UEeqHzozNyeX62A" name="direccionAlfrescoATOMPUB" content="direccionAlfrescoATOMPUB" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_FyujKa6UEeqHzozNyeX62A" name="direccionAlfrescoATOMPUB" typeClassname="java.lang.String"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujKq6UEeqHzozNyeX62A" key="repository">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujK66UEeqHzozNyeX62A" name="nombreDeRepositorioAlfresco" content="nombreDeRepositorioAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                <referencedElements xmi:type="parameter:Parameter" xmi:id="_FyujLK6UEeqHzozNyeX62A" name="nombreDeRepositorioAlfresco" typeClassname="java.lang.String"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujLa6UEeqHzozNyeX62A" key="binding_type">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujLq6UEeqHzozNyeX62A" name="atompub" content="atompub" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujL66UEeqHzozNyeX62A" key="wsObjectServiceUrl">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujMK6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujMa6UEeqHzozNyeX62A" key="wsObjectServiceEndpointUrl">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujMq6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujM66UEeqHzozNyeX62A" key="wsRepositoryServiceUrl">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujNK6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujNa6UEeqHzozNyeX62A" key="wsRepositoryServiceEndpointUrl">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujNq6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujN66UEeqHzozNyeX62A" key="documents">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujOK6UEeqHzozNyeX62A" name="evidencias" content="evidencias" interpreter="GROOVY" type="DOCUMENT_REF_TYPE" returnType="java.lang.Object" returnTypeFixed="true">
+                <referencedElements xmi:type="process:Document" xmi:id="_FyujOa6UEeqHzozNyeX62A" name="evidencias" multiple="true"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_FyujOq6UEeqHzozNyeX62A" key="folder_path">
+              <expression xmi:type="expression:Expression" xmi:id="_FyujO66UEeqHzozNyeX62A" name="directorioDeGuardado" content="directorioDeGuardado" type="TYPE_VARIABLE" returnTypeFixed="true">
+                <referencedElements xmi:type="process:Data" xmi:id="_FyujPK6UEeqHzozNyeX62A" name="directorioDeGuardado" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ"/>
+              </expression>
+            </parameters>
+          </configuration>
+        </connectors>
+        <operations xmi:type="expression:Operation" xmi:id="_FyujPa6UEeqHzozNyeX62A">
+          <leftOperand xmi:type="expression:Expression" xmi:id="_FyujPq6UEeqHzozNyeX62A" name="directorioDeGuardado" content="directorioDeGuardado">
+            <referencedElements xmi:type="process:Data" xmi:id="_FyujP66UEeqHzozNyeX62A" name="directorioDeGuardado" dataType="_lbmDoa2qEeqAHbQ9cgyVpQ"/>
+          </leftOperand>
+          <rightOperand xmi:type="expression:Expression" xmi:id="_FyujQK6UEeqHzozNyeX62A" name="directorioSeleccionado" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;logger.info(&quot;Seleccionaste &quot; + directorioSeleccionado);&#xD;&#xA;return directorioSeleccionado;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+            <referencedElements xmi:type="process:ContractInput" xmi:id="_FyujQa6UEeqHzozNyeX62A" name="directorioSeleccionado">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_FyujQq6UEeqHzozNyeX62A"/>
+            </referencedElements>
+          </rightOperand>
+          <operator xmi:type="expression:Operator" xmi:id="_FyujQ66UEeqHzozNyeX62A" type="ASSIGNMENT"/>
+        </operations>
+        <loopCondition xmi:type="expression:Expression" xmi:id="_FyujRK6UEeqHzozNyeX62A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <loopMaximum xmi:type="expression:Expression" xmi:id="_FyujRa6UEeqHzozNyeX62A" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+        <cardinalityExpression xmi:type="expression:Expression" xmi:id="_FyujRq6UEeqHzozNyeX62A" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+        <iteratorExpression xmi:type="expression:Expression" xmi:id="_FyujR66UEeqHzozNyeX62A" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+        <completionCondition xmi:type="expression:Expression" xmi:id="_FyujSK6UEeqHzozNyeX62A" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <formMapping xmi:type="process:FormMapping" xmi:id="_FyujSa6UEeqHzozNyeX62A">
+          <targetForm xmi:type="expression:Expression" xmi:id="_FyujSq6UEeqHzozNyeX62A" name="ArchivarEvidencias" content="7dba071f-ce94-4d58-856f-b4e20c25f7b0" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        </formMapping>
+        <contract xmi:type="process:Contract" xmi:id="_FyujS66UEeqHzozNyeX62A">
+          <inputs xmi:type="process:ContractInput" xmi:id="_FyujTK6UEeqHzozNyeX62A" name="directorioSeleccionado">
+            <mapping xmi:type="process:ContractInputMapping" xmi:id="_FyujTa6UEeqHzozNyeX62A"/>
+          </inputs>
+        </contract>
+        <expectedDuration xmi:type="expression:Expression" xmi:id="_FyujTq6UEeqHzozNyeX62A" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+      </elements>
+      <elements xmi:type="process:StartEvent" xmi:id="_GeEmAK6UEeqHzozNyeX62A" name="Inicio2" outgoing="_G_t6gK6UEeqHzozNyeX62A">
+        <dynamicLabel xmi:type="expression:Expression" xmi:id="_GeFNEa6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+        <dynamicDescription xmi:type="expression:Expression" xmi:id="_GeFNEK6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+        <stepSummary xmi:type="expression:Expression" xmi:id="_GeFNEq6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+      </elements>
+      <elements xmi:type="process:EndEvent" xmi:id="_IA2AUK6UEeqHzozNyeX62A" name="Fin2" incoming="_IA640K6UEeqHzozNyeX62A">
+        <dynamicLabel xmi:type="expression:Expression" xmi:id="_IA2nYa6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+        <dynamicDescription xmi:type="expression:Expression" xmi:id="_IA2nYK6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+        <stepSummary xmi:type="expression:Expression" xmi:id="_IA2nYq6UEeqHzozNyeX62A" name="" content="" returnTypeFixed="true"/>
+      </elements>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_FoBu0K6UEeqHzozNyeX62A">
+        <targetForm xmi:type="expression:Expression" xmi:id="_lzLnsK6UEeqHzozNyeX62A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_FoBu0q6UEeqHzozNyeX62A">
+        <targetForm xmi:type="expression:Expression" xmi:id="_FoBu066UEeqHzozNyeX62A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_G_t6gK6UEeqHzozNyeX62A" target="_Fyui8K6UEeqHzozNyeX62A" source="_GeEmAK6UEeqHzozNyeX62A">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_G_t6ga6UEeqHzozNyeX62A"/>
+        <condition xmi:type="expression:Expression" xmi:id="_G_t6gq6UEeqHzozNyeX62A" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_IA640K6UEeqHzozNyeX62A" target="_IA2AUK6UEeqHzozNyeX62A" source="_Fyui8K6UEeqHzozNyeX62A">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_IA640a6UEeqHzozNyeX62A"/>
+        <condition xmi:type="expression:Expression" xmi:id="_IA640q6UEeqHzozNyeX62A" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <actors xmi:type="process:Actor" xmi:id="_Fyt74K6UEeqHzozNyeX62A" name="Revisor" initiator="true"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_q0Gj4K6UEeqHzozNyeX62A" name="passwordAlfresco" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_rtkigK6UEeqHzozNyeX62A" name="usuarioAlfresco" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_yzTPEK6UEeqHzozNyeX62A" name="nombreDeRepositorioAlfresco" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_zReY0K6UEeqHzozNyeX62A" name="direccionAlfrescoATOMPUB" typeClassname="java.lang.String"/>
+      <contract xmi:type="process:Contract" xmi:id="_FoBu1K6UEeqHzozNyeX62A"/>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_Fn_5oK6UEeqHzozNyeX62A">
+        <name xmi:type="expression:Expression" xmi:id="_FoAgsK6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_FoAgsa6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_FoAgsq6UEeqHzozNyeX62A">
+        <name xmi:type="expression:Expression" xmi:id="_FoAgs66UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_FoAgtK6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_FoAgta6UEeqHzozNyeX62A">
+        <name xmi:type="expression:Expression" xmi:id="_FoAgtq6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_FoAgt66UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_FoAguK6UEeqHzozNyeX62A">
+        <name xmi:type="expression:Expression" xmi:id="_FoAgua6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_FoAguq6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_FoAgu66UEeqHzozNyeX62A">
+        <name xmi:type="expression:Expression" xmi:id="_FoAgvK6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_FoAgva6UEeqHzozNyeX62A" content="" returnTypeFixed="true"/>
       </searchIndexes>
     </elements>
     <datatypes xmi:type="process:BooleanType" xmi:id="_lbmDnK2qEeqAHbQ9cgyVpQ" name="Boolean"/>
@@ -353,6 +549,32 @@
       <styles xmi:type="notation:FillStyle" xmi:id="_lbmDu62qEeqAHbQ9cgyVpQ"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lbmDvK2qEeqAHbQ9cgyVpQ" width="1320" height="250"/>
     </children>
+    <children xmi:type="notation:Node" xmi:id="_Fo4qcK6UEeqHzozNyeX62A" type="2007" element="_FlxsEK6UEeqHzozNyeX62A">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Fo5RgK6UEeqHzozNyeX62A" type="5008"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_Fo5Rga6UEeqHzozNyeX62A" type="7001">
+        <children xmi:type="notation:Shape" xmi:id="_FyvKAK6UEeqHzozNyeX62A" type="3005" element="_Fyui8K6UEeqHzozNyeX62A" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+          <children xmi:type="notation:DecorationNode" xmi:id="_FyvKAa6UEeqHzozNyeX62A" type="5005" element="_Fyui8K6UEeqHzozNyeX62A"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FyvKAq6UEeqHzozNyeX62A" x="162" y="61" width="208" height="104"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_GeKFkK6UEeqHzozNyeX62A" type="3002" element="_GeEmAK6UEeqHzozNyeX62A" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_GeKFkq6UEeqHzozNyeX62A" type="5024">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_GeKFk66UEeqHzozNyeX62A" y="5"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GeKFka6UEeqHzozNyeX62A" x="81" y="98"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_IA3OcK6UEeqHzozNyeX62A" type="3003" element="_IA2AUK6UEeqHzozNyeX62A" fontName="Segoe UI">
+          <children xmi:type="notation:DecorationNode" xmi:id="_IA3Ocq6UEeqHzozNyeX62A" type="5025">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_IA3Oc66UEeqHzozNyeX62A" y="5"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA3Oca6UEeqHzozNyeX62A" x="426" y="98"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_Fo4qca6UEeqHzozNyeX62A"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Fo4qcq6UEeqHzozNyeX62A" fontName="Segoe UI"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_Fo4qc66UEeqHzozNyeX62A"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_Fo5Rgq6UEeqHzozNyeX62A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fo4qdK6UEeqHzozNyeX62A" width="1320" height="250"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_lbmDva2qEeqAHbQ9cgyVpQ"/>
     <edges xmi:type="notation:Connector" xmi:id="_m6j70K2qEeqAHbQ9cgyVpQ" type="4001" element="_m6jUwK2qEeqAHbQ9cgyVpQ" source="_lbmDr62qEeqAHbQ9cgyVpQ" target="_lrlAMK2qEeqAHbQ9cgyVpQ" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_m6ki4K2qEeqAHbQ9cgyVpQ" type="6001">
@@ -369,6 +591,22 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_nmvsYa2qEeqAHbQ9cgyVpQ" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nmvsYq2qEeqAHbQ9cgyVpQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_G_vIoK6UEeqHzozNyeX62A" type="4001" element="_G_t6gK6UEeqHzozNyeX62A" source="_GeKFkK6UEeqHzozNyeX62A" target="_FyvKAK6UEeqHzozNyeX62A" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_G_vIo66UEeqHzozNyeX62A" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_G_vIpK6UEeqHzozNyeX62A" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_G_vIoa6UEeqHzozNyeX62A" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_G_vIoq6UEeqHzozNyeX62A" points="[0, -15, -70, -2]$[51, -16, -19, -3]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G_xk4K6UEeqHzozNyeX62A" id="(1.0,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G_xk4a6UEeqHzozNyeX62A" id="(0.09134615384615384,0.40384615384615385)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_IA7f4K6UEeqHzozNyeX62A" type="4001" element="_IA640K6UEeqHzozNyeX62A" source="_FyvKAK6UEeqHzozNyeX62A" target="_IA3OcK6UEeqHzozNyeX62A" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_IA7f466UEeqHzozNyeX62A" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IA7f5K6UEeqHzozNyeX62A" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_IA7f4a6UEeqHzozNyeX62A" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IA7f4q6UEeqHzozNyeX62A" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
