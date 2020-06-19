@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "ArchivarEvidencias",
   "name" : "ArchivarEvidencias",
-  "lastUpdate" : 1592176977771,
+  "lastUpdate" : 1592510774698,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -546,7 +546,7 @@
     },
     "arbolDeDirectorios" : {
       "type" : "url",
-      "value" : "../API/bpm/activityVariable/{{taskId}}/arbol",
+      "value" : "../API/bpm/activityVariable/{{taskId}}/arbolRVI",
       "exposed" : false
     },
     "nombreDeProduccion" : {

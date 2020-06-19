@@ -84,8 +84,6 @@ public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
 		ItemIterable<CmisObject> documents = folder.getChildren();
 		ArrayList<String> directorios = obtenerDirectorios(documents);
 		
-		logger.info("Los directorios son." + directorios.toString());
-		
 		parent.put("id",path);
 		parent.put("text", folder.getName());
 		
@@ -113,7 +111,6 @@ public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
 
     @Override
     public void setInputParameters(final Map<String, Object> parameters) {
-    	logger.info("EN EL CONECTOR");
         super.setInputParameters(parameters);
         folderPath = (String) parameters.get(FOLDER_PATH);
         logger.log(Level.ALL, FOLDER_PATH);
