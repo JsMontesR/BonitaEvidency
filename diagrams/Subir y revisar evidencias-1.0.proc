@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_qDSVkJL2EeqFsrwXrcX2sg" name="Subir y revisar evidencias" author="SEBAS" bonitaVersion="7.9.2" bonitaModelVersion="7.9.0-002" configId="ACED000574000E372E392E302D303032372E392E32">
-    <elements xmi:type="process:Pool" xmi:id="_qDSVkZL2EeqFsrwXrcX2sg" name="Subir y revisar producciones">
+    <elements xmi:type="process:Pool" xmi:id="_qDSVkZL2EeqFsrwXrcX2sg" name="Subir y revisar producciones" version="1.2">
       <elements xmi:type="process:Lane" xmi:id="_eH7k0KXkEeqXLsu1GLx6KA" name="Revisor" actor="_kUWRgKXpEeqXLsu1GLx6KA">
         <elements xmi:type="process:Task" xmi:id="_YCnr0JL-EeqbFKGjrD3rGQ" documentation="Un revisor de la Vicerrectoría de investigaciones de la Universidad del Quindío revisa la documentación adjunta." name="Revisar producción" outgoing="_O7GtsJL-EeqbFKGjrD3rGQ" incoming="_Cddl8LF2Eeqjvp1kUqS_Jw" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_CA_AoZL-EeqbFKGjrD3rGQ" name="" content="" returnTypeFixed="true"/>
@@ -641,9 +641,9 @@
               <leftOperand xmi:type="expression:Expression" xmi:id="_Lh_BLa_2Eeq6IcSf8k97uA" name="dummy" content="dummy" type="TYPE_VARIABLE">
                 <referencedElements xmi:type="process:Data" xmi:id="_AfSg0K_8Eeq6IcSf8k97uA" name="dummy" dataType="_qDSVwZL2EeqFsrwXrcX2sg"/>
               </leftOperand>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_Lh_BLq_2Eeq6IcSf8k97uA" name="mostrarRespuesta()" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;logger.info(&quot;Respuesta de API de registro de caso en GRI &quot; + bodyAsString.equals(&quot;true&quot;) ? &quot;exitosa&quot; : &quot;fallida&quot; + &quot;, status: &quot; + status_code);&#xD;&#xA;&#xD;&#xA;return null;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                <referencedElements xmi:type="definition:Output" xmi:id="_msiNEK_-Eeq6IcSf8k97uA" name="bodyAsString" type="java.lang.String"/>
-                <referencedElements xmi:type="definition:Output" xmi:id="_msiNEa_-Eeq6IcSf8k97uA" name="status_code" type="java.lang.Integer"/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_Lh_BLq_2Eeq6IcSf8k97uA" name="mostrarRespuesta()" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;String respuesta = &quot;fallida&quot;;&#xD;&#xA;if(bodyAsString.equals(&quot;true&quot;)){&#xD;&#xA;&#x9;respuesta = &quot;exitosa&quot;;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;logger.info(&quot;Respuesta de API de registro de caso en GRI &quot; + respuesta + &quot;, status: &quot; + status_code);&#xD;&#xA;return null;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                <referencedElements xmi:type="definition:Output" xmi:id="_dvjW4LJiEeqOw7yKWgg9Zw" name="bodyAsString" type="java.lang.String"/>
+                <referencedElements xmi:type="definition:Output" xmi:id="_dvjW4bJiEeqOw7yKWgg9Zw" name="status_code" type="java.lang.Integer"/>
               </rightOperand>
               <operator xmi:type="expression:Operator" xmi:id="_Lh_BMK_2Eeq6IcSf8k97uA" type="ASSIGNMENT"/>
             </outputs>
@@ -1013,9 +1013,9 @@
         <filters xmi:type="process:ActorFilter" xmi:id="_MbwEgK0XEeqso-XSwSfutA" name="Filtrar lider investigador" definitionId="single-user" definitionVersion="1.0.0">
           <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_MbwEga0XEeqso-XSwSfutA" definitionId="single-user" version="1.0.0">
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_MbwEgq0XEeqso-XSwSfutA" key="userId">
-              <expression xmi:type="expression:Expression" xmi:id="_MbwEg60XEeqso-XSwSfutA" name="userId()" content="import org.bonitasoft.engine.api.IdentityAPI;&#xD;&#xA;import org.bonitasoft.engine.identity.User;&#xD;&#xA;import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;User u = apiAccessor.getIdentityAPI().getUserByUserName(diDelLiderDelGrupo);&#xD;&#xA;logger.info(u.toString());&#xD;&#xA;return new Long(u.getId());" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
-                <referencedElements xmi:type="expression:Expression" xmi:id="_MbwEhK0XEeqso-XSwSfutA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
-                <referencedElements xmi:type="process:Data" xmi:id="_MbwEha0XEeqso-XSwSfutA" name="diDelLiderDelGrupo" dataType="_qDSVwZL2EeqFsrwXrcX2sg"/>
+              <expression xmi:type="expression:Expression" xmi:id="_MbwEg60XEeqso-XSwSfutA" name="getIdDeUsuarioPorNombreDeUsuario()" content="import org.bonitasoft.engine.api.IdentityAPI;&#xD;&#xA;import org.bonitasoft.engine.identity.User;&#xD;&#xA;import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;User u = apiAccessor.getIdentityAPI().getUserByUserName(diDelLiderDelGrupo);&#xD;&#xA;logger.info(&quot;Delegando tarea de subir evidencia a el usuario &quot; + u.getUserName() + &quot; llamado/a &quot; + u.getFirstName() + &quot; &quot; + u.getLastName());&#xD;&#xA;return new Long(u.getId());" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_kzjvsLJjEeqOw7yKWgg9Zw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+                <referencedElements xmi:type="process:Data" xmi:id="_kzjvsbJjEeqOw7yKWgg9Zw" name="diDelLiderDelGrupo" dataType="_qDSVwZL2EeqFsrwXrcX2sg"/>
               </expression>
             </parameters>
           </configuration>
@@ -1058,7 +1058,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_FicdQbGfEeq-7tynY_o-6A" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="org.apache.chemistry.opencmis.commons.impl.json.JSONArray"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_qDSVpJL2EeqFsrwXrcX2sg">
-        <targetForm xmi:type="expression:Expression" xmi:id="_kYSlgLGeEeq-7tynY_o-6A" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_nrATYLJiEeqOw7yKWgg9Zw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_qDSVppL2EeqFsrwXrcX2sg">
         <targetForm xmi:type="expression:Expression" xmi:id="_qDSVp5L2EeqFsrwXrcX2sg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -1314,7 +1314,7 @@
               <leftOperand xmi:type="expression:Expression" xmi:id="_aw_er7F6Eeq-7tynY_o-6A" name="cookieDeSesion" content="cookieDeSesion" type="TYPE_VARIABLE">
                 <referencedElements xmi:type="process:Data" xmi:id="_x2Q_0LGZEeq-7tynY_o-6A" name="cookieDeSesion" dataType="_qDSVwZL2EeqFsrwXrcX2sg"/>
               </leftOperand>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_aw_esLF6Eeq-7tynY_o-6A" name="obtenerCookieDeSesion()" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;logger.info(&quot;Iniciando sesión en GRI como &quot; + usuarioGRI);&#xD;&#xA;logger.info(&quot;Cookie asiganada de la sesión en GRI: &quot; + headers.getAt(&quot;Set-Cookie&quot;).toString());&#xD;&#xA;&#xD;&#xA;return headers.getAt(&quot;Set-Cookie&quot;).toString().split(&quot;;&quot;)[0].split(&quot;=&quot;)[1];" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <rightOperand xmi:type="expression:Expression" xmi:id="_aw_esLF6Eeq-7tynY_o-6A" name="obtenerCookieDeSesion()" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;logger.info(&quot;Iniciando sesión en GRI como &quot; + usuarioGRI);&#xD;&#xA;logger.info(&quot;Cookies asiganada de la sesión en GRI: &quot; + headers.getAt(&quot;Set-Cookie&quot;).toString());&#xD;&#xA;&#xD;&#xA;return headers.getAt(&quot;Set-Cookie&quot;).toString().split(&quot;;&quot;)[0].split(&quot;=&quot;)[1];" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
                 <referencedElements xmi:type="definition:Output" xmi:id="_x7AG8LF6Eeq-7tynY_o-6A" name="headers" type="java.util.Map"/>
                 <referencedElements xmi:type="parameter:Parameter" xmi:id="_x7AG8bF6Eeq-7tynY_o-6A" name="usuarioGRI" typeClassname="java.lang.String"/>
               </rightOperand>
