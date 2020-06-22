@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "RevisarProduccion",
   "name" : "RevisarProduccion",
-  "lastUpdate" : 1592164837540,
+  "lastUpdate" : 1592864219510,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -420,6 +420,78 @@
               "xs" : 12
             },
             "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "minLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "maxLength" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "readOnly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Nombre de guardado (sin extensión):"
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 4
+              },
+              "placeholder" : {
+                "type" : "interpolation",
+                "value" : "Deje este campo vacío para conservar el nombre original"
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : "$item.newValue.filename"
+              },
+              "type" : {
+                "type" : "constant",
+                "value" : "text"
+              },
+              "min" : {
+                "type" : "constant"
+              },
+              "max" : {
+                "type" : "constant"
+              },
+              "step" : {
+                "type" : "constant",
+                "value" : 1
+              }
+            },
+            "reference" : "5230ae80-a848-4da3-a2a9-005703b5fde3",
+            "hasValidationError" : false,
+            "id" : "pbInput"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
               "showPreview" : {
                 "type" : "constant",
                 "value" : true
@@ -494,7 +566,7 @@
               },
               "label" : {
                 "type" : "interpolation",
-                "value" : "Eliminar"
+                "value" : "No archivar este documento"
               },
               "alignment" : {
                 "type" : "constant",
@@ -639,6 +711,97 @@
           "hasValidationError" : false,
           "id" : "pbCheckbox"
         } ], [ {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "expression",
+              "value" : "aprobado"
+            },
+            "repeatedCollection" : {
+              "type" : "variable",
+              "value" : ""
+            }
+          },
+          "reference" : "44c048a9-cfaa-45b5-b663-aadf20ffccf1",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [ [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "text" : {
+                "type" : "interpolation",
+                "value" : "Haga clic en explorar repositorio para acceder al repositorio de la Vicerrectoría de investigaciones de la Universidad del Quindío y seleccione una de las carpetas donde desea archivar la documentación"
+              },
+              "level" : {
+                "type" : "constant",
+                "value" : "Level 5"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "center"
+              }
+            },
+            "reference" : "94230ef3-c20f-47fd-9307-127ed55c238c",
+            "hasValidationError" : false,
+            "id" : "pbTitle"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "value" : {
+                "type" : "constant",
+                "value" : "This is the initial value"
+              },
+              "color" : {
+                "type" : "constant",
+                "value" : "RebeccaPurple"
+              },
+              "background" : {
+                "type" : "constant",
+                "value" : "Yellow"
+              },
+              "arbolDeDirectorios" : {
+                "type" : "variable",
+                "value" : "arbolDeDirectorios"
+              },
+              "selectedData" : {
+                "type" : "variable",
+                "value" : "formOutput.directorioSeleccionado"
+              }
+            },
+            "reference" : "ae71326d-0c80-4c66-a5e5-0c911cc763cc",
+            "hasValidationError" : false,
+            "id" : "customArbolDeNavegacion"
+          } ] ]
+        } ], [ {
           "type" : "component",
           "dimension" : {
             "xs" : 12
@@ -650,7 +813,7 @@
             },
             "hidden" : {
               "type" : "expression",
-              "value" : "comprobacionDeCriterioDeEvaluacion"
+              "value" : "no_aprobado"
             },
             "readOnly" : {
               "type" : "constant",
@@ -870,7 +1033,7 @@
     },
     "formInput" : {
       "type" : "json",
-      "value" : "{\r\n  \"criterioDeEvaluacion\" : false,\r\n  \"retroalimentacion\" : \"\"\r\n}",
+      "value" : "{\r\n  \"criterioDeEvaluacion\" : true,\r\n  \"retroalimentacion\" : \"\",\r\n  \"directorioSeleccionado\" : \"\"\r\n}",
       "exposed" : false
     },
     "submit_errors_list" : {
@@ -880,7 +1043,7 @@
     },
     "formOutput" : {
       "type" : "expression",
-      "value" : "if( $data.context ){\n\treturn {\n\t\tevidenciasDocumentInput: $data.context.evidencias_ref.map( doc => ({\n\t\t\tid : doc.id ? doc.id.toString() : null,\n\t\t\tfilename : doc.newValue && doc.newValue.filename ? doc.newValue.filename : null,\n\t\t\ttempPath : doc.newValue && doc.newValue.tempPath ? doc.newValue.tempPath : null,\n\t\t\tcontentType : doc.newValue && doc.newValue.contentType ? doc.newValue.contentType : null\n\t\t})),\n\t\tcriterioDeEvaluacion: $data.formInput.criterioDeEvaluacion,\n\t\tretroalimentacion: $data.formInput.retroalimentacion\n\t}\n}",
+      "value" : "if( $data.context ){\n\treturn {\n\t\tevidenciasDocumentInput: $data.context.evidencias_ref.map( doc => ({\n\t\t\tid : doc.id ? doc.id.toString() : null,\n\t\t\tfilename : doc.newValue && doc.newValue.filename ? doc.newValue.filename : null,\n\t\t\ttempPath : doc.newValue && doc.newValue.tempPath ? doc.newValue.tempPath : null,\n\t\t\tcontentType : doc.newValue && doc.newValue.contentType ? doc.newValue.contentType : null\n\t\t})),\n\t\tcriterioDeEvaluacion: $data.formInput.criterioDeEvaluacion,\n\t\tretroalimentacion: $data.formInput.retroalimentacion,\n\t\tdirectorioSeleccionado: $data.formInput.directorioSeleccionado\n\t}\n}",
       "exposed" : false
     },
     "context" : {
@@ -891,11 +1054,6 @@
     "taskId" : {
       "type" : "urlparameter",
       "value" : "id",
-      "exposed" : false
-    },
-    "comprobacionDeCriterioDeEvaluacion" : {
-      "type" : "expression",
-      "value" : "return $data.formInput.criterioDeEvaluacion;",
       "exposed" : false
     },
     "nombreDeLiderDeGrupo" : {
@@ -921,6 +1079,21 @@
     "idDeProduccion" : {
       "type" : "url",
       "value" : "../API/bpm/activityVariable/{{taskId}}/idDeProduccion",
+      "exposed" : false
+    },
+    "arbolDeDirectorios" : {
+      "type" : "url",
+      "value" : "../API/bpm/activityVariable/{{taskId}}/arbolRVI",
+      "exposed" : false
+    },
+    "aprobado" : {
+      "type" : "expression",
+      "value" : "return !$data.formInput.criterioDeEvaluacion;",
+      "exposed" : false
+    },
+    "no_aprobado" : {
+      "type" : "expression",
+      "value" : "return $data.formInput.criterioDeEvaluacion;",
       "exposed" : false
     }
   },

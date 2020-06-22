@@ -1,0 +1,50 @@
+{
+  "designerVersion" : "1.9.53",
+  "id" : "customArbolDeNavegacion",
+  "name" : "ArbolDeNavegacion",
+  "lastUpdate" : 1592866061805,
+  "template" : "<!-- as a Dom element -->\r\n\r\n<div align=\"center\">\r\n    <input type=\"button\" class=\"btn btn-default\" value=\"Explorar repositorio\" ng-click=\"ctrl.renderizarRepositorio()\">\r\n</div>\r\n<br>\r\n<div style=\"background-color: #f5f5f5;\">\r\n    <treecontrol class=\"tree-boot\"\r\n       tree-model=\"dataForTheTree\"\r\n       options=\"treeOptions\"\r\n       on-selection=\"showSelected(node)\"\r\n       expanded-nodes=\"expandedNodes\"\r\n       selected-node=\"node1\">\r\n       {{node.text}}\r\n    </treecontrol>\r\n</div>",
+  "controller" : "/**\n * The controller is a JavaScript function that augments the AngularJS scope and exposes functions that can be used in the custom widget template\n * \n * Custom widget properties defined on the right can be used as variables in a controller with $scope.properties\n * To use AngularJS standard services, you must declare them in the main function arguments.\n * \n * You can leave the controller empty if you do not need it.\n */\nfunction ($scope, $window) {\n    this.renderizarRepositorio = function(){\n        $scope.treeOptions = {\n        nodeChildren: \"children\",\n        dirSelectable: true,\n        injectClasses: {\n            ul: \"a2\",\n            li: \"a2\",\n            liSelected: \"a7\",\n            iExpanded: \"a3\",\n            iCollapsed: \"a4\",\n            iLeaf: \"a5\",\n            label: \"a6\",\n            labelSelected: \"a8\"\n        }\n        }\n        $scope.dataForTheTree = $scope.properties.arbolDeDirectorios.value;\n        \n        $scope.showSelected = function(sel) {\n            console.log(\"Directorio seleccionado\" + sel.id);\n            $scope.properties.selectedData = sel.id;\n         };\n         \n         $scope.expandedNodes = [$scope.dataForTheTree[0],\n             $scope.dataForTheTree[0].children[0],\n             $scope.dataForTheTree[0].children[1],\n             $scope.dataForTheTree[0].children[2]\n         ];\n    }\n    \n\n        \n\n}",
+  "custom" : true,
+  "properties" : [ {
+    "label" : "Arbol de directorios",
+    "name" : "arbolDeDirectorios",
+    "caption" : "Arbol de directorios",
+    "type" : "text",
+    "bond" : "variable"
+  }, {
+    "label" : "Directorio seleccionado",
+    "name" : "selectedData",
+    "caption" : "Directorio seleccionado",
+    "type" : "text",
+    "bond" : "variable"
+  } ],
+  "assets" : [ {
+    "id" : "0fc49ba8-5d37-4d74-9f95-be269c682ab9",
+    "name" : "context-menu.js",
+    "type" : "js",
+    "order" : 4,
+    "external" : false
+  }, {
+    "id" : "c433c71d-142e-45e1-bd62-0e4dc2d8a819",
+    "name" : "tree-control.css",
+    "type" : "css",
+    "order" : 1,
+    "external" : false
+  }, {
+    "id" : "0aab1ca4-257c-4bb3-9480-39c2e5273847",
+    "name" : "tree-control-attribute.css",
+    "type" : "css",
+    "order" : 2,
+    "external" : false
+  }, {
+    "id" : "1d2bfda6-2de8-4e4a-b874-8b6851a834f4",
+    "name" : "angular-tree-control.js",
+    "type" : "js",
+    "order" : 3,
+    "external" : false
+  } ],
+  "requiredModules" : [ "treeControl" ],
+  "type" : "widget",
+  "hasHelp" : false
+}
