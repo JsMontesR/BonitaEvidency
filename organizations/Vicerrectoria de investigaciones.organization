@@ -600,7 +600,7 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
-    <user userName="98337524">
+    <user userName="98380743">
       <firstName>Edwin</firstName>
       <lastName>Chamorro</lastName>
       <manager></manager>
@@ -839,7 +839,7 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
-    <user userName="Usuario1">
+    <user userName="98337524">
       <firstName>José</firstName>
       <lastName>Castillo</lastName>
       <manager></manager>
@@ -853,7 +853,7 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
-    <user userName="7561086">
+    <user userName="41942253">
       <firstName>Lina</firstName>
       <lastName>Castro</lastName>
       <manager></manager>
@@ -1007,7 +1007,7 @@
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
-    <user userName="Usuario2">
+    <user userName="7561086">
       <firstName>Luis</firstName>
       <lastName>Castro</lastName>
       <manager></manager>
@@ -1278,7 +1278,7 @@
       <groupName>Lideres investigadores</groupName>
     </membership>
     <membership>
-      <userName>98337524</userName>
+      <userName>98380743</userName>
       <roleName>Lider investigador</roleName>
       <groupName>Lideres investigadores</groupName>
     </membership>
@@ -1363,12 +1363,12 @@
       <groupName>Lideres investigadores</groupName>
     </membership>
     <membership>
-      <userName>Usuario1</userName>
+      <userName>98337524</userName>
       <roleName>Lider investigador</roleName>
       <groupName>Lideres investigadores</groupName>
     </membership>
     <membership>
-      <userName>7561086</userName>
+      <userName>41942253</userName>
       <roleName>Lider investigador</roleName>
       <groupName>Lideres investigadores</groupName>
     </membership>
@@ -1423,7 +1423,7 @@
       <groupName>Lideres investigadores</groupName>
     </membership>
     <membership>
-      <userName>Usuario2</userName>
+      <userName>7561086</userName>
       <roleName>Lider investigador</roleName>
       <groupName>Lideres investigadores</groupName>
     </membership>
