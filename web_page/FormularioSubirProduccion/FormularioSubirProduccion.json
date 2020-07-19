@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "FormularioSubirProduccion",
   "name" : "FormularioSubirProduccion",
-  "lastUpdate" : 1595107776890,
+  "lastUpdate" : 1595195134434,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -208,7 +208,7 @@
               },
               "alignment" : {
                 "type" : "constant",
-                "value" : "left"
+                "value" : "center"
               }
             },
             "reference" : "91a6477e-33f1-4099-a9f3-e7f4134fbf87",
@@ -291,7 +291,7 @@
               },
               "alignment" : {
                 "type" : "constant",
-                "value" : "left"
+                "value" : "center"
               }
             },
             "reference" : "6362a12f-b5c9-4608-ac09-2722051ce5f0",
@@ -374,7 +374,7 @@
               },
               "alignment" : {
                 "type" : "constant",
-                "value" : "left"
+                "value" : "center"
               }
             },
             "reference" : "ea4040f5-c70e-48ca-8341-71641843902e",
@@ -389,7 +389,7 @@
           "propertyValues" : {
             "cssClasses" : {
               "type" : "constant",
-              "value" : ""
+              "value" : "panel panel-default"
             },
             "hidden" : {
               "type" : "constant",
@@ -457,7 +457,7 @@
               },
               "alignment" : {
                 "type" : "constant",
-                "value" : "left"
+                "value" : "center"
               }
             },
             "reference" : "c0c4c6d2-f0ee-43e7-9910-e99b1d812a85",
@@ -514,7 +514,7 @@
               },
               "label" : {
                 "type" : "interpolation",
-                "value" : "Adjunte su producción:"
+                "value" : "Suba aquí su documento (preferiblemente PDF):"
               },
               "required" : {
                 "type" : "constant",

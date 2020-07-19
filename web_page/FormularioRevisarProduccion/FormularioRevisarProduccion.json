@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "FormularioRevisarProduccion",
   "name" : "FormularioRevisarProduccion",
-  "lastUpdate" : 1595115737299,
+  "lastUpdate" : 1595196458319,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -1069,7 +1069,7 @@
               },
               "label" : {
                 "type" : "interpolation",
-                "value" : "Archivar producción en carpeta seleccionada"
+                "value" : "Archivar en carpeta seleccionada"
               },
               "alignment" : {
                 "type" : "constant",
