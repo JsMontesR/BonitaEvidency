@@ -1,8 +1,8 @@
 {
   "designerVersion" : "1.9.53",
-  "id" : "RevisarProduccion",
-  "name" : "RevisarProduccion",
-  "lastUpdate" : 1592864219510,
+  "id" : "FormularioRevisarProduccion",
+  "name" : "FormularioRevisarProduccion",
+  "lastUpdate" : 1595115737299,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -144,7 +144,37 @@
             },
             "text" : {
               "type" : "interpolation",
-              "value" : "Producción en cuestión: {{nombreDeProduccion.value}} de tipo {{tipoDeProduccion.value}} con id {{idDeProduccion.value}}"
+              "value" : "Producción en cuestión:"
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 3"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            }
+          },
+          "reference" : "073e5635-0035-4efb-b857-23d7829bf79d",
+          "hasValidationError" : false,
+          "id" : "pbTitle"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "{{nombreDeProduccion.value}}"
             },
             "level" : {
               "type" : "constant",
@@ -156,6 +186,172 @@
             }
           },
           "reference" : "a3bbb69e-7908-49db-bad7-fd1f0266a77f",
+          "hasValidationError" : false,
+          "id" : "pbTitle"
+        } ] ]
+      } ], [ {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "panel panel-default"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "4308cadc-5892-498a-8a59-939e71a4ace9",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "Tipo de producción:"
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 3"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            }
+          },
+          "reference" : "384f650f-2eda-48f8-9072-71ecc289034d",
+          "hasValidationError" : false,
+          "id" : "pbTitle"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "{{subTipoDeProduccion.value}}"
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 4"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "center"
+            }
+          },
+          "reference" : "4dd19631-39c2-4c49-adb0-91aa282fd68b",
+          "hasValidationError" : false,
+          "id" : "pbTitle"
+        } ] ]
+      }, {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "panel panel-default"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "b1f8dc0e-f647-4715-bb91-279c215a669e",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [ [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "ID GRI:"
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 3"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            }
+          },
+          "reference" : "6bb3a29e-780f-47d5-afcf-5af5c10f0491",
+          "hasValidationError" : false,
+          "id" : "pbTitle"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "{{idDeProduccion.value}}"
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 4"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "center"
+            }
+          },
+          "reference" : "bc47eac5-4844-4826-8c45-fd175ab875eb",
           "hasValidationError" : false,
           "id" : "pbTitle"
         } ] ]
@@ -197,7 +393,37 @@
             },
             "text" : {
               "type" : "interpolation",
-              "value" : "Grupo de investigación asociado: {{nombreGrupo.value}}"
+              "value" : "Grupo de investigación asociado:"
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 3"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            }
+          },
+          "reference" : "4a3d3136-f7d5-4646-9336-2853bf202376",
+          "hasValidationError" : false,
+          "id" : "pbTitle"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "{{nombreGrupo.value}}"
             },
             "level" : {
               "type" : "constant",
@@ -250,7 +476,37 @@
             },
             "text" : {
               "type" : "interpolation",
-              "value" : "Lider del grupo: {{nombreDeLiderDeGrupo.value}}"
+              "value" : "Lider del grupo:"
+            },
+            "level" : {
+              "type" : "constant",
+              "value" : "Level 3"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "left"
+            }
+          },
+          "reference" : "5b6cd83b-373d-4686-9ae9-dd0fa68b7708",
+          "hasValidationError" : false,
+          "id" : "pbTitle"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "text" : {
+              "type" : "interpolation",
+              "value" : "{{nombreDeLiderDeGrupo.value}}"
             },
             "level" : {
               "type" : "constant",
@@ -348,7 +604,7 @@
             },
             "text" : {
               "type" : "interpolation",
-              "value" : "Por favor revise la documentación adjunta:"
+              "value" : "Por favor revise la producción adjunta:"
             },
             "alignment" : {
               "type" : "constant",
@@ -367,18 +623,86 @@
           "hasValidationError" : false,
           "id" : "pbTitle"
         } ], [ {
-          "type" : "container",
+          "type" : "component",
           "dimension" : {
             "xs" : 12
           },
           "propertyValues" : {
-            "repeatedCollection" : {
-              "type" : "variable",
-              "value" : "context.evidencias_ref"
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "hidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "required" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "minLength" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "maxLength" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "readOnly" : {
+              "type" : "constant",
+              "value" : false
             },
             "labelHidden" : {
               "type" : "constant",
               "value" : false
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Nombre de guardado (sin extensión):"
+            },
+            "labelPosition" : {
+              "type" : "constant",
+              "value" : "top"
+            },
+            "labelWidth" : {
+              "type" : "constant",
+              "value" : 4
+            },
+            "placeholder" : {
+              "type" : "interpolation",
+              "value" : "Deje este campo vacío para conservar el nombre original"
+            },
+            "value" : {
+              "type" : "variable",
+              "value" : "context.produccion_ref.newValue.filename"
+            },
+            "type" : {
+              "type" : "constant",
+              "value" : "text"
+            },
+            "min" : {
+              "type" : "constant"
+            },
+            "max" : {
+              "type" : "constant"
+            },
+            "step" : {
+              "type" : "constant",
+              "value" : 1
+            }
+          },
+          "reference" : "5230ae80-a848-4da3-a2a9-005703b5fde3",
+          "hasValidationError" : false,
+          "id" : "pbInput"
+        } ], [ {
+          "type" : "component",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : {
+            "showPreview" : {
+              "type" : "constant",
+              "value" : true
             },
             "hidden" : {
               "type" : "constant",
@@ -389,7 +713,12 @@
               "value" : ""
             },
             "widgetId" : {
-              "type" : "constant"
+              "type" : "constant",
+              "value" : "pbFileViewer"
+            },
+            "document" : {
+              "type" : "variable",
+              "value" : "context.produccion_ref"
             },
             "readOnly" : {
               "type" : "constant",
@@ -398,241 +727,33 @@
             "label" : {
               "type" : "interpolation"
             },
+            "type" : {
+              "type" : "constant",
+              "value" : "Process document"
+            },
+            "url" : {
+              "type" : "constant"
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
             "alignment" : {
               "type" : "constant",
               "value" : "left"
             },
             "class" : {
               "type" : "constant",
-              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.WidgetContainer"
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.FileViewerWidget"
             },
             "dimension" : {
               "type" : "constant",
               "value" : 12
             }
           },
-          "reference" : "ea26c94d-3b2d-46f7-a41a-98fc92885292",
+          "reference" : "921412fb-f23a-4cbb-96b7-8289a083b336",
           "hasValidationError" : false,
-          "id" : "pbContainer",
-          "rows" : [ [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "required" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "minLength" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "maxLength" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "readOnly" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "labelHidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "label" : {
-                "type" : "interpolation",
-                "value" : "Nombre de guardado (sin extensión):"
-              },
-              "labelPosition" : {
-                "type" : "constant",
-                "value" : "top"
-              },
-              "labelWidth" : {
-                "type" : "constant",
-                "value" : 4
-              },
-              "placeholder" : {
-                "type" : "interpolation",
-                "value" : "Deje este campo vacío para conservar el nombre original"
-              },
-              "value" : {
-                "type" : "variable",
-                "value" : "$item.newValue.filename"
-              },
-              "type" : {
-                "type" : "constant",
-                "value" : "text"
-              },
-              "min" : {
-                "type" : "constant"
-              },
-              "max" : {
-                "type" : "constant"
-              },
-              "step" : {
-                "type" : "constant",
-                "value" : 1
-              }
-            },
-            "reference" : "5230ae80-a848-4da3-a2a9-005703b5fde3",
-            "hasValidationError" : false,
-            "id" : "pbInput"
-          } ], [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "showPreview" : {
-                "type" : "constant",
-                "value" : true
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "widgetId" : {
-                "type" : "constant",
-                "value" : "pbFileViewer"
-              },
-              "document" : {
-                "type" : "variable",
-                "value" : "$item"
-              },
-              "readOnly" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "label" : {
-                "type" : "interpolation"
-              },
-              "type" : {
-                "type" : "constant",
-                "value" : "Process document"
-              },
-              "url" : {
-                "type" : "constant"
-              },
-              "labelHidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "left"
-              },
-              "class" : {
-                "type" : "constant",
-                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.FileViewerWidget"
-              },
-              "dimension" : {
-                "type" : "constant",
-                "value" : 12
-              }
-            },
-            "reference" : "921412fb-f23a-4cbb-96b7-8289a083b336",
-            "hasValidationError" : false,
-            "id" : "pbFileViewer"
-          } ], [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "disabled" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "label" : {
-                "type" : "interpolation",
-                "value" : "No archivar este documento"
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "right"
-              },
-              "buttonStyle" : {
-                "type" : "constant",
-                "value" : "danger"
-              },
-              "action" : {
-                "type" : "constant",
-                "value" : "Remove from collection"
-              },
-              "assign" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "url" : {
-                "type" : "interpolation"
-              },
-              "responseStatusCode" : {
-                "type" : "variable",
-                "value" : ""
-              },
-              "dataToSend" : {
-                "type" : "constant"
-              },
-              "dataFromSuccess" : {
-                "type" : "variable",
-                "value" : ""
-              },
-              "closeOnSuccess" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "dataFromError" : {
-                "type" : "variable",
-                "value" : ""
-              },
-              "targetUrlOnSuccess" : {
-                "type" : "interpolation"
-              },
-              "collectionToModify" : {
-                "type" : "variable",
-                "value" : "context.evidencias_ref"
-              },
-              "modalId" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "collectionPosition" : {
-                "type" : "constant",
-                "value" : "Item"
-              },
-              "valueToAdd" : {
-                "type" : "constant"
-              },
-              "removeItem" : {
-                "type" : "variable",
-                "value" : "$item"
-              }
-            },
-            "reference" : "1c92084f-f6e0-4315-b6ba-b06634c011b6",
-            "hasValidationError" : false,
-            "id" : "pbButton"
-          } ] ]
+          "id" : "pbFileViewer"
         } ] ]
       } ], [ {
         "type" : "container",
@@ -684,7 +805,7 @@
             },
             "label" : {
               "type" : "interpolation",
-              "value" : "La documentación es adecuada y se pondrá en custodia"
+              "value" : "La documentación adjunta es adecuada y se pondrá en custodia"
             },
             "alignment" : {
               "type" : "constant",
@@ -748,7 +869,7 @@
               },
               "text" : {
                 "type" : "interpolation",
-                "value" : "Haga clic en explorar repositorio para acceder al repositorio de la Vicerrectoría de investigaciones de la Universidad del Quindío y seleccione una de las carpetas donde desea archivar la documentación"
+                "value" : "Haga clic en explorar repositorio para acceder al repositorio de la Vicerrectoría de investigaciones de la Universidad del Quindío y seleccione una de las carpetas donde desea archivar la documentación."
               },
               "level" : {
                 "type" : "constant",
@@ -795,11 +916,225 @@
               "selectedData" : {
                 "type" : "variable",
                 "value" : "formOutput.directorioSeleccionado"
+              },
+              "formInvalid" : {
+                "type" : "variable",
+                "value" : "$form.$invalid"
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : true
               }
             },
             "reference" : "ae71326d-0c80-4c66-a5e5-0c911cc763cc",
             "hasValidationError" : false,
             "id" : "customArbolDeNavegacion"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "text" : {
+                "type" : "interpolation",
+                "value" : "Si no encuentra las carpetas deseadas, creelas desde Alfresco Share y posteriormente actualice el árbol de directorios, en caso contrario archive la producción en la carpeta seleccionada."
+              },
+              "level" : {
+                "type" : "constant",
+                "value" : "Level 5"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "center"
+              }
+            },
+            "reference" : "e4c2a394-6343-489a-bf45-da48b36e6ab6",
+            "hasValidationError" : false,
+            "id" : "pbTitle"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 6
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Actualizar árbol de directorios"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "center"
+              },
+              "buttonStyle" : {
+                "type" : "constant",
+                "value" : "warning"
+              },
+              "action" : {
+                "type" : "constant",
+                "value" : "Submit task"
+              },
+              "assign" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "url" : {
+                "type" : "interpolation"
+              },
+              "responseStatusCode" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "dataToSend" : {
+                "type" : "expression",
+                "value" : "formOutput"
+              },
+              "dataFromSuccess" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "closeOnSuccess" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "dataFromError" : {
+                "type" : "variable",
+                "value" : "formOutput._submitError"
+              },
+              "targetUrlOnSuccess" : {
+                "type" : "interpolation",
+                "value" : "/bonita"
+              },
+              "collectionToModify" : {
+                "type" : "variable"
+              },
+              "modalId" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "collectionPosition" : {
+                "type" : "constant",
+                "value" : "Last"
+              },
+              "valueToAdd" : {
+                "type" : "constant"
+              },
+              "removeItem" : {
+                "type" : "variable"
+              },
+              "banderaDeActualizacionDeDirectorios" : {
+                "type" : "variable",
+                "value" : "formOutput.banderaDeActualizacionDeDirectorios"
+              }
+            },
+            "reference" : "ce5b071e-37f8-4f9b-956a-3e200e8249b7",
+            "hasValidationError" : false,
+            "id" : "customActualizarRVI"
+          }, {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 6
+            },
+            "propertyValues" : {
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "disabled" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Archivar producción en carpeta seleccionada"
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "center"
+              },
+              "buttonStyle" : {
+                "type" : "constant",
+                "value" : "success"
+              },
+              "action" : {
+                "type" : "constant",
+                "value" : "Submit task"
+              },
+              "assign" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "url" : {
+                "type" : "interpolation"
+              },
+              "responseStatusCode" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "dataToSend" : {
+                "type" : "expression",
+                "value" : "formOutput"
+              },
+              "dataFromSuccess" : {
+                "type" : "variable",
+                "value" : ""
+              },
+              "closeOnSuccess" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "dataFromError" : {
+                "type" : "variable",
+                "value" : "formOutput._submitError"
+              },
+              "targetUrlOnSuccess" : {
+                "type" : "interpolation",
+                "value" : "/bonita"
+              },
+              "collectionToModify" : {
+                "type" : "variable"
+              },
+              "modalId" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "collectionPosition" : {
+                "type" : "constant",
+                "value" : "Last"
+              },
+              "valueToAdd" : {
+                "type" : "constant"
+              },
+              "removeItem" : {
+                "type" : "variable"
+              }
+            },
+            "reference" : "4fdb0f25-1828-4234-9a36-e2180070214a",
+            "hasValidationError" : false,
+            "id" : "pbButton"
           } ] ]
         } ], [ {
           "type" : "component",
@@ -837,7 +1172,7 @@
             },
             "label" : {
               "type" : "interpolation",
-              "value" : "Retroalimentacion"
+              "value" : "Retroalimentacion (escriba las razones por las cuales el documento adjunto no es válido)"
             },
             "labelPosition" : {
               "type" : "constant",
@@ -865,8 +1200,8 @@
               "type" : "variable"
             },
             "hidden" : {
-              "type" : "constant",
-              "value" : false
+              "type" : "expression",
+              "value" : "no_aprobado"
             },
             "cssClasses" : {
               "type" : "constant",
@@ -878,7 +1213,7 @@
             },
             "buttonStyle" : {
               "type" : "constant",
-              "value" : "primary"
+              "value" : "danger"
             },
             "readOnly" : {
               "type" : "constant",
@@ -886,7 +1221,7 @@
             },
             "label" : {
               "type" : "interpolation",
-              "value" : "Finalizar tarea"
+              "value" : "Rechazar producción"
             },
             "dataToSend" : {
               "type" : "expression",
@@ -1033,7 +1368,7 @@
     },
     "formInput" : {
       "type" : "json",
-      "value" : "{\r\n  \"criterioDeEvaluacion\" : true,\r\n  \"retroalimentacion\" : \"\",\r\n  \"directorioSeleccionado\" : \"\"\r\n}",
+      "value" : "{\r\n  \"criterioDeEvaluacion\" : true,\r\n  \"retroalimentacion\" : \"\",\r\n  \"directorioSeleccionado\" : \"\",\r\n  \"banderaDeActualizacionDeDirectorios\" : false\r\n}",
       "exposed" : false
     },
     "submit_errors_list" : {
@@ -1043,7 +1378,7 @@
     },
     "formOutput" : {
       "type" : "expression",
-      "value" : "if( $data.context ){\n\treturn {\n\t\tevidenciasDocumentInput: $data.context.evidencias_ref.map( doc => ({\n\t\t\tid : doc.id ? doc.id.toString() : null,\n\t\t\tfilename : doc.newValue && doc.newValue.filename ? doc.newValue.filename : null,\n\t\t\ttempPath : doc.newValue && doc.newValue.tempPath ? doc.newValue.tempPath : null,\n\t\t\tcontentType : doc.newValue && doc.newValue.contentType ? doc.newValue.contentType : null\n\t\t})),\n\t\tcriterioDeEvaluacion: $data.formInput.criterioDeEvaluacion,\n\t\tretroalimentacion: $data.formInput.retroalimentacion,\n\t\tdirectorioSeleccionado: $data.formInput.directorioSeleccionado\n\t}\n}",
+      "value" : "if( $data.context ){\n\treturn {\n\t\tcriterioDeEvaluacion: $data.formInput.criterioDeEvaluacion,\n\t\tretroalimentacion: $data.formInput.retroalimentacion,\n\t\tdirectorioSeleccionado: $data.formInput.directorioSeleccionado,\n\t\tproduccionDocumentInput: {\n\t\t    id: $data.context.produccion_ref && $data.context.produccion_ref.id ? $data.context.produccion_ref.id.toString() : null,\n\t\t\tfilename: $data.context.produccion_ref.newValue && $data.context.produccion_ref.newValue.filename ? $data.context.produccion_ref.newValue.filename : null,\n\t\t\ttempPath: $data.context.produccion_ref.newValue && $data.context.produccion_ref.newValue.tempPath ? $data.context.produccion_ref.newValue.tempPath : null,\n\t\t\tcontentType: $data.context.produccion_ref.newValue && $data.context.produccion_ref.newValue.contentType ? $data.context.produccion_ref.newValue.contentType : null\n\t\t},\n\t\tbanderaDeActualizacionDeDirectorios: $data.formInput.banderaDeActualizacionDeDirectorios\n\t}\n}",
       "exposed" : false
     },
     "context" : {
@@ -1094,6 +1429,11 @@
     "no_aprobado" : {
       "type" : "expression",
       "value" : "return $data.formInput.criterioDeEvaluacion;",
+      "exposed" : false
+    },
+    "subTipoDeProduccion" : {
+      "type" : "url",
+      "value" : "../API/bpm/activityVariable/{{taskId}}/subTipoDeProduccion",
       "exposed" : false
     }
   },
