@@ -37,14 +37,20 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.apache.chemistry.opencmis.client.api.CmisObject;
+import org.apache.chemistry.opencmis.client.api.FileableCmisObject;
 import org.apache.chemistry.opencmis.client.api.Folder;
 import org.apache.chemistry.opencmis.client.api.ItemIterable;
+import org.apache.chemistry.opencmis.client.api.OperationContext;
+import org.apache.chemistry.opencmis.client.api.Tree;
+import org.apache.chemistry.opencmis.client.runtime.OperationContextImpl;
 import org.apache.chemistry.opencmis.commons.enums.BaseTypeId;
+import org.apache.chemistry.opencmis.commons.enums.IncludeRelationships;
 import org.apache.chemistry.opencmis.commons.impl.json.JSONArray;
 import org.apache.chemistry.opencmis.commons.impl.json.JSONObject;
 import org.bonitasoft.connectors.cmis.AbstractCMISConnector;
 import org.bonitasoft.connectors.cmis.cmisclient.AbstractCmisClient;
 import org.bonitasoft.engine.connector.ConnectorException;
+import java.util.List;
 
 public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
 
@@ -63,7 +69,29 @@ public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
         
         try {
             if (cmisClient != null) {
-            	JSONObject root = construirArbol(folderPath, cmisClient, new JSONObject());
+            	logger.info("Recuperando árbol de directorios del RVI");
+            	OperationContext oc = new OperationContextImpl();
+            	oc.setFilterString("cmis:name");
+            	oc.setIncludeAcls(false);
+            	oc.setIncludeAllowableActions(false);
+            	oc.setIncludePolicies(false);
+            	oc.setIncludeRelationships(IncludeRelationships.NONE);
+            	oc.setRenditionFilterString("cmis:none");
+            	oc.setCacheEnabled(true);
+            	oc.setIncludePathSegments(false);
+            	oc.setLoadSecondaryTypeProperties(false);
+            	Folder folder = cmisClient.getFolderByPath(folderPath);
+            	List<Tree<FileableCmisObject>>  l = folder.getFolderTree(-1, oc);
+            	logger.info("Creando árbol JSON de directorios del RVI");
+            	JSONObject root = new JSONObject();
+            	JSONArray childs = new JSONArray();
+            	for (Tree<FileableCmisObject> tree : l) {
+					childs.add(recorrerArbol(tree, cmisClient, new JSONObject()));
+				}
+            	root.put("text", folder.getName());
+            	root.put("path", folder.getPath());
+            	root.put("children", childs);
+            	logger.info("Se cargó el árbol de directorios");
             	setOutputParameter(ARBOL, root);
             }else {
             	throw new ConnectorException("Fallo de conexión al cliente CMIS");
@@ -77,38 +105,30 @@ public class ObtenerArbolDirectoriosImpl extends AbstractCMISConnector {
         }
     }
     
-    public JSONObject construirArbol(String path, AbstractCmisClient cmisClient, JSONObject parent) {
-  			
-		Folder folder = cmisClient.getFolderByPath(path);
-		
-		ItemIterable<CmisObject> documents = folder.getChildren();
-		ArrayList<String> directorios = obtenerDirectorios(documents);
-		
-		parent.put("id",path);
-		parent.put("text", folder.getName());
-		
-		if(!directorios.isEmpty()) {
-			JSONArray children = new JSONArray();
-			for (String directorio : directorios) {
-				children.add(construirArbol(path +"/" + directorio, cmisClient, new JSONObject()));		
-			}
-			parent.put("children", children);
-		}
-		
-		
-		return parent;
-	}
-    
-    public ArrayList<String> obtenerDirectorios(ItemIterable<CmisObject> documents) {
-    	ArrayList<String> directorios = new ArrayList<String>();
-    	for (CmisObject document : documents) {  		
-			if(document.getBaseTypeId() == BaseTypeId.CMIS_FOLDER) {
-				directorios.add(document.getName());
-			}
-		}
-    	return directorios;
-    }
+    /**
+     * Método recursivo que recorre el Arbol retornado del directorio base
+     * @param tree arbol a recorrer, "Hace las veces de nodo"
+     * @param cmisClient cliente cmis
+     * @param parent Objecto JSON o nodo JSON al cual se transferirá el arbol
+     * @return JSONObject un nodo JSON con sus hijos en formato JSON
+     */
+    public JSONObject recorrerArbol(Tree<FileableCmisObject> tree, AbstractCmisClient cmisClient, JSONObject parent) {
+    	
+    	parent.put("text", tree.getItem().getName());
+    	JSONArray children = new JSONArray();
 
+    	if(!tree.getChildren().isEmpty()) {
+    		for (Tree<FileableCmisObject> arbolHijo : tree.getChildren()) {
+				children.add(recorrerArbol(arbolHijo, cmisClient, new JSONObject()));
+			}
+    	}
+    	
+    	parent.put("children", children);
+    	
+    	return parent;
+    	
+    }
+    
     @Override
     public void setInputParameters(final Map<String, Object> parameters) {
         super.setInputParameters(parameters);

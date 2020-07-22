@@ -47,17 +47,18 @@
             <leftOperand xmi:type="expression:Expression" xmi:id="_8JSVYbMmEeqb9NamFLv0Lg" name="directorioDeGuardado" content="directorioDeGuardado" type="TYPE_VARIABLE">
               <referencedElements xmi:type="process:Data" xmi:id="__bHSgLMmEeqb9NamFLv0Lg" name="directorioDeGuardado" dataType="_qDSVwZL2EeqFsrwXrcX2sg"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_8JSVYrMmEeqb9NamFLv0Lg" name="obtenerDirectorioSeleccionado()" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;if(!banderaDeActualizacionDeDirectorios){&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if(criterioDeEvaluacion){&#xD;&#xA;&#x9;&#x9;logger.info(&quot;Las evidencias asociadas al caso &quot; + rootProcessInstanceId + &quot; se guardarán en &quot; + directorioSeleccionado);&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return directorioSeleccionado;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return null;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_iTJRYMesEeqOYriZkT2B-w" name="banderaDeActualizacionDeDirectorios" type="BOOLEAN">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_iTJRYcesEeqOYriZkT2B-w"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_8JSVYrMmEeqb9NamFLv0Lg" name="obtenerDirectorioSeleccionado()" content="import java.util.logging.Logger;&#xD;&#xA;Logger logger= Logger.getLogger(&quot;org.bonitasoft&quot;);&#xD;&#xA;&#xD;&#xA;if(!banderaDeActualizacionDeDirectorios){&#xD;&#xA;&#x9;String directorioFinal = &quot;&quot;;&#xD;&#xA;&#x9;if(criterioDeEvaluacion){&#xD;&#xA;&#x9;&#x9;directorioFinal = directorioRaizDelRVI + &quot;/&quot; + directorioSeleccionado&#xD;&#xA;&#x9;&#x9;logger.info(&quot;Las evidencias asociadas al caso &quot; + rootProcessInstanceId + &quot; se guardarán en &quot; + directorioFinal);&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return directorioFinal;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return null;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_c0zfoMutEeqyo76-wifEpQ" name="criterioDeEvaluacion" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_c0zfocutEeqyo76-wifEpQ"/>
               </referencedElements>
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_iTJRYsesEeqOYriZkT2B-w" name="directorioSeleccionado">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_iTJRY8esEeqOYriZkT2B-w"/>
+              <referencedElements xmi:type="parameter:Parameter" xmi:id="_c0zfosutEeqyo76-wifEpQ" name="directorioRaizDelRVI" typeClassname="java.lang.String"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_c0zfo8utEeqyo76-wifEpQ" name="rootProcessInstanceId" content="rootProcessInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_c0zfpMutEeqyo76-wifEpQ" name="directorioSeleccionado">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_c0zfpcutEeqyo76-wifEpQ"/>
               </referencedElements>
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_iTJRZMesEeqOYriZkT2B-w" name="criterioDeEvaluacion" type="BOOLEAN">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_iTJRZcesEeqOYriZkT2B-w"/>
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2re_MMusEeqyo76-wifEpQ" name="banderaDeActualizacionDeDirectorios" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_2re_McusEeqyo76-wifEpQ"/>
               </referencedElements>
-              <referencedElements xmi:type="expression:Expression" xmi:id="_iTJ4cMesEeqOYriZkT2B-w" name="rootProcessInstanceId" content="rootProcessInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_8JSVY7MmEeqb9NamFLv0Lg" type="ASSIGNMENT"/>
           </operations>
@@ -1151,7 +1152,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_brvJUck9EeqRsv0FMOgPcQ" name="ESPACIO DE PARTICIPACIÓN CIUDADANA CTI" content="ESPACIO DE PARTICIPACIÓN CIUDADANA CTI"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_qDSVpJL2EeqFsrwXrcX2sg">
-        <targetForm xmi:type="expression:Expression" xmi:id="_hWEfwMoKEeqO9JLDMIAV7g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_CdyvoMutEeqyo76-wifEpQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_qDSVppL2EeqFsrwXrcX2sg">
         <targetForm xmi:type="expression:Expression" xmi:id="_qDSVp5L2EeqFsrwXrcX2sg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -1246,10 +1247,7 @@
       <parameters xmi:type="parameter:Parameter" xmi:id="_iAshYKzPEeq6puoIYGYV3w" name="passwordSMTP" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_xdUncKzPEeq6puoIYGYV3w" name="correoSMTP" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_u8tLwK1GEeqMjapu3yWB8g" name="direccionDelPortalBonita" typeClassname="java.lang.String"/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_RQPwAK2gEeqAHbQ9cgyVpQ" name="direccionLoginGRI" typeClassname="java.lang.String"/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_bJvpcK4IEeq5DP7hz6BfBg" name="passwordGRI" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_dB1McK4IEeq5DP7hz6BfBg" name="urlAPIActualizarEstadoDeProduccion" typeClassname="java.lang.String"/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_fEvfYK4IEeq5DP7hz6BfBg" name="usuarioGRI" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_3AWj8K4IEeq5DP7hz6BfBg" name="usuarioAlfresco" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_5Idf8K4IEeq5DP7hz6BfBg" name="passwordAlfresco" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_7c7c8K4IEeq5DP7hz6BfBg" name="nombreDeRepositorioAlfresco" typeClassname="java.lang.String"/>
