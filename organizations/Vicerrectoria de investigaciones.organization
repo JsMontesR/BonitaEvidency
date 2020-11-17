@@ -5,9 +5,13 @@
       <name>email</name>
       <description>Correo electrónico</description>
     </customUserInfoDefinition>
+    <customUserInfoDefinition>
+      <name>contraseña RVI</name>
+      <description>Contraseña del RVI</description>
+    </customUserInfoDefinition>
   </customUserInfoDefinitions>
   <users>
-    <user userName="salcedo">
+    <user userName="1094951341">
       <firstName>Felipe</firstName>
       <lastName>Salcedo</lastName>
       <title>Revisor Felipe Salcedo</title>
@@ -17,8 +21,12 @@
         <email>jsalcedo@uqvirtual.edu.co</email>
       </personalData>
       <professionalData/>
-      <password encrypted="false">bpm</password>
+      <password encrypted="false">1094951341</password>
       <customUserInfoValues>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value>1094951341</value>
+        </customUserInfoValue>
         <customUserInfoValue>
           <name>email</name>
           <value>jsalcedo@uqvirtual.edu.co</value>
@@ -37,6 +45,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="41721518">
@@ -50,6 +62,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -66,6 +82,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="41902205">
@@ -78,6 +98,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -94,6 +118,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="32629604">
@@ -106,6 +134,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -122,6 +154,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="25153622">
@@ -134,6 +170,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -150,6 +190,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="42086140">
@@ -162,6 +206,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -178,6 +226,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="24587121">
@@ -190,6 +242,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -206,6 +262,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="89007514">
@@ -218,6 +278,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -234,6 +298,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="7527497">
@@ -246,6 +314,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -262,6 +334,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="7535130">
@@ -274,6 +350,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -290,6 +370,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="75079723">
@@ -302,6 +386,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -318,6 +406,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="41494489">
@@ -330,6 +422,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -346,6 +442,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="76308181">
@@ -358,6 +458,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -374,6 +478,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="19162785">
@@ -386,6 +494,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -402,6 +514,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="93357542">
@@ -414,6 +530,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -430,6 +550,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="19164898">
@@ -442,6 +566,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -458,6 +586,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="1098308059">
@@ -470,6 +602,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -486,6 +622,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="31287177">
@@ -498,6 +638,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -514,6 +658,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="14241527">
@@ -526,6 +674,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -542,6 +694,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="94286282">
@@ -554,6 +710,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -570,6 +730,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="7521214">
@@ -582,6 +746,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -598,6 +766,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="98380743">
@@ -610,6 +782,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -626,6 +802,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="76318502">
@@ -638,6 +818,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -654,6 +838,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="75101892">
@@ -666,6 +854,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -682,6 +874,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="7523648">
@@ -694,6 +890,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -711,6 +911,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="7556508">
@@ -723,6 +927,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -739,6 +947,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="41922558">
@@ -751,6 +963,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -767,6 +983,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="41942993">
@@ -779,6 +999,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -795,6 +1019,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="52070041">
@@ -807,6 +1035,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -823,6 +1055,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="1094893955">
@@ -837,6 +1073,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="98337524">
@@ -847,6 +1087,10 @@
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
         <customUserInfoValue>
           <name>email</name>
           <value></value>
@@ -865,6 +1109,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="16185584">
@@ -877,6 +1125,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -893,6 +1145,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="66736378">
@@ -905,6 +1161,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -921,6 +1181,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="24602147">
@@ -933,6 +1197,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -949,6 +1217,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="43876871">
@@ -963,6 +1235,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="94501347">
@@ -973,6 +1249,10 @@
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
         <customUserInfoValue>
           <name>email</name>
           <value></value>
@@ -991,6 +1271,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="41931649">
@@ -1003,6 +1287,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -1019,6 +1307,10 @@
           <name>email</name>
           <value></value>
         </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
       </customUserInfoValues>
     </user>
     <user userName="70420310">
@@ -1031,6 +1323,10 @@
       <customUserInfoValues>
         <customUserInfoValue>
           <name>email</name>
+          <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
           <value></value>
         </customUserInfoValue>
       </customUserInfoValues>
@@ -1046,6 +1342,29 @@
         <customUserInfoValue>
           <name>email</name>
           <value></value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="9738437">
+      <firstName>Jonatan</firstName>
+      <lastName>Ramirez</lastName>
+      <title>Ing</title>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">9738437</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>contraseña RVI</name>
+          <value>9738437</value>
+        </customUserInfoValue>
+        <customUserInfoValue>
+          <name>email</name>
+          <value>jramirez@uniquindio.edu.co</value>
         </customUserInfoValue>
       </customUserInfoValues>
     </user>
@@ -1068,7 +1387,7 @@
   </groups>
   <memberships>
     <membership>
-      <userName>salcedo</userName>
+      <userName>1094951341</userName>
       <roleName>Revisor</roleName>
       <groupName>Revisores vicerrectoria</groupName>
     </membership>
@@ -1436,6 +1755,11 @@
       <userName>89006379</userName>
       <roleName>Lider investigador</roleName>
       <groupName>Lideres investigadores</groupName>
+    </membership>
+    <membership>
+      <userName>9738437</userName>
+      <roleName>Revisor</roleName>
+      <groupName>Revisores vicerrectoria</groupName>
     </membership>
   </memberships>
 </organization:Organization>
