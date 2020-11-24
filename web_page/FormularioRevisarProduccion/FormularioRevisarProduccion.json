@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "FormularioRevisarProduccion",
   "name" : "FormularioRevisarProduccion",
-  "lastUpdate" : 1595365688941,
+  "lastUpdate" : 1605594531265,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -945,7 +945,7 @@
               },
               "text" : {
                 "type" : "interpolation",
-                "value" : "Si no encuentra las carpetas deseadas, creelas desde Alfresco Share y posteriormente actualice el árbol de directorios, en caso contrario archive la producción en la carpeta seleccionada."
+                "value" : "Si no encuentra las carpetas deseadas creelas desde el RVI y posteriormente de clic en \"Actualizar carpetas\", en caso contrario archive la producción en la carpeta seleccionada."
               },
               "level" : {
                 "type" : "constant",
@@ -979,7 +979,7 @@
               },
               "label" : {
                 "type" : "interpolation",
-                "value" : "Actualizar árbol de directorios"
+                "value" : "Actualizar carpetas"
               },
               "alignment" : {
                 "type" : "constant",
