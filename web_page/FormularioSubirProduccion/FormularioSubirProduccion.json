@@ -2,7 +2,7 @@
   "designerVersion" : "1.9.53",
   "id" : "FormularioSubirProduccion",
   "name" : "FormularioSubirProduccion",
-  "lastUpdate" : 1595195134434,
+  "lastUpdate" : 1607024153586,
   "rows" : [ [ {
     "type" : "container",
     "dimension" : {
@@ -151,40 +151,10 @@
               "value" : ""
             }
           },
-          "reference" : "0a12723b-432c-4a24-b021-014604f342a9",
+          "reference" : "d973bc06-7bd2-4fe8-bb30-5482d35f89f1",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [ [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : "font-weight-bold"
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "text" : {
-                "type" : "interpolation",
-                "value" : "Bienvenido/a:"
-              },
-              "level" : {
-                "type" : "constant",
-                "value" : "Level 3"
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "left"
-              }
-            },
-            "reference" : "03304f37-7a08-47e8-9332-1ed4555827de",
-            "hasValidationError" : false,
-            "id" : "pbTitle"
-          } ], [ {
             "type" : "component",
             "dimension" : {
               "xs" : 12
@@ -200,104 +170,200 @@
               },
               "text" : {
                 "type" : "interpolation",
-                "value" : "{{nombreDeLiderDeGrupo.value}}"
+                "value" : "↓ Suba aquí su documento ↓"
               },
               "level" : {
                 "type" : "constant",
-                "value" : "Level 4"
+                "value" : "Level 1"
               },
               "alignment" : {
                 "type" : "constant",
                 "value" : "center"
               }
             },
-            "reference" : "91a6477e-33f1-4099-a9f3-e7f4134fbf87",
+            "reference" : "d52a2569-82a7-41a4-ab6b-abff52a5a15d",
             "hasValidationError" : false,
             "id" : "pbTitle"
+          } ], [ {
+            "type" : "component",
+            "dimension" : {
+              "xs" : 12
+            },
+            "propertyValues" : {
+              "hidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "cssClasses" : {
+                "type" : "constant",
+                "value" : ""
+              },
+              "widgetId" : {
+                "type" : "constant",
+                "value" : "pbUpload"
+              },
+              "labelWidth" : {
+                "type" : "constant",
+                "value" : 4
+              },
+              "readOnly" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "label" : {
+                "type" : "interpolation",
+                "value" : "Suba aquí su documento (PDF máximo de 10Mb):"
+              },
+              "required" : {
+                "type" : "constant",
+                "value" : true
+              },
+              "url" : {
+                "type" : "constant",
+                "value" : "../API/formFileUpload"
+              },
+              "labelHidden" : {
+                "type" : "constant",
+                "value" : false
+              },
+              "labelPosition" : {
+                "type" : "constant",
+                "value" : "top"
+              },
+              "placeholder" : {
+                "type" : "constant",
+                "value" : "Examinar para subir el archivo..."
+              },
+              "alignment" : {
+                "type" : "constant",
+                "value" : "left"
+              },
+              "class" : {
+                "type" : "constant",
+                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.FileUploadWidget"
+              },
+              "dimension" : {
+                "type" : "constant",
+                "value" : 12
+              },
+              "value" : {
+                "type" : "variable",
+                "value" : "formInput.produccionDocumentInput"
+              },
+              "errorContent" : {
+                "type" : "variable",
+                "value" : ""
+              }
+            },
+            "reference" : "dc99ddc4-63fa-47f4-b3d9-a1eae812af2f",
+            "hasValidationError" : false,
+            "id" : "pbUpload"
           } ] ]
         } ], [ {
-          "type" : "container",
+          "type" : "component",
           "dimension" : {
             "xs" : 12
           },
           "propertyValues" : {
-            "cssClasses" : {
-              "type" : "constant",
-              "value" : "panel panel-default"
+            "removeItem" : {
+              "type" : "variable"
             },
             "hidden" : {
               "type" : "constant",
               "value" : false
             },
-            "repeatedCollection" : {
+            "cssClasses" : {
+              "type" : "constant",
+              "value" : ""
+            },
+            "widgetId" : {
+              "type" : "constant",
+              "value" : "pbButton"
+            },
+            "buttonStyle" : {
+              "type" : "constant",
+              "value" : "success"
+            },
+            "readOnly" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "label" : {
+              "type" : "interpolation",
+              "value" : "Enviar a revisión"
+            },
+            "dataToSend" : {
+              "type" : "expression",
+              "value" : "formOutput"
+            },
+            "dataFromError" : {
               "type" : "variable",
+              "value" : "formOutput._submitError"
+            },
+            "labelHidden" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "collectionPosition" : {
+              "type" : "constant"
+            },
+            "targetUrlOnSuccess" : {
+              "type" : "interpolation",
+              "value" : "/bonita"
+            },
+            "action" : {
+              "type" : "constant",
+              "value" : "Submit task"
+            },
+            "collectionToModify" : {
+              "type" : "variable"
+            },
+            "valueToAdd" : {
+              "type" : "expression"
+            },
+            "disabled" : {
+              "type" : "expression",
+              "value" : "$form.$invalid"
+            },
+            "alignment" : {
+              "type" : "constant",
+              "value" : "center"
+            },
+            "class" : {
+              "type" : "constant",
+              "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+            },
+            "dimension" : {
+              "type" : "constant",
+              "value" : 12
+            },
+            "assign" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "url" : {
+              "type" : "interpolation"
+            },
+            "responseStatusCode" : {
+              "type" : "variable",
+              "value" : ""
+            },
+            "dataFromSuccess" : {
+              "type" : "variable",
+              "value" : ""
+            },
+            "closeOnSuccess" : {
+              "type" : "constant",
+              "value" : false
+            },
+            "modalId" : {
+              "type" : "constant",
               "value" : ""
             }
           },
-          "reference" : "836750aa-824e-435a-83eb-3fd7c232bb42",
+          "reference" : "0eb96871-9935-4722-8901-5800e738a6cc",
           "hasValidationError" : false,
-          "id" : "pbContainer",
-          "rows" : [ [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : "bold"
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "text" : {
-                "type" : "interpolation",
-                "value" : "Grupo de investigación:"
-              },
-              "level" : {
-                "type" : "constant",
-                "value" : "Level 3"
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "left"
-              }
-            },
-            "reference" : "45c81ca9-874c-4748-b6f0-2dfba39a3f97",
-            "hasValidationError" : false,
-            "id" : "pbTitle"
-          } ], [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "text" : {
-                "type" : "interpolation",
-                "value" : "{{nombreGrupo.value}}"
-              },
-              "level" : {
-                "type" : "constant",
-                "value" : "Level 4"
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "center"
-              }
-            },
-            "reference" : "6362a12f-b5c9-4608-ac09-2722051ce5f0",
-            "hasValidationError" : false,
-            "id" : "pbTitle"
-          } ] ]
+          "id" : "pbButton"
         } ], [ {
           "type" : "container",
           "dimension" : {
@@ -464,209 +530,7 @@
             "hasValidationError" : false,
             "id" : "pbTitle"
           } ] ]
-        } ], [ {
-          "type" : "container",
-          "dimension" : {
-            "xs" : 12
-          },
-          "propertyValues" : {
-            "cssClasses" : {
-              "type" : "constant",
-              "value" : "panel panel-default"
-            },
-            "hidden" : {
-              "type" : "constant",
-              "value" : false
-            },
-            "repeatedCollection" : {
-              "type" : "variable",
-              "value" : ""
-            }
-          },
-          "reference" : "d973bc06-7bd2-4fe8-bb30-5482d35f89f1",
-          "hasValidationError" : false,
-          "id" : "pbContainer",
-          "rows" : [ [ {
-            "type" : "component",
-            "dimension" : {
-              "xs" : 12
-            },
-            "propertyValues" : {
-              "hidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "cssClasses" : {
-                "type" : "constant",
-                "value" : ""
-              },
-              "widgetId" : {
-                "type" : "constant",
-                "value" : "pbUpload"
-              },
-              "labelWidth" : {
-                "type" : "constant",
-                "value" : 4
-              },
-              "readOnly" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "label" : {
-                "type" : "interpolation",
-                "value" : "Suba aquí su documento (preferiblemente PDF):"
-              },
-              "required" : {
-                "type" : "constant",
-                "value" : true
-              },
-              "url" : {
-                "type" : "constant",
-                "value" : "../API/formFileUpload"
-              },
-              "labelHidden" : {
-                "type" : "constant",
-                "value" : false
-              },
-              "labelPosition" : {
-                "type" : "constant",
-                "value" : "top"
-              },
-              "placeholder" : {
-                "type" : "constant",
-                "value" : "Examinar para subir el archivo..."
-              },
-              "alignment" : {
-                "type" : "constant",
-                "value" : "left"
-              },
-              "class" : {
-                "type" : "constant",
-                "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.FileUploadWidget"
-              },
-              "dimension" : {
-                "type" : "constant",
-                "value" : 12
-              },
-              "value" : {
-                "type" : "variable",
-                "value" : "formInput.produccionDocumentInput"
-              },
-              "errorContent" : {
-                "type" : "variable",
-                "value" : ""
-              }
-            },
-            "reference" : "dc99ddc4-63fa-47f4-b3d9-a1eae812af2f",
-            "hasValidationError" : false,
-            "id" : "pbUpload"
-          } ] ]
         } ] ]
-      } ], [ {
-        "type" : "component",
-        "dimension" : {
-          "xs" : 12
-        },
-        "propertyValues" : {
-          "removeItem" : {
-            "type" : "variable"
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "widgetId" : {
-            "type" : "constant",
-            "value" : "pbButton"
-          },
-          "buttonStyle" : {
-            "type" : "constant",
-            "value" : "success"
-          },
-          "readOnly" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "label" : {
-            "type" : "interpolation",
-            "value" : "Enviar a revisión"
-          },
-          "dataToSend" : {
-            "type" : "expression",
-            "value" : "formOutput"
-          },
-          "dataFromError" : {
-            "type" : "variable",
-            "value" : "formOutput._submitError"
-          },
-          "labelHidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "collectionPosition" : {
-            "type" : "constant"
-          },
-          "targetUrlOnSuccess" : {
-            "type" : "interpolation",
-            "value" : "/bonita"
-          },
-          "action" : {
-            "type" : "constant",
-            "value" : "Submit task"
-          },
-          "collectionToModify" : {
-            "type" : "variable"
-          },
-          "valueToAdd" : {
-            "type" : "expression"
-          },
-          "disabled" : {
-            "type" : "expression",
-            "value" : "$form.$invalid"
-          },
-          "alignment" : {
-            "type" : "constant",
-            "value" : "center"
-          },
-          "class" : {
-            "type" : "constant",
-            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
-          },
-          "dimension" : {
-            "type" : "constant",
-            "value" : 12
-          },
-          "assign" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "url" : {
-            "type" : "interpolation"
-          },
-          "responseStatusCode" : {
-            "type" : "variable",
-            "value" : ""
-          },
-          "dataFromSuccess" : {
-            "type" : "variable",
-            "value" : ""
-          },
-          "closeOnSuccess" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "modalId" : {
-            "type" : "constant",
-            "value" : ""
-          }
-        },
-        "reference" : "0eb96871-9935-4722-8901-5800e738a6cc",
-        "hasValidationError" : false,
-        "id" : "pbButton"
       } ], [ {
         "type" : "component",
         "dimension" : {
@@ -715,6 +579,14 @@
           "dimension" : {
             "type" : "constant",
             "value" : 12
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
           }
         },
         "reference" : "fd7038b6-9f3d-4e36-b0f4-0b92872969eb",
